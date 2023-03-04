@@ -132,7 +132,7 @@
   \href{mailto:yanick.kind@udo.edu}{yanick.kind@udo.edu}%
 }
 
-\title{Zusammenfassung zur Vorlesung Gruppentheorie I}
+\title{Zusammenfassung zur Vorlesung Gruppentheorie in der Physik I}
 \date{03.03.2023}
 
 \begin{document}
@@ -147,6 +147,11 @@
 
 
 \newpage
+\section{Ergänzen}
+\begin{itemize}
+  \item Iso/Homomorphismus
+  \item Permutationsgruppe
+\end{itemize}
 \section{Abstrakte Gruppentheorie}
 \subsection{Definition: Gruppe}
   Eine Menge $\symcal{G} = \{A_2,A_3,...\}$ bildet eine Gruppe, wenn mit einer Gruppenverknüpfung $*$ folgende vier Eigenschaften erfüllt sind:
@@ -160,7 +165,8 @@
   \end{enumerate}
 \subsubsection{endliche Gruppe}
 Eine Gruppe mit einer endlichen Anzahl an Elementen heißt endliche Gruppe.
-Eine Gruppe $\symcal{G} = \{ E, A_2, \ldots, A_h \} $ ist eine endliche Gruppe der Ordnung $h$.\\
+Eine Gruppe $\symcal{G} = \{ E, A_2, \ldots, A_h \} $ ist eine endliche Gruppe der Ordnung $h$.
+Man schreibt auch $|\symcal{G}| = h$\\
 \footnote{Im Folgenden wird das Symbol der Verknüpfung und die Angabe, dass ein Element ein Element
 einer Gruppe ist, weggelassen, sofern es eindeutig ist.}
 \subsection{Multiplikationstabelle}
@@ -179,7 +185,7 @@ Bsp. Symmetrische Gruppe $S_3$:
     \end{tabular} 
 \]
 \subsubsection{Rearrangement Theorem}
-Sallop gesacht: In jeder Zeile und Spalte einer Multiplikationstabelle kann ein Gruppenelemnt nur einmal auftreten.\\
+Sallop gesagt: In jeder Zeile und Spalte einer Multiplikationstabelle kann ein Gruppenelemnt nur einmal auftreten.\\
 Mathematisch: In der Sequenz $EA_k, A_2A_k, \cdots , A_h A_k$ kommt jedes Element $A_i$ nur einmal vor.
 \subsection{Zyklische Gruppe}
 Bei einer zyklischen Gruppe kann jedes Element durch mehrfacher Multiplikation eines Elements reproduziert werden, so dass
@@ -189,10 +195,10 @@ sich jede zyklische Gruppe $\symcal{G}$ als
 \end{equation*}
 schreiben lässt, wobei die Ordnung die Periode der zyklischen Gruppe ist (Bsp.: Translationsgruppe eines Kirstalls)
 \subsection{Untergruppen und Nebenklassen}
-Sei $\symcal{S}  = \{E, S_2, \ldots, S_g \}$ eine Untergruppe der Ordnung $h$ der Gruppe $\symcal{G}$
+Sei $\symcal{S}  = \{E, S_2, \ldots, S_g \}$ eine Untergruppe der Ordnung $g$ der Gruppe $\symcal{G}$
 der Ordnung $h$, dann ist 
 \begin{equation*}
-  X\symcal{S} = \{ EX, S_2X, \ldots, S_g X\}
+  \symcal{S}X = \{ EX, S_2X, \ldots, S_g X\}
 \end{equation*}
 eine rechte Nebenklasse von $\symcal{S}$ (linke Nebenklasse analog).
 Wäre $X \in \symcal{S}$, dann wäre $X\symcal{S}$ wieder $\symcal{S}$ selbst und damit enthält
@@ -200,7 +206,20 @@ eine Nebenklasse kein einziges Element der Untergruppe.\\
 \subsubsection{Satz: Disjunkheit oder Gleichheit}
 Zwei (linke oder rechte) Nebenklassen $X\symcal{S}, Y\symcal{S}$ einer Untergruppe $\symcal{S}$ sind entweder 
 disjunkt oder gleich.
-\subsection{Satz: Index einer Untergruppe}
-
-
+\subsubsection{Satz: Index einer Untergruppe}
+Die Ordnung einer Untergruppe $\symcal{S}$ von $\symcal{G}$, wobei 
+$|\symcal{S}| = g, \symcal{G} = h$ gilt, muss ein ganzzahliger Teiler von $h$ sein, so dass 
+\begin{equation*}
+  \frac{h}{g} = l \in \symbb{Z}
+\end{equation*}
+gilt.
+Dabei wird $l$ der Index der Untergruppe $\symcal{S}$ in $\symcal{G}$ genannt.
+\subsection{Konjugierte Elemente und Klassen}
+Zwei Elemente $A, B$ sind zueinander konjugiert, wenn 
+\begin{equation*}
+  B = X A X^{-1}
+\end{equation*}
+gilt.
+Damit folgt, dass wenn $C$ und $B$ zu $A$ konjugiert sind, dass auch $B$ und $C$ zueinander konjugiert sind.
+\subsubsection{Konjugationsklasse}
 \end{document}

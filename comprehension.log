@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.25)  3 MAR 2023 15:22
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.25)  4 MAR 2023 12:10
  restricted system commands enabled.
 **comprehension.tex
 (./comprehension.tex
@@ -1381,19 +1381,19 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 14
 
 ]
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 9.00096pt on input line 165.
+(Font)              scaled to size 9.00096pt on input line 171.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 165.
+(Font)              scaled to size 6.00064pt on input line 171.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 165.
+(Font)              scaled to size 5.00053pt on input line 171.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 8.99904pt on input line 165.
+(Font)              scaled to size 8.99904pt on input line 171.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 165.
+(Font)              scaled to size 5.99936pt on input line 171.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 165.
+(Font)              scaled to size 4.99947pt on input line 171.
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 196--200
+Underfull \hbox (badness 10000) in paragraph at lines 202--206
 
  []
 
@@ -1402,21 +1402,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 196--200
 \openout4 = comprehension.loe
 [4] (./comprehension.aux)
 Package rerunfilecheck Info: File `comprehension.aux' has not changed.
-(rerunfilecheck)             Checksum: A7379CE0B0DD8284B9D9D6810CA19AA6;5062.
+(rerunfilecheck)             Checksum: 890E4BC013B81B716BB273306756431D;6589.
 Package rerunfilecheck Info: File `comprehension.toc' has not changed.
-(rerunfilecheck)             Checksum: E85786230D41DE7A194B8953F17FCB85;821.
+(rerunfilecheck)             Checksum: 43FA0CCA753507CBC726B7A03AB074E0;1089.
 )
 
 Here is how much of LuaTeX's memory you used:
- 34672 strings out of 478290
+ 34678 strings out of 478290
  100000,1977958 words of node,token memory allocated
- 694 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 1 local_par, 9 glue, 4 kern, 1 penalty, 3 glyph, 20
- attribute, 68 glue_spec, 12 attribute_list, 1 write nodes
-   avail lists: 1:6,2:920,3:206,4:92,5:220,6:32,7:4464,8:26,9:398,10:7,11:348,12
+ 706 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 1 local_par, 9 glue, 4 kern, 1 penalty, 3 glyph, 24
+ attribute, 68 glue_spec, 14 attribute_list, 1 write nodes
+   avail lists: 1:6,2:952,3:211,4:88,5:250,6:37,7:4177,8:29,9:401,10:7,11:328,12
 :1
- 53759 multiletter control sequences out of 65536+600000
- 107 fonts using 44461655 bytes
+ 53762 multiletter control sequences out of 65536+600000
+ 107 fonts using 44461859 bytes
  108i,8n,114p,10607b,2933s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-r
 egular.otf></home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm
@@ -1430,10 +1430,10 @@ ar.otf></home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmr
 oman10-regular.otf></home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/p
 ublic/lm/lmroman12-regular.otf></home/yanick/.local/texlive/2022/texmf-dist/font
 s/opentype/public/lm/lmsans10-bold.otf>
-Output written on comprehension.pdf (4 pages, 44370 bytes).
+Output written on comprehension.pdf (4 pages, 47654 bytes).
 
-PDF statistics: 149 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 131072)
- 65 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 164 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 131072)
+ 89 words of extra memory for PDF output out of 10000 (max. 100000000)
 
