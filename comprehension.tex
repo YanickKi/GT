@@ -166,7 +166,7 @@
 \subsubsection{endliche Gruppe}
 Eine Gruppe mit einer endlichen Anzahl an Elementen heißt endliche Gruppe.
 Eine Gruppe $\symcal{G} = \{ E, A_2, \ldots, A_h \} $ ist eine endliche Gruppe der Ordnung $h$.
-Man schreibt auch $|\symcal{G}| = h$\\
+Man schreibt auch $|\symcal{G}| = h$.
 \footnote{Im Folgenden wird das Symbol der Verknüpfung und die Angabe, dass ein Element ein Element
 einer Gruppe ist, weggelassen, sofern es eindeutig ist.}
 \subsection{Multiplikationstabelle}
@@ -208,7 +208,7 @@ Zwei (linke oder rechte) Nebenklassen $X\symcal{S}, Y\symcal{S}$ einer Untergrup
 disjunkt oder gleich.
 \subsubsection{Satz: Index einer Untergruppe}
 Die Ordnung einer Untergruppe $\symcal{S}$ von $\symcal{G}$, wobei 
-$|\symcal{S}| = g, \symcal{G} = h$ gilt, muss ein ganzzahliger Teiler von $h$ sein, so dass 
+$|\symcal{S}| = g$ und $\symcal{G} = h$ gilt, muss ein ganzzahliger Teiler von $h$ sein, so dass 
 \begin{equation*}
   \frac{h}{g} = l \in \symbb{Z}
 \end{equation*}
@@ -222,4 +222,54 @@ Zwei Elemente $A, B$ sind zueinander konjugiert, wenn
 gilt.
 Damit folgt, dass wenn $C$ und $B$ zu $A$ konjugiert sind, dass auch $B$ und $C$ zueinander konjugiert sind.
 \subsubsection{Konjugationsklasse}
+Alle Elemente einer Gruppe $\symcal{G}$ die zueinander konjugiert sind bilden eine Konjugationsklasse
+\begin{equation*}
+  \symcal{G} A = \{BAB^{-1} | B \in \symcal{G} \},
+\end{equation*}
+wobei A ein beliebiges Element der Konjugationsklasse ist.
+\subsection{Normalteiler und Faktorgruppen}
+\subsubsection{Definition: Normalteiler}
+\label{def:normalteiler}
+Eine Untergruppe $\symcal{S}$ einer Gruppe $\symcal{G}$, die nur aus kompletten Klassen besteht,
+heißt \textbf{Normalteiler} oder \textbf{invariante Untergruppe}.
+Mit einer komplette Klasse meint man, dass, wenn $A$ in  $\symcal{S}$ liegt, alle Elemente $XAX^{-1}$ in $\symcal{S}$ liegen,
+selbst wenn $X\in\symcal{G}$ nicht in $\symcal{S}$ liegt.
+Solche eine Untergruppe heißt invariant, da es unter Konjugation mit einem beliebigen Element 
+von $\symcal{G}$ invariant ist.
+\subsubsection{Einschub: Komplexe}
+Ein Komplex
+\begin{equation*}
+  \symcal{K} = \{ K_1, \ldots, K_n \} 
+\end{equation*}
+ist eine Menge von Gruppenelementen unter Vernachlässigung der Reihenfolge.
+Eine Multiplikation mit einen beliebigen Element $X$ ist durch $\symcal{K}X = \{ K_1 X, \ldots, K_n X \}$ gegeben.
+Die Multiplikation zweier Komplexe $\symcal{K} = \{ K_1, \ldots, K_n \} $ und $\symcal{K}' =  \{ K_1', \ldots, K_m' \} $ ist durch 
+$\symcal{K}\symcal{K'} = \{ K_1 K_1', K_2 K_1', \ldots, K_1 K_2', K_1 K_3', \ldots, K_n K_m'  \} $ gegeben.
+Doppelte Elemente werden, wie es bei einer Menge üblich ist, nicht mitgezählt.
+
+\subsubsection{Satz: Nebenklasse einer invarianten Untergruppe}
+Aus der Definition \ref{def:normalteiler} folgt
+\begin{equation*}
+  X\symcal{S}X^{-1} = \symcal{S} \iff X\symcal{S} = \symcal{S}X,
+\end{equation*}
+womit die rechte gleich der linken Nebenklasse einer invarianten Untergruppe ist.
+\subsubsection{Definiton: Faktorgruppe}
+Eine invariante Untergruppe $\symcal{S}$ einer Gruppe $G$ bildet mit all ihren $l-1$ Nebenklassen eine Faktorgruppe 
+\begin{equation*}
+  \sfrac{\symcal{G}}{\symcal{S}} = \{S, \symcal{S}X_1, \symcal{S}X_2, \ldots, \symcal{S}X_{l-1} \},
+\end{equation*}
+wobei die invariante Untergruppe $\symcal{S}$ das Einselement bildet.
+Die Ordnung der Faktorgruppe entspricht $\sfrac{|\symcal{G}|}{|\symcal{S}|}$.
+\subsection{Darstellungstheorie}
+Wir haben uns ausschließlich mit Matritzen beschäftigt.
+\subsection{Definition: Darstellung}
+Bei einer Darstellung $\gamma$ wird jedem Gruppenelement eine quadratische Matrix zugeordnet.
+Damit liegt ein Isomo vor
+\begin{equation*}
+  \Gamma(A) \Gamma(B) = \Gamma(AB), \quad A,B \in \symcal{G}.
+\end{equation*}
+Das Einselement wird durch die $d$-dimensional ($d$ ist die Dimension der Darstellung) Einheitsmatrix dargestellt.
+
+
+
 \end{document}

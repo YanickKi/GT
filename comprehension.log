@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.25)  4 MAR 2023 12:10
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.25)  4 MAR 2023 20:06
  restricted system commands enabled.
 **comprehension.tex
 (./comprehension.tex
@@ -1397,43 +1397,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 202--206
 
  []
 
+[4]
+LaTeX Font Info:    Calculating math sizes for size <7.63434> on input line 259
+.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 7.63515pt on input line 259.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 5.34457pt on input line 259.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 3.81757pt on input line 259.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 7.63351pt on input line 259.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 5.34343pt on input line 259.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 3.81676pt on input line 259.
+ [5]
 \tf@loe=\write4
 
 \openout4 = comprehension.loe
-[4] (./comprehension.aux)
+ [6] (./comprehension.aux)
 Package rerunfilecheck Info: File `comprehension.aux' has not changed.
-(rerunfilecheck)             Checksum: 890E4BC013B81B716BB273306756431D;6589.
+(rerunfilecheck)             Checksum: 6A11B97410C248E5900FED56EF1F0173;11072.
 Package rerunfilecheck Info: File `comprehension.toc' has not changed.
-(rerunfilecheck)             Checksum: 43FA0CCA753507CBC726B7A03AB074E0;1089.
+(rerunfilecheck)             Checksum: 06F72626B3B7D050AFB16425EB03F7E3;1869.
 )
 
 Here is how much of LuaTeX's memory you used:
- 34678 strings out of 478290
+ 34904 strings out of 478290
  100000,1977958 words of node,token memory allocated
- 706 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 1 local_par, 9 glue, 4 kern, 1 penalty, 3 glyph, 24
- attribute, 68 glue_spec, 14 attribute_list, 1 write nodes
-   avail lists: 1:6,2:952,3:211,4:88,5:250,6:37,7:4177,8:29,9:401,10:7,11:328,12
-:1
- 53762 multiletter control sequences out of 65536+600000
- 107 fonts using 44461859 bytes
- 108i,8n,114p,10607b,2933s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-r
-egular.otf></home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm
-/lmroman6-regular.otf></home/yanick/.local/texlive/2022/texmf-dist/fonts/opentyp
-e/public/lm/lmroman8-regular.otf></home/yanick/.local/texlive/2022/texmf-dist/fo
-nts/opentype/public/lm/lmroman10-bold.otf></home/yanick/.local/texlive/2022/texm
-f-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/yanick/.local/t
-exlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home
-/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/public/xits/XITSMath-Regul
-ar.otf></home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmr
-oman10-regular.otf></home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/p
-ublic/lm/lmroman12-regular.otf></home/yanick/.local/texlive/2022/texmf-dist/font
-s/opentype/public/lm/lmsans10-bold.otf>
-Output written on comprehension.pdf (4 pages, 47654 bytes).
+ 742 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 1 local_par, 9 glue, 4 kern, 1 penalty, 3 glyph, 36
+ attribute, 68 glue_spec, 20 attribute_list, 1 write nodes
+   avail lists: 1:6,2:1126,3:286,4:106,5:332,6:61,7:4370,8:45,9:399,10:7,11:484,
+12:1
+ 53978 multiletter control sequences out of 65536+600000
+ 207 fonts using 92431679 bytes
+ 108i,12n,114p,10607b,2933s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/public/xits/XITSMath
+-Regular.otf></home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/public/
+lm/lmroman9-regular.otf></home/yanick/.local/texlive/2022/texmf-dist/fonts/opent
+ype/public/lm/lmroman6-regular.otf></home/yanick/.local/texlive/2022/texmf-dist/
+fonts/opentype/public/lm/lmroman8-regular.otf></home/yanick/.local/texlive/2022/
+texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/yanick/.local/texl
+ive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/ya
+nick/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinmodern-ma
+th.otf></home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/public/xits/X
+ITSMath-Regular.otf></home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/
+public/lm/lmroman10-regular.otf></home/yanick/.local/texlive/2022/texmf-dist/fon
+ts/opentype/public/lm/lmroman12-regular.otf></home/yanick/.local/texlive/2022/te
+xmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf>
+Output written on comprehension.pdf (6 pages, 56741 bytes).
 
-PDF statistics: 164 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 131072)
- 89 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 223 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 131072)
+ 153 words of extra memory for PDF output out of 10000 (max. 100000000)
 
