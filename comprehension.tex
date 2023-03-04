@@ -1,0 +1,206 @@
+\documentclass[
+  captions=tableheading,  % Tabellenüberschriften
+  titlepage=firstiscover, % Titelseite ist Deckblatt
+]{scrartcl}
+
+% Paket float verbessern
+\usepackage{scrhack}
+
+% Warnung, falls nochmal kompiliert werden muss
+\usepackage[aux]{rerunfilecheck}
+
+% unverzichtbare Mathe-Befehle
+\usepackage{amsmath}
+% viele Mathe-Symbole
+\usepackage{amssymb}
+% Erweiterungen für amsmath
+\usepackage{mathtools}
+
+\usepackage{amsthm}
+
+
+% Fonteinstellungen
+\usepackage{fontspec}
+% Latin Modern Fonts werden automatisch geladen
+% Alternativ zum Beispiel:
+%\setromanfont{Libertinus Serif}
+%\setsansfont{Libertinus Sans}
+%\setmonofont{Libertinus Mono}
+
+% Wenn man andere Schriftarten gesetzt hat,
+% sollte man das Seiten-Layout neu berechnen lassen
+\recalctypearea{}
+
+% deutsche Spracheinstellungen
+\usepackage[ngerman]{babel}
+
+\usepackage{thmtools}
+
+\usepackage[
+  math-style=ISO,    % ┐
+  bold-style=ISO,    % │
+  sans-style=italic, % │ ISO-Standard folgen
+  nabla=upright,     % │
+  partial=upright,   % ┘
+  warnings-off={           % ┐
+    mathtools-colon,       % │ unnötige Warnungen ausschalten
+    mathtools-overbracket, % │
+  },                       % ┘
+]{unicode-math}
+
+% traditionelle Fonts für Mathematik
+\setmathfont{Latin Modern Math}
+% Alternativ zum Beispiel:
+%\setmathfont{Libertinus Math}
+
+\setmathfont{XITS Math}[range={scr, bfscr}]
+\setmathfont{XITS Math}[range={cal, bfcal}, StylisticSet=1]
+
+% Zahlen und Einheiten
+\usepackage[
+  locale=DE,                   % deutsche Einstellungen
+  separate-uncertainty=true,   % immer Unsicherheit mit \pm
+  per-mode=symbol-or-fraction, % / in inline math, fraction in display math
+]{siunitx}
+
+% chemische Formeln
+\usepackage[
+  version=4,
+  math-greek=default, % ┐ mit unicode-math zusammenarbeiten
+  text-greek=default, % ┘
+]{mhchem}
+
+% richtige Anführungszeichen
+\usepackage[autostyle]{csquotes}
+
+% schöne Brüche im Text
+\usepackage{xfrac}
+
+% Standardplatzierung für Floats einstellen
+\usepackage{float}
+\floatplacement{figure}{htbp}
+\floatplacement{table}{htbp}
+
+% Floats innerhalb einer Section halten
+\usepackage[
+  section, % Floats innerhalb der Section halten
+  below,   % unterhalb der Section aber auf der selben Seite ist ok
+]{placeins}
+
+% Seite drehen für breite Tabellen: landscape Umgebung
+\usepackage{pdflscape}
+
+% Captions schöner machen.
+\usepackage[
+  labelfont=bf,        % Tabelle x: Abbildung y: ist jetzt fett
+  font=small,          % Schrift etwas kleiner als Dokument
+  width=0.9\textwidth, % maximale Breite einer Caption schmaler
+]{caption}
+% subfigure, subtable, subref
+\usepackage{subcaption}
+
+% Grafiken können eingebunden werden
+\usepackage{graphicx}
+
+% schöne Tabellen
+\usepackage{booktabs}
+
+% Verbesserungen am Schriftbild
+\usepackage{microtype}
+
+
+\usepackage{listings}
+
+% Hyperlinks im Dokument
+\usepackage[
+  german,
+  unicode,        % Unicode in PDF-Attributen erlauben
+  pdfusetitle,    % Titel, Autoren und Datum als PDF-Attribute
+  pdfcreator={},  % ┐ PDF-Attribute säubern
+  pdfproducer={}, % ┘
+]{hyperref}
+% erweiterte Bookmarks im PDF
+\usepackage{bookmark}
+
+% Trennung von Wörtern mit Strichen
+\usepackage[shortcuts]{extdash}
+
+\usepackage{cleveref}
+
+\author{%
+  Yanick Sebastian Kind\\%
+  \href{mailto:yanick.kind@udo.edu}{yanick.kind@udo.edu}%
+}
+
+\title{Zusammenfassung zur Vorlesung Gruppentheorie I}
+\date{03.03.2023}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\theoremstyle{remark}
+\newtheorem{df}{Definition}
+\listoftheorems
+
+
+\newpage
+\section{Abstrakte Gruppentheorie}
+\subsection{Definition: Gruppe}
+  Eine Menge $\symcal{G} = \{A_2,A_3,...\}$ bildet eine Gruppe, wenn mit einer Gruppenverknüpfung $*$ folgende vier Eigenschaften erfüllt sind:
+  \begin{enumerate}
+    \item \textbf{Abgeschlossenheit}: Mit $A_i, A_j \in \symcal{G}$ folgt $A_i * A_j = A_k \in \symcal{G}$, d.h. die Verknüpfung zweier 
+    Elemente ergibt wieder ein Element der Gruppe.
+    \item \textbf{Assoziativität}: Es gilt mit $A_i, A_j, A_k \in \symcal{G}$, dass $(A_i * A_j) * A_k = A_i * (A_j*A_k)$.
+    \item \textbf{Neutrale Element}: Es exestiert ein eindeutiges Element $E\in \symcal{G}$ mit $E * A_i = A_i * E  = A_i$.
+    \item \textbf{Inverse Element}: Zu jedem Element $A_i \in \symcal{G}$ exestiert ein eindeutiges inverses Element $A_i^{-1}$,
+      so dass $A_i^{-1} * A_i = A_i * A_i^{-1} = E$ gilt.
+  \end{enumerate}
+\subsubsection{endliche Gruppe}
+Eine Gruppe mit einer endlichen Anzahl an Elementen heißt endliche Gruppe.
+Eine Gruppe $\symcal{G} = \{ E, A_2, \ldots, A_h \} $ ist eine endliche Gruppe der Ordnung $h$.\\
+\footnote{Im Folgenden wird das Symbol der Verknüpfung und die Angabe, dass ein Element ein Element
+einer Gruppe ist, weggelassen, sofern es eindeutig ist.}
+\subsection{Multiplikationstabelle}
+Die Multiplikationstabelle gibt einfach an, welche Verknüpfungen welches Gruppenelement ergeben.
+Bsp. Symmetrische Gruppe $S_3$:
+\[
+    \begin{tabular}{>{$}l<{$}|*{6}{>{$}l<{$}}}
+    ~   & e   & a   & a^2 & b   & c   & d   \\
+    \hline\vrule height 12pt width 0pt
+    e   & e   & a   & a^2 & b   & c   & d   \\
+    a   & a   & a^2 & e   & c   & d   & b   \\
+    a^2 & a^2 & e   & a   & d   & b   & c   \\
+    b   & b   & d   & c   & e   & a^2 & a   \\
+    c   & c   & b   & d   & a   & e   & a^2 \\
+    d   & d   & c   & b   & a^2 & a   & e   \\
+    \end{tabular} 
+\]
+\subsubsection{Rearrangement Theorem}
+Sallop gesacht: In jeder Zeile und Spalte einer Multiplikationstabelle kann ein Gruppenelemnt nur einmal auftreten.\\
+Mathematisch: In der Sequenz $EA_k, A_2A_k, \cdots , A_h A_k$ kommt jedes Element $A_i$ nur einmal vor.
+\subsection{Zyklische Gruppe}
+Bei einer zyklischen Gruppe kann jedes Element durch mehrfacher Multiplikation eines Elements reproduziert werden, so dass
+sich jede zyklische Gruppe $\symcal{G}$ als 
+\begin{equation*}
+  \symcal{G} = \{ X, X^2, \ldots, X^n = E \}
+\end{equation*}
+schreiben lässt, wobei die Ordnung die Periode der zyklischen Gruppe ist (Bsp.: Translationsgruppe eines Kirstalls)
+\subsection{Untergruppen und Nebenklassen}
+Sei $\symcal{S}  = \{E, S_2, \ldots, S_g \}$ eine Untergruppe der Ordnung $h$ der Gruppe $\symcal{G}$
+der Ordnung $h$, dann ist 
+\begin{equation*}
+  X\symcal{S} = \{ EX, S_2X, \ldots, S_g X\}
+\end{equation*}
+eine rechte Nebenklasse von $\symcal{S}$ (linke Nebenklasse analog).
+Wäre $X \in \symcal{S}$, dann wäre $X\symcal{S}$ wieder $\symcal{S}$ selbst und damit enthält
+eine Nebenklasse kein einziges Element der Untergruppe.\\
+\subsubsection{Satz: Disjunkheit oder Gleichheit}
+Zwei (linke oder rechte) Nebenklassen $X\symcal{S}, Y\symcal{S}$ einer Untergruppe $\symcal{S}$ sind entweder 
+disjunkt oder gleich.
+\subsection{Satz: Index einer Untergruppe}
+
+
+\end{document}

@@ -1,0 +1,10 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Abstrakte Gruppentheorie}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Definition: Gruppe}{3}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}endliche Gruppe}{3}{subsubsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.2}Multiplikationstabelle}{3}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Rearrangement Theorem}{3}{subsubsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.3}Zyklische Gruppe}{4}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Untergruppen und Nebenklassen}{4}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Satz: Disjunkheit oder Gleichheit}{4}{subsubsection.1.4.1}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
