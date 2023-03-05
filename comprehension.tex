@@ -151,6 +151,7 @@
 \begin{itemize}
   \item Iso/Homomorphismus
   \item Permutationsgruppe
+  \item triviale Darstellung als Isomorphismus
 \end{itemize}
 \section{Abstrakte Gruppentheorie}
 \subsection{Definition: Gruppe}
@@ -261,15 +262,36 @@ Eine invariante Untergruppe $\symcal{S}$ einer Gruppe $G$ bildet mit all ihren $
 wobei die invariante Untergruppe $\symcal{S}$ das Einselement bildet.
 Die Ordnung der Faktorgruppe entspricht $\sfrac{|\symcal{G}|}{|\symcal{S}|}$.
 \subsection{Darstellungstheorie}
-Wir haben uns ausschließlich mit Matritzen beschäftigt.
+Wir haben uns ausschließlich mit Matritzendarstellungen beschäftigt.
 \subsection{Definition: Darstellung}
-Bei einer Darstellung $\gamma$ wird jedem Gruppenelement eine quadratische Matrix zugeordnet.
-Damit liegt ein Isomo vor
+Bei einer Darstellung $\Gamma$ wird jedem Gruppenelement eine quadratische Matrix zugeordnet:
+\begin{equation*}
+  \Gamma(A) : \quad V \to V
+\end{equation*}´
+mit dem Vektorraum $V$ als Darstellungsraum mit $\text{Dim(V)} = d$ als 
+Dimension der Darstellung.
+Eine lineare Darstellung $\Gamma (A)$ von $\symcal{G}$ ist ein Homomorphismus der Gruppe GL$(V)$
 \begin{equation*}
   \Gamma(A) \Gamma(B) = \Gamma(AB), \quad A,B \in \symcal{G}.
+\end{equation*} 
+Das Einselement wird durch die Einheitsmatrix dargestellt.
+\subsection{Definition: Äquivalente Darstellung}
+Eine andere Darstellung lässt sich durch eine Ähnlichkeitstransformation gewinnen
+\begin{equation*}
+  \Gamma'(A) = S^{-1} \Gamma (A) S \implies \Gamma'(A) \Gamma'(B) = \Gamma'(AB).
 \end{equation*}
-Das Einselement wird durch die $d$-dimensional ($d$ ist die Dimension der Darstellung) Einheitsmatrix dargestellt.
-
-
-
+Die Darstellungen $\Gamma$ und $\Gamma'$ heißen äquivalent.
+\subsection{(Ir)reduzibilität}
+Die direkte Summe von zwei Darstellungen 
+\begin{equation*}
+  \Gamma (A) = 
+  \begin{pmatrix}
+    \Gamma^1 (A)  & 0           \\
+    0             & \Gamma^2(A)
+  \end{pmatrix}
+  , \quad \Gamma (A) = \Gamma^1 (A)\bigoplus \Gamma^2(A)
+\end{equation*}
+ist eine weiter Form von Redundanz.
+Lässt sich eine Darstellung durch eine globale Ähnlichkeitstransformation auf eine Blockdiagonale
+bringen, ist sie reduzibel, sonst irreduzibel.
 \end{document}

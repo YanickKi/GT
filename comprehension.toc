@@ -18,4 +18,6 @@
 \contentsline {subsubsection}{\numberline {2.6.4}Definiton: Faktorgruppe}{5}{subsubsection.2.6.4}%
 \contentsline {subsection}{\numberline {2.7}Darstellungstheorie}{5}{subsection.2.7}%
 \contentsline {subsection}{\numberline {2.8}Definition: Darstellung}{6}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Definition: Äquivalente Darstellung}{6}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}(Ir)reduzibilität}{6}{subsection.2.10}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
