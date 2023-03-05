@@ -259,6 +259,7 @@ Eine invariante Untergruppe $\symcal{S}$ einer Gruppe $G$ bildet mit all ihren $
 \begin{equation*}
   \sfrac{\symcal{G}}{\symcal{S}} = \{S, \symcal{S}X_1, \symcal{S}X_2, \ldots, \symcal{S}X_{l-1} \},
 \end{equation*}
+Moodle Diese Veranstaltung verfügt über einen Moodle
 wobei die invariante Untergruppe $\symcal{S}$ das Einselement bildet.
 Die Ordnung der Faktorgruppe entspricht $\sfrac{|\symcal{G}|}{|\symcal{S}|}$.
 \section{Darstellungstheorie}
@@ -267,7 +268,7 @@ Wir haben uns ausschließlich mit Matritzendarstellungen beschäftigt.
 Bei einer Darstellung $\Gamma$ wird jedem Gruppenelement eine quadratische Matrix zugeordnet:
 \begin{equation*}
   \Gamma(A) : \quad V \to V
-\end{equation*}´
+\end{equation*}
 mit dem Vektorraum $V$ als Darstellungsraum mit $\text{Dim(V)} = d$ als 
 Dimension der Darstellung.
 Eine lineare Darstellung $\Gamma (A)$ von $\symcal{G}$ ist ein Homomorphismus der Gruppe GL$(V)$
@@ -294,4 +295,20 @@ Die direkte Summe von zwei Darstellungen
 ist eine weiter Form von Redundanz.
 Lässt sich eine Darstellung durch eine globale Ähnlichkeitstransformation auf eine Blockdiagonale
 bringen, ist sie reduzibel, sonst irreduzibel.
+\subsection{Satz: unitäre Darstellungen}
+Jede Darstellung lässt sich mit Hilfe einer Ähnlichkeitstransformation auf eine 
+unitäre Darstellung abgebildet werden. Vorgehen: Konstruiere hermitische Matrix 
+$\mathbf{H = \sum_i^h \Gamma(A_i) \Gamma (A_i^\dagger)}$. Dann diese diagonalisieren mit unitärer Trafo 
+$\mathbf(d) = \mathbf{U}^{-1} \mathbf{H} \mathbf{U}$. Somit ist
+die Darstellung 
+\begin{equation*}
+  \Gamma^{''}(A_j) = \mathbf{d^{-\frac{1}{2}}} \mathbf{U}^{-1} \Gamma(A_j) \mathbf{U} d^{\frac{1}{2}}
+\end{equation*}
+unitär.
+\subsection{Schur'sches Lemma}
+Jede Matrix, welche mit allen Matrizen einer irreduziblen Darstellung kommutiert,
+muss ein Vielfaches von der Einheitsmatrix (sog. konstante Matrix) sein. 
+Wenn somit eine nicht-konstante Matrix mit mindestens einer Matrix einer Darstellung kommutiert, 
+ist diese Darstellung reduzibel.
+
 \end{document}

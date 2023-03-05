@@ -20,4 +20,6 @@
 \contentsline {subsection}{\numberline {3.1}Definition: Darstellung}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Definition: Äquivalente Darstellung}{6}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}(Ir)reduzibilität}{6}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Satz: unitäre Darstellungen}{6}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Schur'sches Lemma}{6}{subsection.3.5}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
