@@ -22,4 +22,8 @@
 \contentsline {subsection}{\numberline {3.3}(Ir)reduzibilität}{6}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Satz: unitäre Darstellungen}{6}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Schur'sches Lemma}{6}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Alternative Formulierung}{7}{subsubsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.6}Orthogonalitätstheorem}{7}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Satz von Burnside}{7}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Definition: Charakter}{7}{subsection.3.8}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
