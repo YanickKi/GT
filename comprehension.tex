@@ -152,6 +152,8 @@
   \item Iso/Homomorphismus
   \item Permutationsgruppe
   \item triviale Darstellung als Isomorphismus
+  \item vll. noch Kristallstruktur und Blochtheorem 
+  \item wichtigen Liegruppen und dessen Mannigfaltigkeit
 \end{itemize}
 \section{Abstrakte Gruppentheorie}
 \subsection{Definition: Gruppe}
@@ -299,10 +301,10 @@ bringen, ist sie reduzibel, sonst irreduzibel.
 Jede Darstellung lässt sich mit Hilfe einer Ähnlichkeitstransformation auf eine 
 unitäre Darstellung abgebildet werden. Vorgehen: Konstruiere hermitische Matrix 
 ${\mathbf{H} = \sum_i^h \symup{\Gamma}(A_i) \symup{\Gamma} (A_i^\dagger)}$. Dann diese diagonalisieren mit unitärer Trafo 
-$\mathbf(d) = \mathbf{U}^{-1} \mathbf{H} \mathbf{U}$. Somit ist
+$\mathbf{d} = \mathbf{U}^{-1} \mathbf{H} \mathbf{U}$. Somit ist
 die Darstellung 
 \begin{equation*}
-  \symup{\Gamma}^{''}(A_j) = \mathbf{d^{-\frac{1}{2}}} \mathbf{U}^{-1} \symup{\Gamma}(A_j) \mathbf{U} \mathbf{d}^{\frac{1}{2}}
+  \symup{\Gamma}^{'}(A_j) = \mathbf{d^{-\frac{1}{2}}} \mathbf{U}^{-1} \symup{\Gamma}(A_j) \mathbf{U} \mathbf{d}^{\frac{1}{2}}
 \end{equation*}
 unitär.
 \subsection{Schur'sches Lemma}
@@ -327,8 +329,8 @@ Bei Betrachtung \textbf{nicht-äquivalenter}, unitärer, irreduziblen Darstellun
   \sum_R \symup{\Gamma}^i(R)_{\mu \nu}\symup{\Gamma}^j(R)_{\alpha \beta} = \frac{h}{d_i} \delta_{ij}\delta_{\nu \alpha}\delta_{\nu \beta}.
 \end{equation*}
 Geometrische Interpretation: die Gruppelemente $R = E, A_2, \ldots, A_h$ spannen einen 
-$h$-dimensionalen "Gruppenelement-Vektorraum" auf.
-Jeder Vektor in diesem Raum haben drei Indizes, $i, \mu, \nu$.
+$h$-dimensionalen \enquote{Gruppenelement}-Vektorraum auf.
+Jeder Vektor in diesem Raum hat drei Indizes, $i, \mu, \nu$.
 Diese Vektoren sind orthogonal zueinander.
 \subsection{Satz von Burnside}
 Aus der geometrischen Interpretation des Orthogonalitätstheorems \ref{sub:orth} folgt 
@@ -342,9 +344,195 @@ Da in einem $h$-dimensionalen Vektorraum nur maximal $h$ zueinander orthogonale 
 folgt $\sum_i d_i^2 \leq h = |\symcal{G}|$. 
 Die eindeutige Gleichheit wird z.B. im Tinkham bewiesen.
 \subsection{Definition: Charakter}
-Der Charakter $\chi^i(R)$ einer Darstellung $\symup{\Gamma}^i(R)$ ist durch 
+Der Charakter einer Darstellung $\symup{\Gamma}^i(R)$ ist die Menge
+der $h$ Zahlen $\chi^i(E), \chi^i(A_2), \ldots, \chi^i(A_h)$ mit
 \begin{equation*}
-  \chi^i(R) = \text{Tr}(\symup{\Gamma}^i(R)) = \sum_j^{d_i} \Gamma^i(R)_{jj}
+  \chi^i(R) = \text{Tr}(\symup{\Gamma}^i(R)) = \sum_j^{d_i} \Gamma^i(R)_{jj}.
 \end{equation*}
-gegeben.
+Die Spur ist unter einer Ähnlichkeitstransformation invariant, so dass äquivalente Darstellungen und 
+Elemente innerhalb einer Klasse denselben Charakter besitzen.
+Im Folgenden wird der Charakter für die $k$-te Klasse $\symcal{G}_k$ durch $\chi^i(\symcal{G}_k)$ angegeben.
+\subsection{Satz: Zeilenorthogonalität}
+Wir das Orthogonalitätstheorem genutzt, kann 
+\begin{equation*}
+  \sum_R \chi^i(R) \chi^j(R) = \sum_R \chi^i(\symcal{G}_k) \chi^j(\symcal{G}_k) N_k = h \delta_{ij}
+\end{equation*}
+gezeigt werden, wobei $N_k$ die Anzahl an Elementen in der $k$-ten Klasse ist.
+Somit formen die Charaktere der verschiedenen irreduziblen Darstellungen eine Menge von orthogonalen Vektoren 
+\begin{equation*}
+\chi^i = 
+\begin{pmatrix}
+  \chi^i(E       )\\
+  \chi^i(A_2     )\\
+  \ldots          \\
+  \chi^i(A_h     )
+\end{pmatrix}
+\end{equation*}  
+im Gruppenelement-Vektorraum aufgespannt durch die Klassen $\symcal{G}_k$.
+Da die Anzahl der orthogonalen Vektoren nicht die Dimension des Vektorraums übersteigen kann,
+darf die Anzahl der Klassen nicht die Anzahl der irreduziblen Darstellungen übersteigen.
+Es gilt sogar
+\begin{equation*}
+  \text{Anzahl Klassen} = \text{Anzahl irreduzible Darstellungen}.
+\end{equation*}
+\subsection{Charaktertafel}
+In den Zeilen stehen die irreduziblen Darstellungen und in den Spalten die Klassen mit 
+der Anzahl an Elementen in der jeweiligen Klasse.
+\begin{table}
+  \centering
+  \caption{Charaktertafel der $S_3$}
+  \label{tab:some_data}
+  \sisetup{table-format=2.0}
+  \begin{tabular}{S[table-format=10.0] S[table-format = 1.0] S S}
+  \toprule
+   & {$\symcal{G}_1$} & {$3\symcal{G}_2$} & {$2\symcal{G}_3$} \\
+  \midrule
+  {$\Gamma^1$} & 1 & 1  & 1   \\
+  {$\Gamma^2$} & 1 & -1 & 1   \\
+  {$\Gamma^3$} & 2 & 0  & -1  \\
+  \bottomrule
+  \end{tabular}
+  \end{table}
+\subsection{Satz: Spaltenorthogonalität}
+\begin{equation*}
+  \sum_i \chi^i(\symcal{G}_k) \chi^i(\symcal{G}_l) = \frac{h}{N_k} \delta_{kl}
+\end{equation*}
+\subsection{Dekomposition von reduziblen Darestellungen}
+Bringe die Darstellung erst auf blockdiagonale Form:
+\begin{equation*}
+  \symup{\Gamma} (R) = 
+  \begin{pmatrix}
+    \symup{\Gamma}^1 (R)  &       &    \\
+    & \!\!\!\!\!\! \symup{\Gamma}^2(R) &  \\
+    & & \ddots \quad \quad
+  \end{pmatrix}
+  , \quad \symup{\Gamma} (R) = \symup{\Gamma}^1 (R)\bigoplus \symup{\Gamma}^2(R) \bigoplus \cdots
+\end{equation*}
+mit den irreduziblen Darstellungen auf der Diagonale.
+Somit ist die Spur der reduziblen Darstellung die Summe der Spuren der irreduziblen Darstellungen
+\begin{equation*}
+  \chi_{\text{red}} (R) = \sum_i a_i \chi_{\text{irred}}^i(R),
+\end{equation*}
+wobei der Koeffizient $a_i$ angibt, wie oft die $i$-te irreduzible Darstellung auf der 
+Diagonale vorkommt.
+Durch Anwendung des Orthogonalitätstheorems \ref{sub:orth}, sind die Koeffizienten eindeutig 
+durch den Charakter der reduziblen Darstellung bestimmt
+\begin{equation*}
+  a_i = \frac{1}{h} \sum_k N_k \chi_{\text{irred}}^i (\symcal{G}_k) \chi_{\text{red}} (\symcal{G}_k) \label{eqn:decomp}
+\end{equation*}
+\subsection{Reguläre Darstellung}
+Hier schiebt man einfach die Elemente in der Multiplikationstabelle so rum, so dass 
+auf der Hauptdiagonalen das Einselement liegt. 
+Wenn man nun die reguläre Darstellung eines Elements bestimmen möchte, schaut man in der 
+Multiplikationstabelle, wo dieses Element als Resultät der Multiplikationen steht.
+Damit bekommt die Matrix der regulären Darstellung eine $1$ als Eintrag an dieser Stelle.
+\[
+    \begin{tabular}{>{$}l<{$}|*{6}{>{$}l<{$}}}
+    ~       & E   & A & B & C & D & F   \\
+    \hline\vrule height 12pt width 0pt
+    E       & E   & A & B & C & D & F\\
+    A^{-1}  & A   & E & D & F & B & C\\
+    B^{-1}  & B   & F & E & D & C & A\\
+    C^{-1}  & C   & D & F & E & A & B\\
+    D^{-1}  & F   & B & C & A & E & D\\
+    F^{-1}  & D   & C & A & B & F & E\\
+    \end{tabular} 
+\]
+\begin{equation*}
+  \Gamma_\text{reg}(A)
+  \begin{pmatrix}
+    0 & 1 & 0 & 0 & 0 & 0 \\
+    1 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 1 \\
+    0 & 0 & 0 & 1 & 1 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 0 & 0 
+  \end{pmatrix}
+\end{equation*}
+Aus \begin{equation*}
+  \chi_\text{reg} \cdot \chi_\text{irred}^i = 
+  \begin{pmatrix}
+    h \\
+    0 \\
+    \cdots
+  \end{pmatrix}
+  \cdot 
+  \begin{pmatrix}
+    d_i \\
+    x   \\
+    \cdots
+  \end{pmatrix}
+  = h d_i 
+\end{equation*}
+folgt, dass die reguläre Darstellung \textbf{jede} irreduzible Darstellung genau $d_i$ mal entält (s. Gl. \eqref{eqn:decomp}).
+\section{Symmetrieoperationen in der Quantenmechanik}
+Ausgangspunkt ist die Schrödingergleichung 
+\begin{equation*}
+  \hat {H} \Psi_n = E_n^j \Psi_n
+\end{equation*},
+dabei gibt j den Grad der Entartung an.
+Ziel ist es nun einen Zusammenhang zwischen den Symmetrieoperationen und der Entartung der Energieniveaus 
+zu finden.
+\subsection{Wirkung der Symmetrieoperationen auf Wellenfunktionen}
+Sei $\hat{P}_R$ eine Symmetrieoperationen, somit wirkt diese auf eine Wellenfunktionen gemäß
+\begin{equation*}
+  \hat{P}_R \Psi (\vec{r}) = \Psi(\mathbf{R}^{-1}\vec{r}).
+\end{equation*}
+Somit kann entweder der Vektor um einen Winkel im mathematisch positiven Drehsinn oder 
+das Koordinatensystem um diese Winkel im mathematisch negativen Drehsinn gedreht werden.
+Die Symmetrieoperatoren bilden eine Gruppe, die isomoprh zu der Gruppe der 
+Koordinatentransformationen ist.
+\subsection{Symmetrie des Hamiltonoperators}
+\label{sub:symmhamil}
+Wenn das System und damit auch der Hamiltonian invariant unter einer Symmetrieoperationen ist, vertauscht 
+der Hamiltonian mit dem Symmetrieoperator und somit gilt 
+\begin{equation*}
+  \hat{H} \Psi = E_n \Psi \iff 
+  \hat{P}_R \hat{H} \Psi = E_n \hat{P}_R \Psi \iff 
+  \hat{H} \hat{P}_R \Psi = \hat{H} \Psi' = E_n \Psi',
+\end{equation*}
+d.h. bei Symmetrien haben verschiedene Zustände die selbe Energie, womit Entartung vorliegt.
+\subsection{Die Gruppe der Schrödingergleichung}
+\label{sub:schrdgroup}
+Sei nun eine Energieniveau $E_n$ $d_n$-fach entartet.
+Dann wähle $d_n$ orthonormale Eigenfunktionen, welche zu $E_n$ gehören.
+Diese $d_n$ Eigenfunktionen spannen den entarteten Unterraum $\symcal{V} \in \symcal{H}$ 
+von dem gesamten Hilbertraum $\symcal{H}$ auf, welcher invariant unter den Symmetrieoperationen, welche 
+lineare Abbildungen 
+\begin{equation*}
+  \hat{P}_R: \quad \symcal{V} \to \symcal{V}
+\end{equation*}
+sind, ist.
+Die Darstellung sind unitär, da in dem Raum $\symcal{V}$ kein invarianter Unterraum exestiert.
+\subsection{Bestimmung einer Darstellung der Symmetriegruppe}
+Nach Abschnitt \ref{sub:schrdgroup} erhält man durch Anwendung der Symmetrieoperation auf eine 
+Eigenfunktion des entarteten Unterraums eine Linearkombination aller Eigenfunktionen
+\begin{equation*}
+  \hat{P}_R \Psi_\nu^n = \sum_\kappa \Gamma^n(R)_{\kappa \nu} \Psi_\kappa^n
+\end{equation*}
+Die Matrixen $\Gamma^n(R)$ bilden dann eine irreduzible Darstellung zu der Symmetriegruppe, unter welcher 
+der entartete Unterraum mit dem Energiveau $E_n$ invariant ist.
+\subsection{Unitarität der Darstellung}
+Nur wenn die Eigenfunktionen orthornmiert gewählt werden, sind die Darstellungen unitär.
+\subsection{Entartungsgrad}
+\begin{equation*}
+  \text{Entartungsgrad} = \text{Dimension der irreduziblen Darstellung}
+\end{equation*}
+\section{Liegruppen}
+\item erfüllen Gruppenaxiome 
+\item besitzen eine analytische Mannigfaltigkeit
+\item Abstandsbegriff (bilden topologischen Raum, metrischen Raum)
+\subsection{Definiton: Liegruppe}
+Eine Gruppe $\symcal{G}$ wird Liegruppe genannt wenn,
+\begin{enumerate}
+  \item $\symcal{G}$ besitzt mindestens eine endliche Darstellung $\Gamma(T)$ mit $T \in \symcal{G}$ der Dimension 
+  $d$. 
+  Definiere einen Abstand 
+    \begin{equation*}
+      d(T,T') = \sqrt{\sum_{\substack{j=1}{k=1}} \left | \Gamma(T)_{jk} - \Gamma(T')_{jk} \right |  } = d(T',T) > 0
+    \end{equation*}
+    und somit eine Metrik.
+    \item Jedes Element $T$ kann durch $n$ reelle Parameter $\theta = (\theta_1, \ldots, \theta_n)$ angegeben werden.
+      $n$ ist dann die Dimension der Liegruppe und die minimale Anzahl an Elementen  
+\end{enumerate}
 \end{document}
