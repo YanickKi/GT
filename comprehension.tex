@@ -154,6 +154,7 @@
   \item triviale Darstellung als Isomorphismus
   \item vll. noch Kristallstruktur und Blochtheorem 
   \item wichtigen Liegruppen und dessen Mannigfaltigkeit
+  \item Sachen von Henry
 \end{itemize}
 \section{Abstrakte Gruppentheorie}
 \subsection{Definition: Gruppe}
@@ -166,7 +167,7 @@
     \item \textbf{Inverse Element}: Zu jedem Element $A_i \in \symcal{G}$ exestiert ein eindeutiges inverses Element $A_i^{-1}$,
       so dass $A_i^{-1} * A_i = A_i * A_i^{-1} = E$ gilt.
   \end{enumerate}
-\subsubsection{endliche Gruppe}
+\subsubsection{Endliche Gruppe}
 Eine Gruppe mit einer endlichen Anzahl an Elementen heißt endliche Gruppe.
 Eine Gruppe $\symcal{G} = \{ E, A_2, \ldots, A_h \} $ ist eine endliche Gruppe der Ordnung $h$.
 Man schreibt auch $|\symcal{G}| = h$.
@@ -300,7 +301,7 @@ bringen, ist sie reduzibel, sonst irreduzibel.
 \subsection{Satz: unitäre Darstellungen}
 Jede Darstellung lässt sich mit Hilfe einer Ähnlichkeitstransformation auf eine 
 unitäre Darstellung abgebildet werden. Vorgehen: Konstruiere hermitische Matrix 
-${\mathbf{H} = \sum_i^h \symup{\Gamma}(A_i) \symup{\Gamma} (A_i^\dagger)}$. Dann diese diagonalisieren mit unitärer Trafo 
+${\mathbf{H} = \sum_i^h \symup{\Gamma}(A_i) \symup{\Gamma} (A_i)^\dagger}$. Dann diese diagonalisieren mit unitärer Trafo 
 $\mathbf{d} = \mathbf{U}^{-1} \mathbf{H} \mathbf{U}$. Somit ist
 die Darstellung 
 \begin{equation*}
@@ -326,7 +327,7 @@ die Darstellungen äquivalent sind.
 \label{sub:orth}
 Bei Betrachtung \textbf{nicht-äquivalenter}, unitärer, irreduziblen Darstellungen gilt
 \begin{equation*}
-  \sum_R \symup{\Gamma}^i(R)_{\mu \nu}\symup{\Gamma}^j(R)_{\alpha \beta} = \frac{h}{d_i} \delta_{ij}\delta_{\nu \alpha}\delta_{\nu \beta}.
+  \sum_R \symup{\Gamma}^i(R)^*_{\mu \nu}\symup{\Gamma}^j(R)_{\alpha \beta} = \frac{h}{d_i} \delta_{ij}\delta_{\nu \alpha}\delta_{\nu \beta}.
 \end{equation*}
 Geometrische Interpretation: die Gruppelemente $R = E, A_2, \ldots, A_h$ spannen einen 
 $h$-dimensionalen \enquote{Gruppenelement}-Vektorraum auf.
@@ -355,7 +356,7 @@ Im Folgenden wird der Charakter für die $k$-te Klasse $\symcal{G}_k$ durch $\ch
 \subsection{Satz: Zeilenorthogonalität}
 Wir das Orthogonalitätstheorem genutzt, kann 
 \begin{equation*}
-  \sum_R \chi^i(R) \chi^j(R) = \sum_R \chi^i(\symcal{G}_k) \chi^j(\symcal{G}_k) N_k = h \delta_{ij}
+  \sum_R \chi^i(R)^* \chi^j(R) = \sum_R \chi^i(\symcal{G}_k)^* \chi^j(\symcal{G}_k) N_k = h \delta_{ij}
 \end{equation*}
 gezeigt werden, wobei $N_k$ die Anzahl an Elementen in der $k$-ten Klasse ist.
 Somit formen die Charaktere der verschiedenen irreduziblen Darstellungen eine Menge von orthogonalen Vektoren 
@@ -395,10 +396,10 @@ der Anzahl an Elementen in der jeweiligen Klasse.
   \end{table}
 \subsection{Satz: Spaltenorthogonalität}
 \begin{equation*}
-  \sum_i \chi^i(\symcal{G}_k) \chi^i(\symcal{G}_l) = \frac{h}{N_k} \delta_{kl}
+  \sum_i \chi^i(\symcal{G}_k)^* \chi^i(\symcal{G}_l) = \frac{h}{N_k} \delta_{kl}
 \end{equation*}
 \subsection{Dekomposition von reduziblen Darestellungen}
-Bringe die Darstellung erst auf blockdiagonale Form:
+Bringe die Darstellung erst auf blockdiagonale Form
 \begin{equation*}
   \symup{\Gamma} (R) = 
   \begin{pmatrix}
@@ -418,7 +419,7 @@ Diagonale vorkommt.
 Durch Anwendung des Orthogonalitätstheorems \ref{sub:orth}, sind die Koeffizienten eindeutig 
 durch den Charakter der reduziblen Darstellung bestimmt
 \begin{equation*}
-  a_i = \frac{1}{h} \sum_k N_k \chi_{\text{irred}}^i (\symcal{G}_k) \chi_{\text{red}} (\symcal{G}_k) \label{eqn:decomp}
+  a_i = \frac{1}{h} \sum_k N_k \chi_{\text{irred}}^i (\symcal{G}_k)^* \chi_{\text{red}} (\symcal{G}_k) . \label{eqn:decomp}
 \end{equation*}
 \subsection{Reguläre Darstellung}
 Hier schiebt man einfach die Elemente in der Multiplikationstabelle so rum, so dass 
@@ -468,9 +469,9 @@ folgt, dass die reguläre Darstellung \textbf{jede} irreduzible Darstellung gena
 \section{Symmetrieoperationen in der Quantenmechanik}
 Ausgangspunkt ist die Schrödingergleichung 
 \begin{equation*}
-  \hat {H} \Psi_n = E_n^j \Psi_n
-\end{equation*},
-dabei gibt j den Grad der Entartung an.
+  \hat {H} \Psi_n = E_n^j \Psi_n.
+\end{equation*}
+Dabei gibt j den Grad der Entartung an.
 Ziel ist es nun einen Zusammenhang zwischen den Symmetrieoperationen und der Entartung der Energieniveaus 
 zu finden.
 \subsection{Wirkung der Symmetrieoperationen auf Wellenfunktionen}
@@ -503,7 +504,7 @@ lineare Abbildungen
   \hat{P}_R: \quad \symcal{V} \to \symcal{V}
 \end{equation*}
 sind, ist.
-Die Darstellung sind unitär, da in dem Raum $\symcal{V}$ kein invarianter Unterraum exestiert.
+Die Darstellung sind irreduzibel, da in dem Raum $\symcal{V}$ kein invarianter Unterraum exestiert.
 \subsection{Bestimmung einer Darstellung der Symmetriegruppe}
 Nach Abschnitt \ref{sub:schrdgroup} erhält man durch Anwendung der Symmetrieoperation auf eine 
 Eigenfunktion des entarteten Unterraums eine Linearkombination aller Eigenfunktionen
@@ -519,9 +520,11 @@ Nur wenn die Eigenfunktionen orthornmiert gewählt werden, sind die Darstellunge
   \text{Entartungsgrad} = \text{Dimension der irreduziblen Darstellung}
 \end{equation*}
 \section{Liegruppen}
+\begin{enumerate}
 \item erfüllen Gruppenaxiome 
 \item besitzen eine analytische Mannigfaltigkeit
 \item Abstandsbegriff (bilden topologischen Raum, metrischen Raum)
+\end{enumerate}
 \subsection{Definiton: Liegruppe}
 Eine Gruppe $\symcal{G}$ wird Liegruppe genannt wenn,
 \begin{enumerate}
@@ -529,10 +532,27 @@ Eine Gruppe $\symcal{G}$ wird Liegruppe genannt wenn,
   $d$. 
   Definiere einen Abstand 
     \begin{equation*}
-      d(T,T') = \sqrt{\sum_{\substack{j=1}{k=1}} \left | \Gamma(T)_{jk} - \Gamma(T')_{jk} \right |  } = d(T',T) > 0
+      d(T,T') = \sqrt{\sum_{\substack{j=1}{k=1}} \left | \Gamma(T)_{jk} - \Gamma(T')_{jk} \right |^2  } = d(T',T) > 0
     \end{equation*}
     und somit eine Metrik.
-    \item Jedes Element $T$ kann durch $n$ reelle Parameter $\theta = (\theta_1, \ldots, \theta_n)$ angegeben werden.
-      $n$ ist dann die Dimension der Liegruppe und die minimale Anzahl an Elementen  
+  \item Jedes Element $T$ kann durch $n$ reelle Parameter $\theta = (\theta_1, \ldots, \theta_n)$ angegeben werden.
+    $n$ ist dann die Dimension der Liegruppe und die minimale Anzahl an Elementen  
+  \item Nähe zum Einselement. Sei $\eta$ vorgegeben, dann gehört zu jedem Punkt $\theta =  (\theta_1, \ldots, \theta_n)$,
+    für den $\sum_i^n \theta_i^2 < \eta^2$ gilt, ein Element $T \in \symcal{G}$
+  \item Die Darstellungen $\Gamma(T(\theta))$ sind in den Parametern analytisch und somit in eine Potenzreihe 
 \end{enumerate}
+\subsection{Erzeugenden}
+Die Erzeugenden/Generatoren einer Liealgebra sind gemäß 
+\begin{equation*}
+  \frac{1}{i} \frac{\partial}{\partial \theta_j} \Gamma(T(\theta)) \biggr |_{\theta = 0} = t_j
+\end{equation*}
+definiert. 
+Der Faktor $\sfrac{1}{i}$ ist Konvention.
+Wenn man die Darstellungen bis zur ersten Ordnung entwickelt und fordert, dass die Darstellungen 
+unitär sind, folgt dass die Generatoren hermitesch sein müssen. 
+\begin{align*}
+  \Gamma(T(\theta)) &= \symbb{1} + \frac{\partial \Gamma(T(\theta))}{\partial \theta_a} \biggr |_{\theta = 0} \theta_a + \symbfcal{O}(\theta^2) 
+  = \mathbb{1} + i t_a \theta_a + \symbfcal{O}(\theta^2) \\
+  \implies \Gamma(T(\theta))\Gamma(T(\theta))^{\dagger}  &\approx \mathbb{1} + i \theta_a (t_a - t_a^{\dagger}) \stackrel{!}{=} \mathbb{1} \iff t_a = t_a^{\dagger}
+\end{align*}
 \end{document}
