@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.25)  7 MAR 2023 22:13
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.25)  8 MAR 2023 19:24
  restricted system commands enabled.
 **comprehension.tex
 (./comprehension.tex
@@ -1442,21 +1442,21 @@ $\TU/LatinModernMath(1)/m/n/10.95 −1$
 \openout4 = comprehension.loe
  [14] (./comprehension.aux)
 Package rerunfilecheck Info: File `comprehension.aux' has not changed.
-(rerunfilecheck)             Checksum: 8EE3896499F116830B361D02F01B61EC;26328.
+(rerunfilecheck)             Checksum: ADBC5052E31AE34C2827E153227EE1B8;26638.
 Package rerunfilecheck Info: File `comprehension.toc' has not changed.
-(rerunfilecheck)             Checksum: 474A2EF74F2F45ACB5090B1B64228443;4332.
+(rerunfilecheck)             Checksum: 3F5649074B4A6440DC41A5D7E02008F3;4404.
 )
 
 Here is how much of LuaTeX's memory you used:
- 35050 strings out of 478290
+ 35052 strings out of 478290
  100000,1977958 words of node,token memory allocated
  955 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 1 local_par, 5 glue, 4 kern, 1 penalty, 1 margin_ke
 rn, 4 glyph, 113 attribute, 68 glue_spec, 58 attribute_list, 1 write nodes
    avail lists: 1:6,2:2146,3:557,4:195,5:386,6:123,7:4792,8:85,9:596,10:9,11:544
 ,12:1
- 54078 multiletter control sequences out of 65536+600000
- 234 fonts using 95988399 bytes
+ 54079 multiletter control sequences out of 65536+600000
+ 234 fonts using 95987511 bytes
  108i,12n,114p,10607b,2933s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman5-b
 old.otf></home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm-ma
@@ -1473,10 +1473,10 @@ s/opentype/public/xits/XITSMath-Regular.otf></home/yanick/.local/texlive/2022/te
 xmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/yanick/.local/tex
 live/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/yanic
 k/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf>
-Output written on comprehension.pdf (14 pages, 103333 bytes).
+Output written on comprehension.pdf (14 pages, 103531 bytes).
 
-PDF statistics: 431 PDF objects out of 1000 (max. 8388607)
- 372 compressed objects within 4 object streams
- 79 named destinations out of 1000 (max. 131072)
- 369 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 436 PDF objects out of 1000 (max. 8388607)
+ 377 compressed objects within 4 object streams
+ 80 named destinations out of 1000 (max. 131072)
+ 377 words of extra memory for PDF output out of 10000 (max. 100000000)
 
