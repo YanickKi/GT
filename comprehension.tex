@@ -155,6 +155,7 @@
   \item vll. noch Kristallstruktur und Blochtheorem 
   \item wichtigen Liegruppen und dessen Mannigfaltigkeit
   \item Sachen von Henry
+  \item Mannigfaltigkeiten verbessern evtl. Bilder
 \end{itemize}
 \section{Abstrakte Gruppentheorie}
 \subsection{Definition: Gruppe}
@@ -262,7 +263,6 @@ Eine invariante Untergruppe $\symcal{S}$ einer Gruppe $G$ bildet mit all ihren $
 \begin{equation*}
   \sfrac{\symcal{G}}{\symcal{S}} = \{S, \symcal{S}X_1, \symcal{S}X_2, \ldots, \symcal{S}X_{l-1} \},
 \end{equation*}
-Moodle Diese Veranstaltung verfügt über einen Moodle
 wobei die invariante Untergruppe $\symcal{S}$ das Einselement bildet.
 Die Ordnung der Faktorgruppe entspricht $\sfrac{|\symcal{G}|}{|\symcal{S}|}$.
 \section{Darstellungstheorie}
@@ -339,8 +339,8 @@ mit $d_i$ als Dimension der $i$-ten irreduziblen Darstellung der Gruppe $\symcal
 \begin{equation*}
   \sum_i d_i^2 = |\symcal{G}|,
 \end{equation*}
-da zu jeder Darstellung $\symup{\Gamma}^i$ $d_i^2$ verschiedene Vektoren gibt. 
-Das heißt in Summe exestieren in diesem Vektorraum $\sum_i d_i^2$ verschiedene Vektoren.
+da es zu jeder Darstellung $\symup{\Gamma}^i$ $d_i^2$ verschiedene Vektoren gibt. 
+Das heißt, dass in Summe in diesem Vektorraum $\sum_i d_i^2$ verschiedene Vektoren exestieren.
 Da in einem $h$-dimensionalen Vektorraum nur maximal $h$ zueinander orthogonale Vektoren exestieren können,
 folgt $\sum_i d_i^2 \leq h = |\symcal{G}|$. 
 Die eindeutige Gleichheit wird z.B. im Tinkham bewiesen.
@@ -417,7 +417,7 @@ Somit ist die Spur der reduziblen Darstellung die Summe der Spuren der irreduzib
 wobei der Koeffizient $a_i$ angibt, wie oft die $i$-te irreduzible Darstellung auf der 
 Diagonale vorkommt.
 Durch Anwendung des Orthogonalitätstheorems \ref{sub:orth}, sind die Koeffizienten eindeutig 
-durch den Charakter der reduziblen Darstellung bestimmt
+durch den Charakter der reduziblen Darstellung bestimmt.
 \begin{equation*}
   a_i = \frac{1}{h} \sum_k N_k \chi_{\text{irred}}^i (\symcal{G}_k)^* \chi_{\text{red}} (\symcal{G}_k) . \label{eqn:decomp}
 \end{equation*}
@@ -504,7 +504,7 @@ lineare Abbildungen
   \hat{P}_R: \quad \symcal{V} \to \symcal{V}
 \end{equation*}
 sind, ist.
-Die Darstellung sind irreduzibel, da in dem Raum $\symcal{V}$ kein invarianter Unterraum exestiert.
+Die Darstellungen sind irreduzibel, da in dem Raum $\symcal{V}$ kein invarianter Unterraum exestiert.
 \subsection{Bestimmung einer Darstellung der Symmetriegruppe}
 Nach Abschnitt \ref{sub:schrdgroup} erhält man durch Anwendung der Symmetrieoperation auf eine 
 Eigenfunktion des entarteten Unterraums eine Linearkombination aller Eigenfunktionen
@@ -526,7 +526,7 @@ Nur wenn die Eigenfunktionen orthornmiert gewählt werden, sind die Darstellunge
 \item Abstandsbegriff (bilden topologischen Raum, metrischen Raum)
 \end{enumerate}
 \subsection{Definiton: Liegruppe}
-Eine Gruppe $\symcal{G}$ wird Liegruppe genannt wenn,
+Eine Gruppe $\symcal{G}$ wird Liegruppe genannt, wenn
 \begin{enumerate}
   \item $\symcal{G}$ besitzt mindestens eine endliche Darstellung $\Gamma(T)$ mit $T \in \symcal{G}$ der Dimension 
   $d$. 
@@ -536,15 +536,21 @@ Eine Gruppe $\symcal{G}$ wird Liegruppe genannt wenn,
     \end{equation*}
     und somit eine Metrik.
   \item Jedes Element $T$ kann durch $n$ reelle Parameter $\theta = (\theta_1, \ldots, \theta_n)$ angegeben werden.
-    $n$ ist dann die Dimension der Liegruppe und die minimale Anzahl an Elementen  
+    $n$ ist dann die Dimension der Liegruppe und die minimale Anzahl an Elementen.
   \item Nähe zum Einselement. Sei $\eta$ vorgegeben, dann gehört zu jedem Punkt $\theta =  (\theta_1, \ldots, \theta_n)$,
-    für den $\sum_i^n \theta_i^2 < \eta^2$ gilt, ein Element $T \in \symcal{G}$
-  \item Die Darstellungen $\Gamma(T(\theta))$ sind in den Parametern analytisch und somit in eine Potenzreihe 
+    für den $\sum_i^n \theta_i^2 < \eta^2$ gilt, ein Element $T \in \symcal{G}$.
+  \item Die Darstellungen $\Gamma(T(\theta))$ sind in den Parametern analytisch und somit in eine Potenzreihe entwickelbar.
 \end{enumerate}
-\subsection{Erzeugenden}
-Die Erzeugenden/Generatoren einer Liealgebra sind gemäß 
+Die Gruppenelemente $T(\theta)$ sind \enquote{smooth} bzgl. den Parametern. 
+Das bedeutet, dass die wenn die Gruppenelemente nah beieinander sind, dass die Parameter ebenfalls nah beieinander sind.
+Ebenfalls soll das Einselement bei $\theta = 0$ liegen:
 \begin{equation*}
-  \frac{1}{i} \frac{\partial}{\partial \theta_j} \Gamma(T(\theta)) \biggr |_{\theta = 0} = t_j
+  T(\theta)\big |_{\theta = 0} = E \iff \Gamma(T(\theta)) \big |_{\theta = 0} = \mathbb{1}
+\end{equation*}
+\subsection{Erzeugenden}
+Die $n$ Erzeugenden/Generatoren einer $n$-dimensionalen Liealgebra sind gemäß 
+\begin{equation*}
+  \frac{1}{i} \frac{\partial}{\partial \theta_j} \Gamma(T(\theta)) \biggr |_{\theta = 0} = t_j \label{eqn:gen}
 \end{equation*}
 definiert. 
 Der Faktor $\sfrac{1}{i}$ ist Konvention.
@@ -555,4 +561,84 @@ unitär sind, folgt dass die Generatoren hermitesch sein müssen.
   = \mathbb{1} + i t_a \theta_a + \symbfcal{O}(\theta^2) \\
   \implies \Gamma(T(\theta))\Gamma(T(\theta))^{\dagger}  &\approx \mathbb{1} + i \theta_a (t_a - t_a^{\dagger}) \stackrel{!}{=} \mathbb{1} \iff t_a = t_a^{\dagger}
 \end{align*}
+\subsection{Strukturkonstanten}
+Ausgang ist die Gruppeneigenschaft. 
+Somit muss mit $T(\theta), \; T(\theta') \in \symcal{G}$ $T(\theta)T(\theta') = T(f(\theta, \theta'))$ gelten.
+Es gilt ebenfalls $\theta = \theta_1, \ldots, \theta_n, \; f = f_1, \ldots, f_n$ mit n als Dimension der Gruppe.
+Bestimme nun $f(\theta, \theta')$ und entwickle $f$ in die zweite Ordnung.
+Dann nochmal die Darstellungen in erste Ordnung entwickeln und dann Koeffizientenvergleich machen, womit 
+die Bedingung für eine Liealgebra
+\begin{equation*}
+  [t_a, t_b] = i \sum_c^n f_{ab}^ct_c
+\end{equation*}
+folgt. 
+Die $f_{ab}^c$ als sind Strukturkonstanten,
+welche extrem wichtig sind, da diese die gesamte Gruppenmultiplikation zusammenfassen.
+\subsection{Exponentielle Parameterisierung}
+Wenn man nun etwas von der Eins weggeht, lässt sich die Darstellung durch 
+ein Entwicklung in den Parametern darstellen:
+\begin{equation*}
+  \Gamma(\symup{d}\theta) = \mathbb{1} + i \sum_a^n t_a \symup{d}\theta_a 
+\end{equation*}
+Wir können $\symup{d}\theta_a$ auch einfach durch $\symup{d}\theta_a = \frac{\theta}{k}$ darstellen und $k$ gegeben
+Unendlich laufen lassen.
+Damit lässt sich die Darstellung
+\begin{equation*}
+  \Gamma(\theta) = \lim_{k \to \infty} (\mathbb{1} + i \sum_a^n t_a \frac{\theta_a}{k})^k = \symup{e}^{i\sum_a^n t_a \theta_a}
+  = \symup{e}^{i\vec{t} \cdot \vec{\theta}}
+\end{equation*}
+finden.
+\subsection{Lie-Klammern}
+Die Erzeugenden erfüllen die Axiome einer Liealgebra, d.h. für die Generatoren $t_a \in \symcal{V}$ ist 
+zusätzlich eine Verknüpfung, die Lie-Klammer, 
+\begin{align*}
+  \symcal{V} * \symcal{V} &\to \symcal{V} \\
+  x,y \in \symcal{V}      &\to [x,y] \in \symcal{V}
+\end{align*}
+definieren, welche die Eigenschaften 
+\begin{enumerate}
+  \item Biliniarität: $[\alpha x + \beta y, z] = \alpha [x,z] + \beta [y,z]$
+  \item $[x,x] = 0$
+  \item Jacobi-Identität (zyklische Vertauschung): $[x, [y,z]] + [z,[x,y]] + [y,[z,x]] = 0$
+\end{enumerate}
+erfüllen.
+\subsection{SO(3)}
+S für speziell (Determinante ist eins), O für orthogonal und drei für $3 \times 3$ Darstellungsmatrizen.
+Die SO(3) ist eigentlich einfach nur  die Gruppe der Drehungen im $\mathbb{R}^3$.
+Generatoren $J_i$ gemäß Gleichung \eqref{eqn:gen} bestimmen:
+\begin{equation*}
+  J_1 = 
+  \begin{pmatrix}
+    0 & 0 & 0   \\
+    0 & 0 & -i  \\
+    0 & i & 0 
+  \end{pmatrix}, 
+  J_2 = 
+  \begin{pmatrix}
+    0 & 0   & i \\
+    0 & 0   & 0 \\
+    -i & 0  & 0 
+  \end{pmatrix}
+  J_3= 
+  \begin{pmatrix}
+    0 & -i  & 0 \\
+    i & 0   & 0 \\
+    0 & 0   & 0 
+  \end{pmatrix}
+\end{equation*}
+Die Kommutatorrelation ist 
+\begin{equation*}
+  [J_i, J_j] = i \sum_k \epsilon_{ijk} J_k 
+\end{equation*}
+mit dem epsilon-Tensor als Strukturkonstanten und somit bilden die Generatoren $J_i$ eine Liealgebra.
+Die Gruppenmannigfaltigkeit wird durch  Drehungen im $\mathbb{R}^3$ auf einer Vollkugel mit dem Radius $\pi$ 
+um den Vektor $\hat{k} = \sfrac{\vec{k}}{|\vec{k}|} = (k_1, k_2, k_3)^T$ mit $|\vec{k}| = \theta$ als
+Drehwinkel beschrieben.
+Nach der Rodrigues-Formel gilt 
+\begin{equation*}
+  \Gamma_{ij} = (1-\cos(\theta)) k_i k_j + \cos(\theta) \delta_{ij} + \sin(\theta) \sum_m \epsilon_{imj}k_m.
+\end{equation*}
+Es gilt außerdem $\Gamma(\hat{k}) = \Gamma(-\hat{k})$.
+\subsection{SU(2)}
+
 \end{document}
