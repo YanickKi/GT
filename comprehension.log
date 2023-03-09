@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.25)  8 MAR 2023 20:58
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.25)  9 MAR 2023 19:59
  restricted system commands enabled.
 **comprehension.tex
 (./comprehension.tex
@@ -1370,92 +1370,103 @@ Package microtype Info: Loading generic protrusion settings for font family
 {/home/yanick/.local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Package tocbasic Info: character protrusion at toc deactivated on input line 14
 2.
- (./comprehension.toc [2
-
-])
+ (./comprehension.toc)
 \tf@toc=\write3
 
 \openout3 = comprehension.toc
 \c@df=\count354
 Package tocbasic Info: character protrusion at lof deactivated on input line 14
 7.
- (./comprehension.loe) [3]
+ (./comprehension.loe) [2
+
+]
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 9.00096pt on input line 176.
+(Font)              scaled to size 9.00096pt on input line 178.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 176.
+(Font)              scaled to size 6.00064pt on input line 178.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 176.
+(Font)              scaled to size 5.00053pt on input line 178.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 8.99904pt on input line 176.
+(Font)              scaled to size 8.99904pt on input line 178.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 176.
+(Font)              scaled to size 5.99936pt on input line 178.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 176.
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 207--211
+(Font)              scaled to size 4.99947pt on input line 178.
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 209--213
 
  []
 
-[5] [6]
-LaTeX Font Info:    Calculating math sizes for size <7.63434> on input line 264
+[4] [5]
+LaTeX Font Info:    Calculating math sizes for size <7.63434> on input line 266
 .
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 7.63515pt on input line 264.
+(Font)              scaled to size 7.63515pt on input line 266.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 5.34457pt on input line 264.
+(Font)              scaled to size 5.34457pt on input line 266.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 3.81757pt on input line 264.
+(Font)              scaled to size 3.81757pt on input line 266.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 7.63351pt on input line 264.
+(Font)              scaled to size 7.63351pt on input line 266.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 5.34343pt on input line 264.
+(Font)              scaled to size 5.34343pt on input line 266.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 3.81676pt on input line 264.
+(Font)              scaled to size 3.81676pt on input line 266.
 
-Overfull \hbox (9.39835pt too wide) in paragraph at lines 302--307
+Overfull \hbox (9.39835pt too wide) in paragraph at lines 304--309
 \TU/lmr/m/n/10.95 stel-lung ab-ge-bil-det wer-den. Vor-ge-hen: Kon-stru-ie-re he
 r-mi-ti-sche Ma-trix $[]$.
  []
 
-[7]
-Overfull \hbox (3.12184pt too wide) in paragraph at lines 348--350
+[6]
+Overfull \hbox (3.12184pt too wide) in paragraph at lines 350--352
 \TU/lmr/m/n/10.95 Der Cha-rak-ter ei-ner Dar-stel-lung $\TU/LatinModernMath(1)/
 m/n/10.95 Γ[](𝑅)$ \TU/lmr/m/n/10.95 ist die Men-ge der $\TU/LatinModernMath
 (1)/m/n/10.95 ℎ$ \TU/lmr/m/n/10.95 Zah-len $\TU/LatinModernMath(1)/m/n/10.95 
 𝜒[](𝐸), 𝜒[](𝐴[]), … , 𝜒[](𝐴[])$
  []
 
-[8]
-Overfull \hbox (3.0441pt too wide) detected at line 392
-$\TU/LatinModernMath(1)/m/n/10.95 −1$
- []
-
-
+[7]
 Overfull \hbox (3.0441pt too wide) detected at line 394
 $\TU/LatinModernMath(1)/m/n/10.95 −1$
  []
 
-[9] [10] [11] [12] [13]
+
+Overfull \hbox (3.0441pt too wide) detected at line 396
+$\TU/LatinModernMath(1)/m/n/10.95 −1$
+ []
+
+[8] [9] [10] [11] [12] [13]
 \tf@loe=\write4
 
 \openout4 = comprehension.loe
  [14] (./comprehension.aux)
-Package rerunfilecheck Info: File `comprehension.aux' has not changed.
-(rerunfilecheck)             Checksum: ADBC5052E31AE34C2827E153227EE1B8;26638.
-Package rerunfilecheck Info: File `comprehension.toc' has not changed.
-(rerunfilecheck)             Checksum: 3F5649074B4A6440DC41A5D7E02008F3;4404.
+
+Package rerunfilecheck Warning: File `comprehension.aux' has changed. Rerun.
+
+Package rerunfilecheck Info: Checksums for `comprehension.aux':
+(rerunfilecheck)             Before: 20A0848488E6594DFBC7CD34F162276D;26043
+(rerunfilecheck)             After:  60EB92405ACBB7A1FCEB4777AB3787F2;27128.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `comprehension.toc' has changed. Rerun.
+
+Package rerunfilecheck Info: Checksums for `comprehension.toc':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  AA9D4C157C3EB16C97B050DE754695DA;4492.
 )
 
 Here is how much of LuaTeX's memory you used:
- 35052 strings out of 478290
+ 35051 strings out of 478290
  100000,1977958 words of node,token memory allocated
- 955 words of node memory still in use:
+ 953 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 1 local_par, 5 glue, 4 kern, 1 penalty, 1 margin_ke
-rn, 4 glyph, 113 attribute, 68 glue_spec, 58 attribute_list, 1 write nodes
-   avail lists: 1:6,2:2146,3:557,4:195,5:386,6:123,7:4792,8:85,9:596,10:9,11:544
-,12:1
- 54079 multiletter control sequences out of 65536+600000
+rn, 4 glyph, 119 attribute, 64 glue_spec, 61 attribute_list, 1 write nodes
+   avail lists: 1:6,2:971,3:231,4:112,5:386,6:44,7:4792,8:49,9:596,10:9,11:544,1
+2:1
+ 54077 multiletter control sequences out of 65536+600000
  234 fonts using 95987955 bytes
  108i,12n,114p,10607b,2933s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman5-b
@@ -1468,15 +1479,15 @@ texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></home/yan
 ick/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><
 /home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm-math/latinm
 odern-math.otf></home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/publi
-c/lm-math/latinmodern-math.otf></home/yanick/.local/texlive/2022/texmf-dist/font
-s/opentype/public/xits/XITSMath-Regular.otf></home/yanick/.local/texlive/2022/te
+c/xits/XITSMath-Regular.otf></home/yanick/.local/texlive/2022/texmf-dist/fonts/o
+pentype/public/lm-math/latinmodern-math.otf></home/yanick/.local/texlive/2022/te
 xmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/yanick/.local/tex
 live/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/yanic
 k/.local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf>
-Output written on comprehension.pdf (14 pages, 103521 bytes).
+Output written on comprehension.pdf (14 pages, 103217 bytes).
 
-PDF statistics: 436 PDF objects out of 1000 (max. 8388607)
- 377 compressed objects within 4 object streams
- 80 named destinations out of 1000 (max. 131072)
- 377 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 393 PDF objects out of 1000 (max. 8388607)
+ 334 compressed objects within 4 object streams
+ 81 named destinations out of 1000 (max. 131072)
+ 385 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -156,6 +156,8 @@
   \item wichtigen Liegruppen und dessen Mannigfaltigkeit
   \item Sachen von Henry
   \item Mannigfaltigkeiten verbessern evtl. Bilder
+  \item Hakenregel  
+  \item $SO(3) \simeq SU(2) \times SU(2)$
 \end{itemize}
 \section{Abstrakte Gruppentheorie}
 \subsection{Definition: Gruppe}
@@ -398,7 +400,7 @@ der Anzahl an Elementen in der jeweiligen Klasse.
 \begin{equation*}
   \sum_i \chi^i(\symcal{G}_k)^* \chi^i(\symcal{G}_l) = \frac{h}{N_k} \delta_{kl}
 \end{equation*}
-\subsection{Dekomposition von reduziblen Darestellungen}
+\subsection{Dekomposition von reduziblen Darstellungen}
 Bringe die Darstellung erst auf blockdiagonale Form
 \begin{equation*}
   \symup{\Gamma} (R) = 
@@ -575,6 +577,7 @@ folgt.
 Die $f_{ab}^c$ als sind Strukturkonstanten,
 welche extrem wichtig sind, da diese die gesamte Gruppenmultiplikation zusammenfassen.
 \subsection{Exponentielle Parameterisierung}
+\label{sub:exp}
 Wenn man nun etwas von der Eins weggeht, lässt sich die Darstellung durch 
 ein Entwicklung in den Parametern darstellen:
 \begin{equation*}
@@ -634,11 +637,35 @@ mit dem epsilon-Tensor als Strukturkonstanten und somit bilden die Generatoren $
 Die Gruppenmannigfaltigkeit wird durch  Drehungen im $\mathbb{R}^3$ auf einer Vollkugel mit dem Radius $\pi$ 
 um den Vektor $\hat{k} = \sfrac{\vec{k}}{|\vec{k}|} = (k_1, k_2, k_3)^T$ mit $|\vec{k}| = \theta$ als
 Drehwinkel beschrieben.
-Nach der Rodrigues-Formel gilt 
+Es gilt 
 \begin{equation*}
   \Gamma_{ij} = (1-\cos(\theta)) k_i k_j + \cos(\theta) \delta_{ij} + \sin(\theta) \sum_m \epsilon_{imj}k_m.
 \end{equation*}
 Es gilt außerdem $\Gamma(\hat{k}) = \Gamma(-\hat{k})$.
 \subsection{SU(2)}
-
+Die Generatoren der SU(2) sind die Pauli-Matrizen gewichtet mit dem Faktor $\sfrac{1}{2}$
+\begin{equation*}
+  s_i = \frac{1}{2} \sigma_i,
+\end{equation*}
+welche die Kommutatorrelation 
+\begin{equation*}
+  [s_i, s_j] = i \sum_k \epsilon_{ijk} s_k
+\end{equation*}
+erfüllen erneut mit dem epslion-Tensor als Strukturkonstanten.
+Die Gruppenmannigfaltigkeit ist die selbe wie die der SO(3) bis auf, dass die Vollkugel den Radius $2\pi$ besitzt.
+Die Darstellungen können durch das Matrixexponential (s. \ref{sub:exp}) gewonnen werden
+\begin{equation*}
+  \Gamma(\alpha) = \symup{e}^{i\alpha S_3} = \symup{i\frac{\alpha}{2}\sigma_3} = 
+  \begin{pmatrix}
+    \symup{e}^{i\frac{\alpha}{2}} & 0                               \\
+    0                             & \symup{e}^{-i\frac{\alpha}{2}}  \\
+  \end{pmatrix}
+\end{equation*}
+jedoch gilt $\Gamma(\alpha + 2\pi) = - \Gamma(\alpha)$.
+Erst bei einer Verschiebung um $4\pi$ kommt man am selben Punkt an.
+\subsection{Vergleich SO(3) und SU(2)}
+Die Generatoren der SO(3) und SU(2) haben dieselben Kommutatorrelationen und somit auch die selbe Liealgebra
+(vielleicht genauer: deren Liealgebren sind isomorph). 
+Sie unterscheiden sich lediglich in ihren Gruppenmannigfaltigkeiten.
+Due SU(2) ist eine doppelte Überlagerung der SO(3).
 \end{document}
