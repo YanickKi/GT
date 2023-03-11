@@ -1,50 +1,61 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {section}{\numberline {1}Ergänzen}{3}{section.1}%
-\contentsline {section}{\numberline {2}Abstrakte Gruppentheorie}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Definition: Gruppe}{3}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Endliche Gruppe}{3}{subsubsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.2}Multiplikationstabelle}{4}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Rearrangement Theorem}{4}{subsubsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.3}Zyklische Gruppe}{4}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Untergruppen und Nebenklassen}{4}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Satz: Disjunkheit oder Gleichheit}{4}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}Satz: Index einer Untergruppe}{5}{subsubsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.5}Konjugierte Elemente und Klassen}{5}{subsection.2.5}%
-\contentsline {subsubsection}{\numberline {2.5.1}Konjugationsklasse}{5}{subsubsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.6}Normalteiler und Faktorgruppen}{5}{subsection.2.6}%
-\contentsline {subsubsection}{\numberline {2.6.1}Definition: Normalteiler}{5}{subsubsection.2.6.1}%
-\contentsline {subsubsection}{\numberline {2.6.2}Einschub: Komplexe}{5}{subsubsection.2.6.2}%
-\contentsline {subsubsection}{\numberline {2.6.3}Satz: Nebenklasse einer invarianten Untergruppe}{6}{subsubsection.2.6.3}%
-\contentsline {subsubsection}{\numberline {2.6.4}Definiton: Faktorgruppe}{6}{subsubsection.2.6.4}%
-\contentsline {section}{\numberline {3}Darstellungstheorie}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Definition: Darstellung}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Definition: Äquivalente Darstellung}{6}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}(Ir)reduzibilität}{6}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Satz: unitäre Darstellungen}{7}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Schur'sches Lemma}{7}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Alternative Formulierung}{7}{subsubsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.6}Orthogonalitätstheorem}{7}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Satz von Burnside}{7}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}Definition: Charakter}{8}{subsection.3.8}%
-\contentsline {subsection}{\numberline {3.9}Satz: Zeilenorthogonalität}{8}{subsection.3.9}%
-\contentsline {subsection}{\numberline {3.10}Charaktertafel}{8}{subsection.3.10}%
-\contentsline {subsection}{\numberline {3.11}Satz: Spaltenorthogonalität}{9}{subsection.3.11}%
-\contentsline {subsection}{\numberline {3.12}Dekomposition von reduziblen Darstellungen}{9}{subsection.3.12}%
-\contentsline {subsection}{\numberline {3.13}Reguläre Darstellung}{9}{subsection.3.13}%
-\contentsline {section}{\numberline {4}Symmetrieoperationen in der Quantenmechanik}{10}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Wirkung der Symmetrieoperationen auf Wellenfunktionen}{10}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Symmetrie des Hamiltonoperators}{10}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Die Gruppe der Schrödingergleichung}{10}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Bestimmung einer Darstellung der Symmetriegruppe}{11}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Unitarität der Darstellung}{11}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Entartungsgrad}{11}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Liegruppen}{11}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Definiton: Liegruppe}{11}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Erzeugenden}{12}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Strukturkonstanten}{12}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Exponentielle Parameterisierung}{12}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Lie-Klammern}{13}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}SO(3)}{13}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}SU(2)}{13}{subsection.5.7}%
-\contentsline {subsection}{\numberline {5.8}Vergleich SO(3) und SU(2)}{14}{subsection.5.8}%
+\contentsline {section}{\numberline {1}Ergänzen}{4}{section.1}%
+\contentsline {section}{\numberline {2}Abstrakte Gruppentheorie}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Definition: Gruppe}{4}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Endliche Gruppe}{4}{subsubsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.2}Multiplikationstabelle}{5}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Rearrangement Theorem}{5}{subsubsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.3}Zyklische Gruppe}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Untergruppen und Nebenklassen}{5}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Satz: Disjunkheit oder Gleichheit}{5}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Satz: Index einer Untergruppe}{6}{subsubsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.5}Konjugierte Elemente und Klassen}{6}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Konjugationsklasse}{6}{subsubsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.6}Normalteiler und Faktorgruppen}{6}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Definition: Normalteiler}{6}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Einschub: Komplexe}{6}{subsubsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.3}Satz: Nebenklasse einer invarianten Untergruppe}{7}{subsubsection.2.6.3}%
+\contentsline {subsubsection}{\numberline {2.6.4}Definiton: Faktorgruppe}{7}{subsubsection.2.6.4}%
+\contentsline {section}{\numberline {3}Darstellungstheorie}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Definition: Darstellung}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Definition: Äquivalente Darstellung}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}(Ir)reduzibilität}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Satz: unitäre Darstellungen}{8}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Schur'sches Lemma}{8}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Alternative Formulierung}{8}{subsubsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.6}Orthogonalitätstheorem}{8}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Satz von Burnside}{8}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Definition: Charakter}{9}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Satz: Zeilenorthogonalität}{9}{subsection.3.9}%
+\contentsline {subsection}{\numberline {3.10}Charaktertafel}{9}{subsection.3.10}%
+\contentsline {subsection}{\numberline {3.11}Satz: Spaltenorthogonalität}{10}{subsection.3.11}%
+\contentsline {subsection}{\numberline {3.12}Dekomposition von reduziblen Darstellungen}{10}{subsection.3.12}%
+\contentsline {subsection}{\numberline {3.13}Reguläre Darstellung}{10}{subsection.3.13}%
+\contentsline {section}{\numberline {4}Symmetrieoperationen in der Quantenmechanik}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Wirkung der Symmetrieoperationen auf Wellenfunktionen}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Symmetrie des Hamiltonoperators}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Die Gruppe der Schrödingergleichung}{11}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Bestimmung einer Darstellung der Symmetriegruppe}{12}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Unitarität der Darstellung}{12}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Entartungsgrad}{12}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Liegruppen}{12}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Definiton: Liegruppe}{12}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Erzeugenden}{13}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Strukturkonstanten}{13}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Exponentielle Parameterisierung}{13}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Lie-Klammern}{14}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}SO(3)}{14}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}SU(2)}{14}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Vergleich SO(3) und SU(2)}{15}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9}Darestellungen der SU(2) und SO(3)}{15}{subsection.5.9}%
+\contentsline {section}{\numberline {6}Poincare-Gruppe}{15}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Lorentz-Transformation}{15}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Eigenschaften der Lorentz-Transformation}{16}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Lorentz-Gruppe als Liegruppe}{16}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Rapiditäten}{16}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Darstellung der Lorentzgruppe}{17}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}Darstellung eines Vierervektors als hermitesche $2 \times 2$-Matrix}{17}{subsubsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.6}Die Gruppe $\text {L}_+^{\uparrow }$}{17}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Relativstische Schreibweise einer allgemeinen Lorentz-Transformation}{18}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Transformation eines Spinors mit Spin $s = 1/2$ unter $\text {L}_+^{\uparrow }$}{18}{subsection.6.8}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

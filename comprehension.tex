@@ -140,12 +140,6 @@
 \maketitle
 
 \tableofcontents
-
-\theoremstyle{remark}
-\newtheorem{df}{Definition}
-\listoftheorems
-
-
 \newpage
 \section{Ergänzen}
 \begin{itemize}
@@ -157,7 +151,9 @@
   \item Sachen von Henry
   \item Mannigfaltigkeiten verbessern evtl. Bilder
   \item Hakenregel  
-  \item $SO(3) \simeq SU(2) \times SU(2)$
+  \item Klassifizierung der Lorentz-Trafos (eigentlich, orthochron)
+  \item Ab Darstellung eines Viervektors als hermitesche 2 kreuz 2 Matrix recherchieren.
+  \item Ende der Vorlesung 11 mit den Dirac-Spinoren und der Dirac-Gleichung
 \end{itemize}
 \section{Abstrakte Gruppentheorie}
 \subsection{Definition: Gruppe}
@@ -302,7 +298,7 @@ Lässt sich eine Darstellung durch eine globale Ähnlichkeitstransformation auf 
 bringen, ist sie reduzibel, sonst irreduzibel.
 \subsection{Satz: unitäre Darstellungen}
 Jede Darstellung lässt sich mit Hilfe einer Ähnlichkeitstransformation auf eine 
-unitäre Darstellung abgebildet werden. Vorgehen: Konstruiere hermitische Matrix 
+unitäre Darstellung abgebildet werden. Vorgehen: Konstruiere hermitesche Matrix 
 ${\mathbf{H} = \sum_i^h \symup{\Gamma}(A_i) \symup{\Gamma} (A_i)^\dagger}$. Dann diese diagonalisieren mit unitärer Trafo 
 $\mathbf{d} = \mathbf{U}^{-1} \mathbf{H} \mathbf{U}$. Somit ist
 die Darstellung 
@@ -642,7 +638,10 @@ Es gilt
   \Gamma_{ij} = (1-\cos(\theta)) k_i k_j + \cos(\theta) \delta_{ij} + \sin(\theta) \sum_m \epsilon_{imj}k_m.
 \end{equation*}
 Es gilt außerdem $\Gamma(\hat{k}) = \Gamma(-\hat{k})$.
+Auf der Vollkugel sind die gegenüberliegenden Punkte zu identifizieren,
+wo dann die Elemente identisch sind ({\color{red}hier bin ich mir nicht sicher})
 \subsection{SU(2)}
+Die SU(2) ist die lineare Gruppe der unitären (U für unitär) Matritzen mit Determinante (S für spezielle) 1.
 Die Generatoren der SU(2) sind die Pauli-Matrizen gewichtet mit dem Faktor $\sfrac{1}{2}$
 \begin{equation*}
   s_i = \frac{1}{2} \sigma_i,
@@ -662,10 +661,255 @@ Die Darstellungen können durch das Matrixexponential (s. \ref{sub:exp}) gewonne
   \end{pmatrix}
 \end{equation*}
 jedoch gilt $\Gamma(\alpha + 2\pi) = - \Gamma(\alpha)$.
-Erst bei einer Verschiebung um $4\pi$ kommt man am selben Punkt an.
+Erst bei einer Verschiebung um $4\pi$ kommt man am selben Punkt an (
+  eine Drehung um $4\pi$ entspricht dem Einheitselement
+), wobei hier wieder die gegenüberliegenden Punkte auf der Vollkugel 
+mit Radius $2\pi$ zu identifizieren sind, welche 
+die selben Elemente bilden ({\color{red}hier bin ich mir wieder nicht sicher}).
 \subsection{Vergleich SO(3) und SU(2)}
 Die Generatoren der SO(3) und SU(2) haben dieselben Kommutatorrelationen und somit auch die selbe Liealgebra
 (vielleicht genauer: deren Liealgebren sind isomorph). 
 Sie unterscheiden sich lediglich in ihren Gruppenmannigfaltigkeiten.
-Due SU(2) ist eine doppelte Überlagerung der SO(3).
+Die SU(2) ist eine doppelte Überlagerung der SO(3).
+\subsection{Darestellungen der SU(2) und SO(3)}
+$\sigma_z/2$ ({\color{red} nicht sicher hier, in Vorlesung steht $s_z/2$ 
+aber sehe noch nicht die Richtigkeit}) bilden 2 dimensionale Darstellung und $(\epsilon_i)_{jk}$ bilden 3 dimensionale Darstellung.
+Im Allgemeinen gilt für beliebiges $j$ (ganz- oder halbzahlig) 
+\begin{equation*}
+  J_z^{2j+1} = 
+  \begin{pmatrix}
+    j & & &  \\
+    & j - 1 & & \\
+    & & \! \!  \ddots & \\
+    & & & -j
+  \end{pmatrix}
+  \implies \Gamma(\alpha) = \symup{e}^{i\alpha J_z} = 
+  \begin{pmatrix}
+    \symup{e}^{i\alpha j} & & &  \\
+    & \symup{e}^{i\alpha (j-1)} & & \\
+    & & \! \!  \ddots & \\
+    & & & \symup{e}^{- i\alpha j}
+  \end{pmatrix}
+\end{equation*}
+Bei ganzahligem $j$ folgt $\Gamma(\alpha +2\pi)$, bei halbzahligen $j$ folgt $\Gamma(\alpha + 2\pi) = - 
+\Gamma(\alpha)$
+\section{Poincare-Gruppe}
+Ab hier wird die Einsteinsche Summenkonvention verwendet.
+\subsection{Lorentz-Transformation}
+Eine Lorentz-Transformation (LT) ist ein $\Lambda$ ist ein lineare Transformation, die 
+Raumzeitpunkte $x^{\mu}$  auf  $x^{\mu ' } = \Lambda_{\; \nu}^{\mu} x_{\nu} + a^{\mu}$ abbilden.
+Im Folgenden werden nur die homogenen LT, d.h. $a^{\mu} = 0$ gebraucht.
+Es wird gefordet, dass die LT das Skalarprdukt $x_{\mu}x^{\mu}$ nicht ändert, so dass die Metrik $g_{\nu \mu}$unter 
+der LT invariant ist 
+\begin{equation*}
+  \Lambda_{\; \nu}^{\mu} \Lambda_{\; \sigma}^{\delta} g_{\mu \delta} = g_{\nu \sigma}.
+\end{equation*}
+\subsection{Eigenschaften der Lorentz-Transformation}
+$\text{Det}(\lambda) = \pm 1$, da 
+\begin{equation*}
+  \Lambda g \Lambda^T = g \iff \text{Det}(\Lambda^2) \text{Det}(g) = \text{Det}(g) \implies 
+  \text{Det}(\Lambda) = \pm 1.
+\end{equation*}
+Außerdem folgt aus $\Lambda_{\; 0}^{\mu} \Lambda_{\; 0}^{\rho} g_{\mu \rho} = g_{0 0}$, dass 
+\begin{equation*}
+  \Lambda_{\; 0}^{0} \geq 1 \quad \text{oder} \quad \Lambda_{\; 0}^{0} \leq 1 
+\end{equation*}
+\subsection{Lorentz-Gruppe als Liegruppe}
+Die Erzeugenden der Drehungen erüllen die Algebra 
+\begin{equation*}
+  [J_i, J_j] = i \epsilon_{ijk} J_k
+\end{equation*}
+und die Winkel sind additiv, womit 
+\begin{equation*}
+  \symup{e}^{i\theta J_i} \symup{e}^{i\varphi J_i} = \symup{e}^{i(\theta + \varphi) J_i}
+\end{equation*}
+gilt. 
+Jedoch sind die Parameter der Boosts nicht additiv. 
+Somit wird ein Satz neuer Parameter, die Rapiditäten, gesucht, die additiv sind.
+\subsection{Rapiditäten}
+Die Rapidität $\chi$ sind gemäß 
+\begin{equation*}
+  \gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} = \cosh(\chi)
+\end{equation*}
+definiert.
+Aus $\cosh^2(\chi) - \sinh^2(\chi) = 1$ folgt $\sinh^2(\chi) = \gamma^2 - 1 = \beta^2\gamma^2$ und somit 
+$\beta = \tanh (\chi)$.
+Die relativistische Geschwindigkeitsaddtion erfolgt gemäß 
+$v = \frac{v_1 + v_2}{1 + \frac{v_1 v_2 }{c^2}}$.
+Ein Lorentzboost in $x$-Richtung ist 
+\begin{equation*}
+  \Lambda  =
+  \begin{pmatrix}
+    \gamma & \beta \gamma & 0 & 0 \\
+    \beta \gamma & \gamma & 0 & 0\\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1
+  \end{pmatrix}
+  = 
+  \begin{pmatrix}
+    \cosh (\chi) & \sinh (\chi) & 0 & 0 \\
+    \sinh (\chi) & \cosh (\chi) & 0 & 0\\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1
+  \end{pmatrix}
+  .
+\end{equation*}
+Die Rapiditäten sind nun additive Parameter.
+Die Generatoren de Boosts $K_i$ gewinnt man wie üblich mit Hilfe von 
+Gleichung \eqref{eqn:gen} mit $(K_j)_{\; \mu}^{\nu} = \sfrac{1}{i} \sfrac{\partial \Lambda_{\; \mu }^{\nu}}{\partial \chi_j} $ gewonnen, womit 
+\begin{equation*}
+  K_i= \frac{1}{i} (\delta_{1i} + \delta_{i1}),
+\end{equation*}
+welcher antihermitesch sind.
+Als Beispiel ergibt sich der Generator des Boosts in $x$-Richtung
+\begin{equation*}
+  (K_1)_{\; \nu}^{\mu} = \frac{1}{i}
+  \begin{pmatrix}
+    0&1&0&0\\
+    1&0&0&0\\
+    0&0&0&0\\
+    0&0&0&0
+  \end{pmatrix}
+\end{equation*}
+Die Generatoren der Boosts sind nicht kompakt, was an den Kommuatatorrelationen 
+\begin{equation*}
+  [J_i,J_j] = i \epsilon_{ijk} J^k,\quad [K_i, K_j] = - i \epsilon_{ijk} J^k, 
+  \quad [J_i,J_j] = i \epsilon_{ijk} K^k
+\end{equation*}
+ersichtlich wird.
+\subsection{Darstellung der Lorentzgruppe}
+Definiere $A_k = \frac{1}{2} (J_k + i K_k)$ und $B_k = \frac{1}{2} (J_k - i K_k)$.
+Diese Generatoren bilden wieder eine kompakte Liealgebra mit 
+\begin{equation*}
+  [A_i,A_j] = i \epsilon_{ijk} A^k, \quad [B_i,B_j] = i \epsilon_{ijk} B^k, \quad [A_i,B_j] = 0 \label{eqn:ka}
+\end{equation*}
+An Gleichung \eqref{eqn:ka} wird ersichtlich, dass die homogene Lorentzgruppe eine $SO(3) \simeq SU(2) \times SU(2)$
+ist. 
+\subsubsection{Darstellung eines Vierervektors als hermitesche \texorpdfstring{$2 \times 2$}{PDFstring}-Matrix}
+\label{sub:2times2}
+Ein Vierervektor $x^{\mu} = (v_0, v_1, V_2, V_3)^\text{T}$ kann als 
+hermitesche $2 \times 2$- Matrix gemäß
+\begin{equation*}
+  v^{\mu} \sigma_{\mu} = 
+  \begin{pmatrix}
+    v^0 + v^3& v^1 - iv^2 \\
+    v^1 + iv^2 & v^0 - v^3
+  \end{pmatrix}
+\end{equation*}
+mit den Pauli-Matrizen $\sigma_{\mu}$ ($\sigma_0 = \mathbb{1}_{2 \times 2}$) dargestellt werden.
+Somit gilt $v^{\mu} v_{\mu} = {(v^0)^2 - \vec{v}^2} = \text{Det}(v^{\mu} \sigma_{\mu})$.
+Die LT bilden dann komplexe $2\times 2$-Matrizen mit Determinante $+ 1$, also  
+die SL(2, $\mathbb{C}$) (special linear, komplex zweidimensonal).
+Mit $\lambda(\Lambda) \in SL(2, \mathbb{C})$ wird ein Viervektor gemäß
+\begin{equation*}
+  \lambda (v^{\mu} \sigma_{\mu}) \lambda^{\dagger} = (\Lambda_{\; \nu}^{\mu} v^{\nu}) \sigma_{\mu}
+\end{equation*}
+transformiert.
+Als Beispiel ein Boost in $z$-Richtung: Es gilt 
+\begin{equation*}
+  \lambda  = \symup{e}^{\frac{\chi}{2} \sigma_z}
+  =
+  \begin{pmatrix}
+    \symup{e}^{\frac{\chi}{2}} & 0 \\
+    0 & \symup{e}^{-\frac{\chi}{2}}
+  \end{pmatrix}
+  \implies  
+  \symup{e}^{\frac{\chi}{2} \sigma_z} 
+  \begin{pmatrix}
+    v^0 + v^3& v^1 - iv^2 \\
+    v^1 + iv^2 & v^0 - v^3
+  \end{pmatrix}
+  \symup{e}^{\frac{\chi}{2} \sigma_z} 
+  = \tilde{v} =
+  \begin{pmatrix}
+    \symup{e}^{\chi} (v^0 + v^3) & v^1 - iv^2 \\
+    v^1 + iv^2 & \symup{e}^{-\chi}(v^0 - v^3)
+  \end{pmatrix}
+\end{equation*}
+\subsection{Die Gruppe \texorpdfstring{$\text{L}_+^{\uparrow}$}{PDFstring} }
+Die eignetlich-orthochrone Lorentz-Gruppe hat die Generatoren 
+\begin{equation*}
+  [J_i,J_j] = i \epsilon_{ijk} J^k,\quad [K_i, K_j] = - i \epsilon_{ijk} J^k, 
+  \quad [J_i,J_j] = i \epsilon_{ijk} K^k \label{eqn:genspinor}
+\end{equation*}
+und entspricht der SO(1,3) mit den Darstellungen
+\begin{equation*}
+  \symup{e}^{i(\vec{\theta} \cdot \vec{J} + \vec{\chi} \cdot \vec{K})}.
+\end{equation*}
+\subsection{Relativstische Schreibweise einer allgemeinen Lorentz-Transformation}
+Definiere zwei neue Tensor, die einmal die Boosts und Drehungen zusammenfasst und einmal 
+die dazugehörigen Parameter
+\begin{equation*}
+  J_{\mu \nu} = 
+  \begin{pmatrix}
+    0   & -K_1  & -K_2& -K_3  \\
+    K_1 & 0     & J_3 & -J_2  \\
+    K_2 & -J_3  & 0   & J_1   \\
+    K_3 & J_2   & -J_1 & 0  
+  \end{pmatrix}, \quad 
+  \omega^{\mu \nu} = 
+  \begin{pmatrix}
+    0   & -\chi_1       & -  \chi   & -\chi_3  \\
+    \chi_1 & 0          & \theta_3  & - \theta_2  \\
+    \chi_2 & -\theta_3  & 0         &   \theta_1   \\
+    \chi_3 &  \theta_2  & -\theta_1  & 0  
+  \end{pmatrix}
+\end{equation*}
+Damit können die LT durch 
+\begin{equation*}
+  \Lambda(\omega) = \symup{e}^{-\frac{i}{2} \omega_{\mu \nu} J^{\mu \nu}}
+\end{equation*}
+dargestellt werden.
+\subsection{Transformation eines Spinors mit Spin \texorpdfstring{$s = 1/2$}{PDFstring}
+unter \texorpdfstring{$\text{L}_+^{\uparrow}$}{PDFstring}}
+Suche eine Spinordarstellung für die Algebra \eqref{eqn:genspinor}.
+Nutze dazu die Darstellung eines Viervektors als hermitesche $2\times 2$-Matrix (s. \ref{sub:2times2}).
+Ein Weyl-Spinor ist ein zweikomponentiges Objekt, dass wie 
+\begin{equation*}
+  x_{\alpha}' = \lambda_{\; \alpha}^{\beta} x_{\beta}
+\end{equation*}
+{\color{red} Strich bei rechte Vektor vll. falsch}
+transformiert mit $\lambda \in SL(2, \mathbb{C})$.
+$\lambda$ und $\lambda^*$ sind die unabhängigen Darstellung der SL(2,$\mathbb{C}$), d.h., dass 
+keine Trafo $\lambda = U^{-1} \lambda^* U$ exestiert.
+Die Weyl-Spinoren $\eta_{\dot{\beta}}$ transformieren unter $\lambda^*$ wie 
+\begin{equation*}
+  \eta_{\dot{\alpha}}' =  \lambda_{\dot{\alpha}}^{\dot{\beta}*} 
+\end{equation*}
+mit dem gepunkteten Spinor, wobei $\dot{\alpha} = 1,2, \; \alpha  = 1,2$ gilt.
+Das Rauf- und Runterziehen der Indizes geschieht mit Hilfe des antisymmetrischen Tensors  
+\begin{equation*}
+  \epsilon_{\alpha \beta} = \epsilon^{\alpha \beta} = \epsilon_{\dot{\alpha} \dot{\beta}} =
+  \epsilon^{\dot{\alpha} \dot{\beta}}  = 
+  \begin{pmatrix}
+    0 & 1 \\
+    -1 & 0
+  \end{pmatrix} .
+\end{equation*}
+Transformiere wieder auf $A_k = \frac{1}{2} (J_k + i K_k)$ und $B_k = \frac{1}{2} (J_k - i K_k)$, die eine 
+$SU(2) \times SU(2)$-Algebra bilden.
+$x_{\alpha}$ transformiert unter $\lambda \in SL(2, \mathbb{C})$ so, dass 
+$\vec{A} = \frac{1}{2}\vec{\sigma}, \; \vec{B} = \vec{0}$, damit gilt 
+$\vec{J} =\frac{1}{2}\vec{\sigma}, \; \vec{K} = -\frac{i}{2}\vec{\sigma}$, womit eine 
+allgemeine LT eines linkshändigen Spinors $(1/2, 0)$ durch 
+\begin{equation*}
+  \symup{e}^{i(\vec{J}\cdot \vec{\theta} + \vec{K} \cdot \vec{\chi})}
+\end{equation*}
+gegeben ist.
+Bei einem linkshändigen (gepunkteten) Spinor $(0, 1/2)^*$ gilt unter $\lambda^*$ 
+$\vec{A} = \vec{0}, \; \vec{B} = \frac{1}{2}\vec{\sigma}^*$ und somit 
+$\vec{J} =\frac{1}{2}\vec{\sigma}^*, \; \vec{K} = \frac{i}{2}\vec{\sigma}^*$ 
+mit der Transformation 
+\begin{equation*}
+  \symup{e}^{i(\frac{\vec{\sigma}^* \cdot \vec{\theta}}{2} + \frac{\vec{\chi} \cdot \vec{\sigma}^*}{2})}
+\end{equation*}
+
+
+
+
+
+
+
+
+
 \end{document}
