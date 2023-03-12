@@ -47,7 +47,7 @@
 \contentsline {subsection}{\numberline {5.6}SO(3)}{14}{subsection.5.6}%
 \contentsline {subsection}{\numberline {5.7}SU(2)}{14}{subsection.5.7}%
 \contentsline {subsection}{\numberline {5.8}Vergleich SO(3) und SU(2)}{15}{subsection.5.8}%
-\contentsline {subsection}{\numberline {5.9}Darestellungen der SU(2) und SO(3)}{15}{subsection.5.9}%
+\contentsline {subsection}{\numberline {5.9}Darstellungen der SU(2) und SO(3)}{15}{subsection.5.9}%
 \contentsline {section}{\numberline {6}Poincare-Gruppe}{15}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Lorentz-Transformation}{15}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Eigenschaften der Lorentz-Transformation}{16}{subsection.6.2}%
@@ -58,4 +58,8 @@
 \contentsline {subsection}{\numberline {6.6}Die Gruppe $\text {L}_+^{\uparrow }$}{17}{subsection.6.6}%
 \contentsline {subsection}{\numberline {6.7}Relativstische Schreibweise einer allgemeinen Lorentz-Transformation}{18}{subsection.6.7}%
 \contentsline {subsection}{\numberline {6.8}Transformation eines Spinors mit Spin $s = 1/2$ unter $\text {L}_+^{\uparrow }$}{18}{subsection.6.8}%
+\contentsline {section}{\numberline {7}Die SU(N)}{19}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Die SU(2)}{19}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Cartan'sche Unteralgebra einer Liealgebra}{19}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Flavour SU(3)}{20}{subsection.7.3}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

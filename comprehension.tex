@@ -63,6 +63,8 @@
   per-mode=symbol-or-fraction, % / in inline math, fraction in display math
 ]{siunitx}
 
+
+
 % chemische Formeln
 \usepackage[
   version=4,
@@ -126,6 +128,14 @@
 \usepackage[shortcuts]{extdash}
 
 \usepackage{cleveref}
+
+\DeclarePairedDelimiter{\bra}{\langle}{\rvert}
+\DeclarePairedDelimiter{\ket}{\lvert}{\rangle}
+% <name> <#arguments> <left> <right> <body>
+\DeclarePairedDelimiterX{\braket}[2]{\langle}{\rangle}{
+#1 \delimsize| #2
+}
+
 
 \author{%
   Yanick Sebastian Kind\\%
@@ -671,7 +681,7 @@ Die Generatoren der SO(3) und SU(2) haben dieselben Kommutatorrelationen und som
 (vielleicht genauer: deren Liealgebren sind isomorph). 
 Sie unterscheiden sich lediglich in ihren Gruppenmannigfaltigkeiten.
 Die SU(2) ist eine doppelte Überlagerung der SO(3).
-\subsection{Darestellungen der SU(2) und SO(3)}
+\subsection{Darstellungen der SU(2) und SO(3)}
 $\sigma_z/2$ ({\color{red} nicht sicher hier, in Vorlesung steht $s_z/2$ 
 aber sehe noch nicht die Richtigkeit}) bilden 2 dimensionale Darstellung und $(\epsilon_i)_{jk}$ bilden 3 dimensionale Darstellung.
 Im Allgemeinen gilt für beliebiges $j$ (ganz- oder halbzahlig) 
@@ -903,7 +913,105 @@ mit der Transformation
 \begin{equation*}
   \symup{e}^{i(\frac{\vec{\sigma}^* \cdot \vec{\theta}}{2} + \frac{\vec{\chi} \cdot \vec{\sigma}^*}{2})}
 \end{equation*}
-
+\section{Die SU(N)}
+Determinante 1 und wieder unitär, mit Elementn 
+$\symup{e}^{i(\vec{theta} * \vec{{T}})}$
+Aus der Unitarität folgt wieder, dass die Generatoren hermitesch sein müssen.
+Eine SU(N) hat
+\begin{equation*}
+  N^2 - 1 \label{eqn:dimgen}
+\end{equation*}
+Generatoren.
+\subsection{Die SU(2)}
+Aus den Überlegungen aus Gleichung \eqref{eqn:dimgen} folgt, dass die 
+SU(3) 8 Generatoren, die Gell-Matrizen $\lambda_i$ (gewichter mit dem Faktor $1/2$ analog 
+zu den Pauli-Matrizen in der SU(2))hat.
+Als Beispiel
+\begin{equation*}
+  \lambda_1 = 
+  \begin{pmatrix}
+    0 & 1 & 1 \\
+    1 & 0 & 0 \\ 
+    0 & 0 & 0 
+  \end{pmatrix} ,\quad 
+  \lambda_7 = 
+  \begin{pmatrix}
+    0 & 0 & 0 \\
+    0 & 0 & -i\\
+    0 & i & 0
+  \end{pmatrix}.
+\end{equation*}
+Die Gell-Matrizen haben die Normierung 
+\begin{equation*}
+  \text{Tr}[\lambda_a \lambda_b] = 2 \delta_{ab} .
+\end{equation*}
+und bilden eine Basis der SU(3) für die Elemente $\symup{e}^{i \theta \vec{\lambda}}$.
+Die Gell-Matrizen $\lambda_1, \lambda_2, \lambda_3$ bilden eine Basis für 
+die SU(2).
+Die Basiszustände der fundamentalen Darstellung sind dreidimensionale Vektoren, die der SU(2) sind 
+zweidimensionale Vektoren.
+Die Farbladung und der Flavour wird druch die SU(3) beschrieben.
+Die QCD (Quantenchromodynamik) beinhaltet exakte Symmetrien, Baryonen und Mesonen und Color-Singulett ({\color{red} ???}).
+Der Flavour hat $(u, d, s)$ als fundamentale Darestellung der SU(3).
+\subsection{Cartan'sche Unteralgebra einer Liealgebra}
+Die Cartansche Unterlgebra (CU) bildet eine abelsche Unteralgebra einer Liealbegra $\symcal{L}$.
+Das heißt die Elemente $H_i$ für die $[H_i, H_j] = 0 \forall i,j, \quad i = 1, \ldots, l$ gilt, bilden 
+die Cartansche Unteralgebra.
+Die kommutierenden Elemente sind $H_1 = \frac{\lambda_3}{2}, H_2 = \frac{\lambda_8}{2}$.
+Die Dimension der CU gibt den Rang der Gruppe and.
+Die Dimension der CU is 2 und somit der Rang der SU(3) 2.
+Die Eigenwerte der Elemente der CU nennt man Gewichte.
+Da die gewichte der CU der SU(3) diagonal sind, lassen sich diese einfach ablesen
+\begin{equation*}
+  H_3 = \frac{1}{2}
+  \begin{pmatrix}
+    1 &  0  & 1 \\
+    0 & -1  & 0 \\ 
+    0 & 0   & 0 
+  \end{pmatrix} ,\quad 
+  H_8 = \frac{1}{2}
+  \begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & -2
+  \end{pmatrix}. \label{eqn:CUgen}
+\end{equation*}
+Aus den Gewichten der beiden Generatoren der CU \eqref{eqn:CUgen} lassen sich 
+Gewichtsvektoren (\enquote{weightvectors}) $\vec{\mu}_i = \ket{(H_1)_{ii}, (H_2)_{ii}}$ basteln.
+Damit ergibt sich Abbildung \ref{fig:weightvectors}
+\begin{figure}
+  \centering
+  \includegraphics[width = 0.35 \textwidth]{CU_mu.jpg}
+  \caption{weightvectors der CU der SU(3).}
+  \label{fig:weightvectors}
+\end{figure}
+\subsection{Flavour SU(3)}
+Hier wird in Abbildung \ref{fig:weightvectors} auf die $x$-Achse der Isospin 
+aufgetragen also entsprechen die Komponente von $H_1$ dem Isospin $I_3$ und auf der 
+$y$-Achse wird die Hyperladung $Y$ reskaliert mit $\sfrac{2}{\sqrt{3}}$ aufgetragen, also enspricht 
+$H_2$ der Hyperladung bis auf den Vorfaktor. 
+Prinzipiell wird jedem weightvector einfach nur ein Quark zugeordnet, womit 
+die Abbildung \ref{fig:quark}
+\begin{figure}
+  \centering
+  \includegraphics[width = 0.35 \textwidth]{Quark.jpg}
+  \caption{Hyperladung-Isospin-Diagramm der Quarks.}
+  \label{fig:quark}
+\end{figure}
+Bei der SU(N) mit $N \geq 3$ gibt es noch die Darstellung 
+\begin{equation*}
+  U^* = (1 + \frac{\lambda_a\theta^a}{2})^* = (1 - \frac{\lambda_a^*\theta^a}{2})
+\end{equation*}
+mit $T_a^* =\frac{-\lambda_a^*}{2} = \frac{\lambda_a^{\text{T}}}{2}$.
+Die Antiquarks transformieren unter der Darstellung $U^*$.
+Analog zu den Quarks lassen sich dazu wieder die weightvectors aufstellen und jedem 
+eine Antiquark zuordnen, womit die Abbildung \ref{fig:antiquark} entsteht.
+\begin{figure}
+  \centering
+  \includegraphics[width = 0.35 \textwidth]{antiquark.jpg}
+  \caption{Hyperladung-Isospin-Diagramm der Antiquarks.}
+  \label{fig:antiquark}
+\end{figure}
 
 
 
