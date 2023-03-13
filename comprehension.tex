@@ -584,19 +584,37 @@ Die $f_{ab}^c$ als sind Strukturkonstanten,
 welche extrem wichtig sind, da diese die gesamte Gruppenmultiplikation zusammenfassen.
 \subsection{Exponentielle Parameterisierung}
 \label{sub:exp}
-Wenn man nun etwas von der Eins weggeht, lässt sich die Darstellung durch 
-ein Entwicklung in den Parametern darstellen:
+Eine inifinitesimale Transformation lässt sich durch eine Reihenentwicklung bis zur ersten Ordnung darstellen.
 \begin{equation*}
-  \Gamma(\symup{d}\theta) = \mathbb{1} + i \sum_a^n t_a \symup{d}\theta_a 
+  \Gamma(\symup{d}\theta) = \mathbb{1} + i \sum_a^n t_a \symup{d}\theta_a.
 \end{equation*}
-Wir können $\symup{d}\theta_a$ auch einfach durch $\symup{d}\theta_a = \frac{\theta}{k}$ darstellen und $k$ gegeben
+Durch Hintereinanderausführung dieser inifinitesimalen Transformation lässt sich eine finite 
+Transformation konstruieren:
+\begin{equation*}
+  \Gamma(\symup{d}\theta) = (\mathbb{1} + i \sum_a^n t_a \symup{d}\theta_a)(\mathbb{1} + i \sum_a^n t_a \symup{d}\theta_a)
+  \cdots (\mathbb{1} + i \sum_a^n t_a \symup{d}\theta_a)
+  = (\mathbb{1} + i \sum_a^n t_a \symup{d}\theta_a)^k.
+\end{equation*}
+Hier wurde die infinitesimale Transformation $k$-mal ausgeführt.
+Um nun eine infinitesimale Transformation zu beschreiben, können wir den Parameter 
+$\symup{d}\theta_a$ auch einfach durch $\symup{d}\theta_a = \frac{\theta}{k}$ darstellen und $k$ gegeben
 Unendlich laufen lassen.
-Damit lässt sich die Darstellung
+Um nun aber eine finite Transformation zu erhalten, müssen wir diese inifinitesimale Transformation unendlich oft anwenden.
+Damit lässt sich die Transformation als Limite
 \begin{equation*}
   \Gamma(\theta) = \lim_{k \to \infty} (\mathbb{1} + i \sum_a^n t_a \frac{\theta_a}{k})^k = \symup{e}^{i\sum_a^n t_a \theta_a}
   = \symup{e}^{i\vec{t} \cdot \vec{\theta}}
 \end{equation*}
-finden.
+finden, wobei der Übergang zur Exponentialfunktion gemacht wurde.
+\subsubsection{Einschub: Name \enquote{Generator}}
+Den Namen \enquote{Generator} lässt sich begründen, indem man ein Element der Gruppe als Matrix um die Eins entwickelt, also 
+\begin{equation*}
+  \Gamma(\theta) = \mathbb{1} + \frac{\symup{d}\Gamma}{\symup{d} \theta} \big |_{\theta = 0} + 
+  \frac{\symup{d^2}\Gamma}{\symup{d} \theta^2} \big |_{\theta = 0} + \cdots  = \sum_{n=0}^{\infty}\frac{1}{n!} 
+  \frac{\symup{d^n}\Gamma}{\symup{d} \theta^n} \big |_{\theta = 0}.
+\end{equation*}
+In diese Reihenentwicklung können die Generatoren einfach eingesetzt werden und damit sieht man, dass 
+die Generatoren tatsächlich die Transformationen generieren.
 \subsection{Lie-Klammern}
 Die Erzeugenden erfüllen die Axiome einer Liealgebra, d.h. für die Generatoren $t_a \in \symcal{V}$ ist 
 zusätzlich eine Verknüpfung, die Lie-Klammer, 
