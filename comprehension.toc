@@ -53,15 +53,19 @@
 \contentsline {subsection}{\numberline {6.1}Lorentz-Transformation}{16}{subsection.6.1}%
 \contentsline {subsubsection}{\numberline {6.1.1}Einschub: Warum $O(3,1)$ und nicht $O(4)$?}{16}{subsubsection.6.1.1}%
 \contentsline {subsection}{\numberline {6.2}Lorentz-Gruppe}{17}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Lorentz-Gruppe als Liegruppe}{17}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Rapiditäten}{18}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Darstellung der Lorentzgruppe}{18}{subsection.6.5}%
-\contentsline {subsubsection}{\numberline {6.5.1}Darstellung eines Vierervektors als hermitesche $2 \times 2$-Matrix}{19}{subsubsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.6}Die Gruppe $\text {L}_+^{\uparrow }$}{19}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Relativstische Schreibweise einer allgemeinen Lorentz-Transformation}{19}{subsection.6.7}%
-\contentsline {subsection}{\numberline {6.8}Transformation eines Spinors mit Spin $s = 1/2$ unter $\text {L}_+^{\uparrow }$}{20}{subsection.6.8}%
-\contentsline {section}{\numberline {7}Die SU(N)}{20}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Die $SU(2)$}{20}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Cartan'sche Unteralgebra einer Liealgebra}{21}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Flavour SU(3)}{21}{subsection.7.3}%
+\contentsline {subsection}{\numberline {6.3}Die Gruppe $\text {L}_+^{\uparrow }$}{17}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Definition: Rapiditäten}{18}{subsubsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.4}Andere Basis für die eigentlich-orthochrone LT}{18}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Darstellungen der Lorentzgruppe}{19}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}(0,0)}{19}{subsubsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.2}(1/2, 0)}{19}{subsubsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.6}(0,1/2)}{20}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Dirac-Spinor}{20}{subsection.6.7}%
+\contentsline {subsubsection}{\numberline {6.7.1}Darstellung eines Vierervektors als hermitesche $2 \times 2$-Matrix}{20}{subsubsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.8}Relativstische Schreibweise einer allgemeinen Lorentz-Transformation}{21}{subsection.6.8}%
+\contentsline {subsection}{\numberline {6.9}Transformation eines Spinors mit Spin $s = 1/2$ unter $\text {L}_+^{\uparrow }$}{21}{subsection.6.9}%
+\contentsline {section}{\numberline {7}Die SU(N)}{22}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Die $SU(2)$}{22}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Cartan'sche Unteralgebra einer Liealgebra}{22}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Flavour SU(3)}{23}{subsection.7.3}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

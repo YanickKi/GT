@@ -780,8 +780,8 @@ Die Unterteilung erfolgt durch
 \begin{align*}
   & \symcal{L}_+^{\uparrow}:    \quad \text{Det}(\Lambda) = +1, \; \;  \Lambda_0^0 \geq 1 \\
   & \symcal{L}_-^{\uparrow}:    \quad \text{Det}(\Lambda) = -1, \; \;  \Lambda_0^0 \geq 1 \\
-  & \symcal{L}_+^{\downarrow}:  \quad \text{Det}(\Lambda) = +1, \; \;  \Lambda_0^0 \leq 1 \\
-  & \symcal{L}_-^{\downarrow}:  \quad \text{Det}(\Lambda) = -1, \; \;  \Lambda_0^0 \leq 1 .
+  & \symcal{L}_+^{\downarrow}:  \quad \text{Det}(\Lambda) = +1, \; \;  \Lambda_0^0 \leq -1 \\
+  & \symcal{L}_-^{\downarrow}:  \quad \text{Det}(\Lambda) = -1, \; \;  \Lambda_0^0 \leq -1 .
 \end{align*}
 Nur die eigentlich ($\text{Det}(\Lambda) = +1$, Nach der Trafo bleibt ein rechtshändiges Koordinatensystem rechtshändig) 
 orthochrone ($\Lambda_0^0 \geq 1$, ändert nicht die Orientierung der Zeit) 
@@ -806,25 +806,81 @@ Außerdem können die restlichen Gruppen der Lorentz-Gruppe durch die Zeit- und 
   \end{pmatrix}
 \end{equation*}
 gewonnen werden.
-Die Lorentz-Gruppe lässt sich damit als Menge von vier Gruppen verstehen 
-$O(3,1) = \{\symcal{L}_+^{\uparrow}, \Lambda_{\text{P}} \symcal{L}_+^{\uparrow}, 
-\Lambda_{\text{T}} \symcal{L}_+^{\uparrow},\Lambda_{\text{T}} \Lambda_{\text{P}} \symcal{L}_+^{\uparrow}\}$.
-\subsection{Lorentz-Gruppe als Liegruppe}
-Die Erzeugenden der Drehungen erüllen die Algebra 
+Die Lorentz-Gruppe lässt sich damit als Vereinigung von vier Mengen 
+$O(3,1) = \symcal{L}_+^{\uparrow} \cup \Lambda_{\text{P}} \symcal{L}_+^{\uparrow}\cup 
+\Lambda_{\text{T}} \symcal{L}_+^{\uparrow}\cup\Lambda_{\text{T}} \Lambda_{\text{P}} \symcal{L}_+^{\uparrow}$ verstehen.
+{\color{red} Vorsicht!} Nur die Menge $ \symcal{L}_+^{\uparrow}$ ist eine Gruppe, da die anderen drei Mengen nicht das Einselement enthalten.
+\subsection{Die Gruppe \texorpdfstring{$\text{L}_+^{\uparrow}$}{PDFstring} }
+\label{sub:l+arr}
+Die Generatoren der Gruppe der eigentlich-orthochronen LT, die als 
+$SO(3,1)$ bezeichnet wird, bilden die Liealgebra 
+\begin{equation}
+  [J_i,J_j] = i \epsilon_{ijk} J^k,\quad [K_i, K_j] = - i \epsilon_{ijk} J^k,
+  \quad [J_i,J_j] = i \epsilon_{ijk} K^k. \label{eqn:genspinor}
+\end{equation}
+Die drei Generatoren 
 \begin{equation*}
-  [J_i, J_j] = i \epsilon_{ijk} J_k
+  J_1 = 
+  \begin{pmatrix}
+    0 & 0   & 0   & 0 \\
+    0 & 0   & 0   & 0 \\
+    0 & 0   & 0   & -i \\
+    0 & 0   & i   & 0  
+  \end{pmatrix}, \quad
+  J_2 = 
+  \begin{pmatrix}
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & i \\
+    0 & 0 & 0 & 0 \\
+    0 & -i& 0 & 0 
+  \end{pmatrix}, \quad 
+  J_3 = 
+  \begin{pmatrix}
+    0 & 0 & 0 & 0 \\
+    0 & 0 & -i& 0 \\
+    0 & i & 0 & 0 \\
+    0 & 0 & 0 & 0 
+  \end{pmatrix}
 \end{equation*}
-und die Winkel sind additiv, womit 
+sind die Generatoren der Drehungen.
+Die Boosts werden duch die Generatoren
 \begin{equation*}
-  \symup{e}^{i\theta J_i} \symup{e}^{i\varphi J_i} = \symup{e}^{i(\theta + \varphi) J_i}
+  K_1 = 
+  \begin{pmatrix}
+    0 & i   & 0   & 0 \\
+    i & 0   & 0   & 0 \\
+    0 & 0   & 0   & 0 \\
+    0 & 0   & 0   & 0  
+  \end{pmatrix}, \quad
+  K_2 = 
+  \begin{pmatrix}
+    0 & 0 & i & 0 \\
+    0 & 0 & 0 & 0 \\
+    i & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 
+  \end{pmatrix}, \quad 
+  K_3 = 
+  \begin{pmatrix}
+    0 & 0 & 0 & i \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    i & 0 & 0 & 0 
+  \end{pmatrix}
 \end{equation*}
-gilt. 
-Jedoch sind die Parameter der Boosts nicht additiv. 
-Somit wird ein Satz neuer Parameter, die Rapiditäten, gesucht, die additiv sind.
-\subsection{Rapiditäten}
+erzeugt.
+Somit wirken die Lorentz-Transformationen als $4 \times 4$-Matrix auf einen Vierervektor.
+Die Generatoren können, wie immer, mit den Parametern und der exponentiellen Parameterisierung genutzt werden, um eine 
+LT zu generieren
+\begin{equation*}
+ \Lambda(\vec{\theta}, \vec{\chi}) =  \symup{e}^{i(\vec{\theta} \cdot \vec{J} + \vec{\chi} \cdot \vec{K})}.
+\end{equation*}
+Die Parameter $\theta_1, \theta_2, \theta_3$ sind die Drehwinkel und $\chi_1,\chi_2,\chi_3$ die Rapiditäten.
+Wie in Gleichung \eqref{eqn:genspinor} ersichtlich wird, sind die Generatoren der Boosts nicht geschlossen unter Kommutation 
+(Die Algebra der Boosts ist nicht kompakt).
+\subsubsection{Definition: Rapiditäten}
 Die Rapidität $\chi$ ist gemäß 
 \begin{equation*}
-  \symup{\Gamma} = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} = \cosh(\chi)
+  \gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} = \cosh(\chi)
 \end{equation*}
 definiert.
 Aus $\cosh^2(\chi) - \sinh^2(\chi) = 1$ folgt $\sinh^2(\chi) = \gamma^2 - 1 = \beta^2\gamma^2$ und somit 
@@ -850,36 +906,96 @@ Ein Lorentzboost in $x$-Richtung ist
   .
 \end{equation*}
 Die Rapiditäten sind nun additive Parameter.
-Die Generatoren der Boosts $K_i$ gewinnt man wie üblich mit Hilfe von 
-Gleichung \eqref{eqn:gen} mit 
+\subsection{Andere Basis für die eigentlich-orthochrone LT}
+\label{sub:bas}
+In Abschnitt \ref{sub:l+arr} ist hervorgegangen, dass die Algebra der Boosts nicht kompakt ist. 
+Die Generatoren können in einer anderen Basis gewählt werden
 \begin{equation*}
-(K_j)_{\; \mu}^{\nu} = \frac{1}{i} \frac{\partial \Lambda_{\; \mu }^{\nu}}{\partial \chi_j} ,
-\end{equation*} 
-welche antihermitesch sind.
-Als Beispiel ergibt sich der Generator des Boosts in $x$-Richtung
+  A_k = \frac{1}{2} (J_k + i K_k), \quad B_k = \frac{1}{2} (J_k - i K_k),
+\end{equation*}
+welche zwei unabhängige $SU(2)$-Algebren ergeben
 \begin{equation*}
-  (K_1)_{\; \nu}^{\mu} = \frac{1}{i}
+  [A_i,A_j] = i \epsilon_{ijk} A^k, \quad [B_i,B_j] = i \epsilon_{ijk} B^k, \quad [A_i,B_j] = 0 \label{eqn:ka}.
+\end{equation*}
+Hier sieht man, dass $SO(3,1) ~ SU(2) \otimes SU(2)$ gilt.
+Die Liealgebra von $\symcal{L}_+^{\uparrow}$ besteht somit aus zwei \enquote{Kopien} von 
+der $SU(2)$. 
+Das sind gute Neuigkeiten, da wir bereits wissen, wie man die irreduziblen Darstellung der 
+$SU(2)$ konstruiert.
+Genauer gilt für die komplexen Lie-Algebren der Isomorphismus 
+\begin{equation*}
+  \mathbb{C} \otimes SO(3) \simeq SL(2,\mathbb{C}) \otimes SL(2,\mathbb{C})
+\end{equation*}
+Die Menge der komplexen Zahlen wirken hier mit, da komplexe Linearkombinationen von den Erzeugern der $SO(3,1)$ gebildet werden.
+Damit lassen sich die endlich-dimensionalen Darstellungen von $\symcal{L}_+^{\uparrow}$ durch zwei Drehimpulse
+$(j_1, j_2)$ (direkte Summe) mit der Dimension $(2j_1 + 1)(2j_2 + 1)$ charakterisieren.
+\subsection{Darstellungen der Lorentzgruppe}
+Prinzipiell geht man hier einfach verschiedene Werte für $j_1$ und $j_2$ aus Abschnitt \ref{sub:bas} durch.
+\subsubsection{(0,0)}
+Diese Darstellung ist relativ langweilig, da die Räume beider $SU(2)$-Algebren (damit auch die Generatoren) eindimensional sind.
+Der einzige Skalar, der die Kommutatorrelationen \eqref{eqn:ka} erfüllt, ist die Null.
+Demnach ist jede LT einfach eins ($\Lambda(\theta_i) = \symup{e}^{i\theta_i J_i} = \symup{e}^{0} = 1$).
+Damit kann man schlussfolgern, dass die (0,0)-Darstellung jedes Objekt, auf welches diese Darstellung wirkt, invariant lässt.
+\subsubsection{(1/2, 0)}
+\label{sub:left}
+Hier ist $B_k = 0$ (eindimensionale Darstellung für Spin 0).
+Aus der Diskussion zur SU(2) wissen wir, dass die zweidimensionale Darstellung für Spin $1/2$ durch die Pauli-Matrizen gewonnen werden kann, 
+also setzt man $A_k = \frac{\sigma_k}{2}$.
+Da $B_k = 0$ gilt, folgt $K_k = \frac{-i\sigma_i}{2} = \frac{J_k}{i}$.
+Damit lässt sich durch exponentieren wieder eine Drehung oder ein Boost erzeugen
+\begin{equation*}
+  \Lambda  = \symup{e}^{i ( \vec{\theta} \cdot \vec{J} + \vec{\chi} \cdot \vec{K})} 
+  = \symup{e}^{\frac{i\vec{\theta} \cdot \vec{\sigma} +\vec{\chi} \cdot \vec{\sigma}}{2}}.
+\end{equation*}
+Beispielweise eine Drehung um die $x$-Achse:
+\begin{equation*}
+  \Lambda(\theta) = 
   \begin{pmatrix}
-    0&1&0&0\\
-    1&0&0&0\\
-    0&0&0&0\\
-    0&0&0&0
+    \cos(\frac{\theta}{2}) & i \sin(\frac{\theta}{2}) \\
+    i\sin(\frac{\theta}{2}) & \cos(\frac{\theta}{2}) 
+  \end{pmatrix} .
+\end{equation*} 
+Diese $2 \times 2$-Matrizen wirken nicht auf Vierervektoren sondern auf Weyl-Spinoren, in diesem Fall wegen $(1/2,0)$ auf 
+linkshändige Weyl-Spinoren 
+\begin{equation*}
+  \chi_L = 
+  \begin{pmatrix}
+  (\chi_L)_1 \\ (\chi_L)2  
+  \end{pmatrix}.
+\end{equation*}
+Bei der Rotation fällt auf, dass die Weyl-Spinoren, im Gegensatz zu gewöhnlichen
+Vierervektoren, erst nach einer Drehung um $4\pi$ in sich selbst übergehen.
+\subsection{(0,1/2)}
+Hier wird analog zu dem linkshändigen Spinor \ref{sub:left} gerechnet, außer, dass $A_k = 0$ gilt. 
+Als Ergebnis findet man die LT 
+\begin{equation*}
+  \Lambda  = \symup{e}^{i ( \vec{\theta} \cdot \vec{J} + \vec{\chi} \cdot \vec{K})} 
+  = \symup{e}^{\frac{i\vec{\theta} \cdot \vec{\sigma} - \vec{\chi} \cdot \vec{\sigma}}{2}}.
+\end{equation*}
+Der Unterschied zum linkshändigen Spinor liegt darin, dass der Exponent der Boosts um ein Minuszeichen besitzt.
+Diese LT wirkt auf einen rechtshändigen Weyl-Spinor  
+\begin{equation*}
+  \chi_R = 
+  \begin{pmatrix}
+  (\chi_R)_1 \\ (\chi_R)2  
+  \end{pmatrix}.
+\end{equation*}
+\subsection{Dirac-Spinor}
+Der Dirac-Spinor $\Psi$ ist die direkte Summe aus dem rechts- und linkshändigen Weyl-Spinor.
+Damit ist der Dirac-Spinor durch 
+\begin{equation*}
+  \Psi = 
+  \begin{pmatrix}
+    \chi_L \\
+    \chi_R
   \end{pmatrix}
 \end{equation*}
-Die Generatoren der Boosts sind nicht kompakt, was an den Kommuatatorrelationen 
+gegeben.
+Der Dirac-Spinor unterliegt der Dirac-Gleichung 
 \begin{equation*}
-  [J_i,J_j] = i \epsilon_{ijk} J^k,\quad [K_i, K_j] = - i \epsilon_{ijk} J^k, 
-  \quad [J_i,J_j] = i \epsilon_{ijk} K^k
+  (i\gamma^{\mu}\partial_{\mu} - m)\Psi = 0,
 \end{equation*}
-ersichtlich wird.
-\subsection{Darstellung der Lorentzgruppe}
-Definiere $A_k = \frac{1}{2} (J_k + i K_k)$ und $B_k = \frac{1}{2} (J_k - i K_k)$.
-Diese Generatoren bilden wieder eine kompakte Liealgebra mit 
-\begin{equation}
-  [A_i,A_j] = i \epsilon_{ijk} A^k, \quad [B_i,B_j] = i \epsilon_{ijk} B^k, \quad [A_i,B_j] = 0 \label{eqn:ka}
-\end{equation}
-An Gleichung \eqref{eqn:ka} wird ersichtlich, dass die homogene Lorentzgruppe eine $SO(3) \simeq SU(2) \times SU(2)$
-ist. 
+wobei die Gamma-Matrizen mit $\gamma^{\mu}$ bezeichnet werden.
 \subsubsection{Darstellung eines Vierervektors als hermitesche \texorpdfstring{$2 \times 2$}{PDFstring}-Matrix}
 \label{sub:2times2}
 Ein Vierervektor $x^{\mu} = (v_0, v_1, v_2, v_3)^\text{T}$ kann als 
@@ -895,7 +1011,7 @@ mit den Pauli-Matrizen $\sigma_{\mu}$ ($\sigma_0 = \mathbb{1}_{2 \times 2}$) dar
 Somit gilt $v^{\mu} v_{\mu} = {(v^0)^2 - \vec{v}^2} = \text{Det}(v^{\mu} \sigma_{\mu})$.
 Die LT bilden dann komplexe $2\times 2$-Matrizen mit Determinante $+ 1$, also  
 die SL(2, $\mathbb{C}$) (special linear, komplex zweidimensonal).
-Mit $\lambda(\Lambda) \in SL(2, \mathbb{C})$ wird ein Viervektor gemäß
+Mit $\lambda(\Lambda) \in SL(2, \mathbb{C})$ wird ein Vierervektor gemäß
 \begin{equation*}
   \lambda (v^{\mu} \sigma_{\mu}) \lambda^{\dagger} = (\Lambda_{\; \nu}^{\mu} v^{\nu}) \sigma_{\mu}
 \end{equation*}
@@ -920,16 +1036,6 @@ Als Beispiel ein Boost in $z$-Richtung:
     \symup{e}^{\chi} (v^0 + v^3) & v^1 - iv^2 \\
     v^1 + iv^2 & \symup{e}^{-\chi}(v^0 - v^3)
   \end{pmatrix}
-\end{equation*}
-\subsection{Die Gruppe \texorpdfstring{$\text{L}_+^{\uparrow}$}{PDFstring} }
-Die eignetlich-orthochrone Lorentz-Gruppe hat die Generatoren 
-\begin{equation}
-  [J_i,J_j] = i \epsilon_{ijk} J^k,\quad [K_i, K_j] = - i \epsilon_{ijk} J^k, 
-  \quad [J_i,J_j] = i \epsilon_{ijk} K^k \label{eqn:genspinor}
-\end{equation}
-und entspricht der SO(3,1) mit den Darstellungen
-\begin{equation*}
-  \symup{e}^{i(\vec{\theta} \cdot \vec{J} + \vec{\chi} \cdot \vec{K})}.
 \end{equation*}
 \subsection{Relativstische Schreibweise einer allgemeinen Lorentz-Transformation}
 Definiere zwei neue Tensor, die einmal die Boosts und Drehungen zusammenfasst und einmal 
@@ -957,6 +1063,9 @@ Damit können die LT durch
 dargestellt werden.
 \subsection{Transformation eines Spinors mit Spin \texorpdfstring{$s = 1/2$}{PDFstring}
 unter \texorpdfstring{$\text{L}_+^{\uparrow}$}{PDFstring}}
+{\color{red} Das ist einfach aus der Vorlesung übernommen.
+Jedoch ist das redundant zu den Abschnitt zu den Darstellungen und die gepunkteten Spinoren 
+finde ich komisch.}
 Suche eine Spinordarstellung für die Algebra \eqref{eqn:genspinor}.
 Nutze dazu die Darstellung eines Viervektors als hermitesche $2\times 2$-Matrix (s. \ref{sub:2times2}).
 Ein Weyl-Spinor ist ein zweikomponentiges Objekt, dass wie 
@@ -999,7 +1108,7 @@ mit der Transformation
 \end{equation*}
 \section{Die SU(N)}
 Die SU(N) ist die Gruppe der unitären $N \times N$-Matrizen mit Determinante Eins. 
-Ein Element kann durch $\symup{e}^{i(\vec{\theta} \cdot \vec{{T}})}$ dargestellt werden.
+Ein Element kann durch $\symup{e}^{i\vec{\theta} \cdot \vec{{T}}}$ dargestellt werden.
 Aus der Unitarität folgt wieder, dass die Generatoren hermitesch sein müssen.
 Eine SU(N) hat
 \begin{equation}
