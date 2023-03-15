@@ -965,7 +965,7 @@ linkshändige Weyl-Spinoren
 \end{equation*}
 Bei der Rotation fällt auf, dass die Weyl-Spinoren, im Gegensatz zu gewöhnlichen
 Vierervektoren, erst nach einer Drehung um $4\pi$ in sich selbst übergehen.
-\subsection{(0,1/2)}
+\subsubsection{(0,1/2)}
 Hier wird analog zu dem linkshändigen Spinor \ref{sub:left} gerechnet, außer, dass $A_k = 0$ gilt. 
 Als Ergebnis findet man die LT 
 \begin{equation*}
@@ -1010,7 +1010,7 @@ hermitesche $2 \times 2$- Matrix gemäß
 mit den Pauli-Matrizen $\sigma_{\mu}$ ($\sigma_0 = \mathbb{1}_{2 \times 2}$) dargestellt werden.
 Somit gilt $v^{\mu} v_{\mu} = {(v^0)^2 - \vec{v}^2} = \text{Det}(v^{\mu} \sigma_{\mu})$.
 Die LT bilden dann komplexe $2\times 2$-Matrizen mit Determinante $+ 1$, also  
-die SL(2, $\mathbb{C}$) (special linear, komplex zweidimensonal).
+die $SL(2, \mathbb{C})$ (special linear, komplex zweidimensonal).
 Mit $\lambda(\Lambda) \in SL(2, \mathbb{C})$ wird ein Vierervektor gemäß
 \begin{equation*}
   \lambda (v^{\mu} \sigma_{\mu}) \lambda^{\dagger} = (\Lambda_{\; \nu}^{\mu} v^{\nu}) \sigma_{\mu}
@@ -1064,7 +1064,7 @@ dargestellt werden.
 \subsection{Transformation eines Spinors mit Spin \texorpdfstring{$s = 1/2$}{PDFstring}
 unter \texorpdfstring{$\text{L}_+^{\uparrow}$}{PDFstring}}
 {\color{red} Das ist einfach aus der Vorlesung übernommen.
-Jedoch ist das redundant zu den Abschnitt zu den Darstellungen und die gepunkteten Spinoren 
+Jedoch ist das redundant zu dem Abschnitt zu den Darstellungen und die gepunkteten Spinoren 
 finde ich komisch.}
 Suche eine Spinordarstellung für die Algebra \eqref{eqn:genspinor}.
 Nutze dazu die Darstellung eines Viervektors als hermitesche $2\times 2$-Matrix (s. \ref{sub:2times2}).
@@ -1073,7 +1073,7 @@ Ein Weyl-Spinor ist ein zweikomponentiges Objekt, dass wie
   x_{\alpha}' = \lambda_{\; \alpha}^{\beta} x_{\beta}
 \end{equation*}
 transformiert mit $\lambda \in SL(2, \mathbb{C})$.
-$\lambda$ und $\lambda^*$ sind die unabhängigen Darstellung der SL(2,$\mathbb{C}$), d.h., dass 
+$\lambda$ und $\lambda^*$ sind die unabhängigen Darstellung der $SL(2,\mathbb{C})$, d.h., dass 
 keine Trafo $\lambda = U^{-1} \lambda^* U$ exestiert.
 Die Weyl-Spinoren $\eta_{\dot{\beta}}$ transformieren unter $\lambda^*$ wie 
 \begin{equation*}
@@ -1096,15 +1096,25 @@ $\vec{A} = \frac{1}{2}\vec{\sigma}, \; \vec{B} = \vec{0}$, damit gilt
 $\vec{J} =\frac{1}{2}\vec{\sigma}, \; \vec{K} = -\frac{i}{2}\vec{\sigma}$, womit eine 
 allgemeine LT eines linkshändigen Spinors $(1/2, 0)$ durch 
 \begin{equation*}
-  \symup{e}^{i(\vec{J}\cdot \vec{\theta} + \vec{K} \cdot \vec{\chi})}
+  \lambda (\Lambda) = \symup{e}^{i(\vec{J}\cdot \vec{\theta} + \vec{K} \cdot \vec{\chi})} 
+  = \symup{e}^{i(-\frac{\vec{\sigma} \cdot \vec{\theta}}{2} + \frac{\vec{\chi} \cdot \vec{\sigma}}{2})}
 \end{equation*}
 gegeben ist.
-Bei einem linkshändigen (gepunkteten) Spinor $(0, 1/2)$ gilt
+Bei einem rechtshändigen (gepunkteten) Spinor $(0, 1/2)$ gilt
 $\vec{A} = \vec{0}, \; \vec{B} = \frac{1}{2}\vec{\sigma}^*$ und somit 
 $\vec{J} =\frac{1}{2}\vec{\sigma}^*, \; \vec{K} = \frac{i}{2}\vec{\sigma}^*$ 
 mit der Transformation 
 \begin{equation*}
-  \symup{e}^{i(\frac{\vec{\sigma}^* \cdot \vec{\theta}}{2} + \frac{\vec{\chi} \cdot \vec{\sigma}^*}{2})}.
+  \lambda(\Lambda) = \symup{e}^{i(\frac{\vec{\sigma}^* \cdot \vec{\theta}}{2} + \frac{\vec{\chi} \cdot \vec{\sigma}^*}{2})}.
+\end{equation*}
+Ein Dirac-Spinor transformiert dan wie 
+\begin{equation*}
+  \Psi' = 
+  \begin{pmatrix}
+    \lambda & \mathbf{0} \\ 
+    \mathbf{0}       & \epsilon \lambda^* \epsilon^{\text{T}}
+  \end{pmatrix}
+  \Psi
 \end{equation*}
 \section{Die SU(N)}
 Die SU(N) ist die Gruppe der unitären $N \times N$-Matrizen mit Determinante Eins. 
