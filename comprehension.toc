@@ -43,29 +43,23 @@
 \contentsline {subsection}{\numberline {5.2}Erzeugenden}{13}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Strukturkonstanten}{13}{subsection.5.3}%
 \contentsline {subsection}{\numberline {5.4}Exponentielle Parameterisierung}{13}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Einschub: Name \enquote {Generator}}{14}{subsubsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.5}Lie-Klammern}{14}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}$SO(3)$}{15}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}$SU(2)$}{15}{subsection.5.7}%
-\contentsline {subsection}{\numberline {5.8}Vergleich $SO(3)$ und $SU(2)$}{16}{subsection.5.8}%
-\contentsline {subsection}{\numberline {5.9}Darstellungen der $SU(2)$ und $SO(3)$}{16}{subsection.5.9}%
+\contentsline {subsection}{\numberline {5.6}SO(3)}{14}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}SU(2)}{14}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Vergleich SO(3) und SU(2)}{15}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9}Irreduzible Darstellungen der SU(2) und SO(3)}{15}{subsection.5.9}%
 \contentsline {section}{\numberline {6}Poincare-Gruppe}{16}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Lorentz-Transformation}{16}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Einschub: Warum $O(3,1)$ und nicht $O(4)$?}{16}{subsubsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.2}Lorentz-Gruppe}{17}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Die Gruppe $\text {L}_+^{\uparrow }$}{17}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Definition: Rapiditäten}{18}{subsubsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.4}Andere Basis für die eigentlich-orthochrone LT}{18}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Darstellungen der Lorentzgruppe}{19}{subsection.6.5}%
-\contentsline {subsubsection}{\numberline {6.5.1}(0,0)}{19}{subsubsection.6.5.1}%
-\contentsline {subsubsection}{\numberline {6.5.2}(1/2, 0)}{19}{subsubsection.6.5.2}%
-\contentsline {subsubsection}{\numberline {6.5.3}(0,1/2)}{20}{subsubsection.6.5.3}%
-\contentsline {subsection}{\numberline {6.6}Dirac-Spinor}{20}{subsection.6.6}%
-\contentsline {subsubsection}{\numberline {6.6.1}Darstellung eines Vierervektors als hermitesche $2 \times 2$-Matrix}{20}{subsubsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.7}Relativstische Schreibweise einer allgemeinen Lorentz-Transformation}{21}{subsection.6.7}%
-\contentsline {subsection}{\numberline {6.8}Transformation eines Spinors mit Spin $s = 1/2$ unter $\text {L}_+^{\uparrow }$}{21}{subsection.6.8}%
-\contentsline {section}{\numberline {7}Die SU(N)}{22}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Die $SU(2)$}{22}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Cartan'sche Unteralgebra einer Liealgebra}{22}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Flavour SU(3)}{23}{subsection.7.3}%
+\contentsline {subsection}{\numberline {6.2}Eigenschaften der Lorentz-Transformation}{16}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Lorentz-Gruppe als Liegruppe}{16}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Rapiditäten}{16}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Darstellung der Lorentzgruppe}{17}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}Darstellung eines Vierervektors als hermitesche $2 \times 2$-Matrix}{17}{subsubsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.6}Die Gruppe $\text {L}_+^{\uparrow }$}{18}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Relativstische Schreibweise einer allgemeinen Lorentz-Transformation}{18}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Transformation eines Spinors mit Spin $s = 1/2$ unter $\text {L}_+^{\uparrow }$}{18}{subsection.6.8}%
+\contentsline {section}{\numberline {7}Die SU(N)}{19}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Die SU(2)}{19}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Cartan'sche Unteralgebra einer Liealgebra}{19}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Flavour SU(3)}{20}{subsection.7.3}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
