@@ -3,6 +3,8 @@
   titlepage=firstiscover, % Titelseite ist Deckblatt
 ]{scrartcl}
 
+\usepackage{datetime2}
+
 % Paket float verbessern
 \usepackage{scrhack}
 
@@ -143,7 +145,7 @@
 }
 
 \title{Zusammenfassung zur Vorlesung Gruppentheorie in der Physik I}
-\date{03.03.2023}
+\date{\today}
 
 \begin{document}
 
@@ -167,7 +169,7 @@
 \end{itemize}
 \section{Abstrakte Gruppentheorie}
 \subsection{Definition: Gruppe}
-  Eine Menge $\symcal{G} = \{A_2,A_3,...\}$ bildet eine Gruppe, wenn mit einer Gruppenverknüpfung $*$ folgende vier Eigenschaften erfüllt sind:
+  Eine Menge $\symcal{G} = \{A_1, A_2,A_3,...\}$ bildet eine Gruppe, wenn mit einer Gruppenverknüpfung $*$ folgende vier Eigenschaften erfüllt sind:
   \begin{enumerate}
     \item \textbf{Abgeschlossenheit}: Mit $A_i, A_j \in \symcal{G}$ folgt $A_i * A_j = A_k \in \symcal{G}$, d.h. die Verknüpfung zweier 
     Elemente ergibt wieder ein Element der Gruppe.
@@ -198,7 +200,7 @@ Bsp. Symmetrische Gruppe $S_3$:
     \end{tabular} 
 \]
 \subsubsection{Rearrangement Theorem}
-Sallop gesagt: In jeder Zeile und Spalte einer Multiplikationstabelle kann ein Gruppenelemnt nur einmal auftreten.\\
+Sallop gesagt: In jeder Zeile und Spalte einer Multiplikationstabelle kann ein Gruppenelement nur einmal auftreten.\\
 Mathematisch: In der Sequenz $EA_k, A_2A_k, \cdots , A_h A_k$ kommt jedes Element $A_i$ nur einmal vor.
 \subsection{Zyklische Gruppe}
 Bei einer zyklischen Gruppe kann jedes Element durch mehrfacher Multiplikation eines Elements reproduziert werden, so dass
@@ -221,7 +223,7 @@ Zwei (linke oder rechte) Nebenklassen $X\symcal{S}, Y\symcal{S}$ einer Untergrup
 disjunkt oder gleich.
 \subsubsection{Satz: Index einer Untergruppe}
 Die Ordnung einer Untergruppe $\symcal{S}$ von $\symcal{G}$, wobei 
-$|\symcal{S}| = g$ und $\symcal{G} = h$ gilt, muss ein ganzzahliger Teiler von $h$ sein, so dass 
+$|\symcal{S}| = g$ und $|\symcal{G}| = h$ gilt, muss ein ganzzahliger Teiler von $h$ sein, so dass 
 \begin{equation*}
   \frac{h}{g} = l \in \symbb{Z}
 \end{equation*}
@@ -235,7 +237,7 @@ Zwei Elemente $A, B$ sind zueinander konjugiert, wenn
 gilt.
 Damit folgt, dass wenn $C$ und $B$ zu $A$ konjugiert sind, dass auch $B$ und $C$ zueinander konjugiert sind.
 \subsubsection{Konjugationsklasse}
-Alle Elemente einer Gruppe $\symcal{G}$ die zueinander konjugiert sind bilden eine Konjugationsklasse
+Alle Elemente einer Gruppe $\symcal{G}$, die zueinander konjugiert sind, bilden eine Konjugationsklasse
 \begin{equation*}
   \symcal{G} A = \{BAB^{-1} | B \in \symcal{G} \},
 \end{equation*}
@@ -274,15 +276,14 @@ Eine invariante Untergruppe $\symcal{S}$ einer Gruppe $G$ bildet mit all ihren $
 wobei die invariante Untergruppe $\symcal{S}$ das Einselement bildet.
 Die Ordnung der Faktorgruppe entspricht $\sfrac{|\symcal{G}|}{|\symcal{S}|}$.
 \section{Darstellungstheorie}
-Wir haben uns ausschließlich mit Matritzendarstellungen beschäftigt.
+Wir haben uns ausschließlich mit Matrizendarstellungen beschäftigt.
 \subsection{Definition: Darstellung}
-Bei einer Darstellung $\symup{\Gamma}$ wird jedem Gruppenelement eine quadratische Matrix zugeordnet:
+Bei einer Darstellung $\symup{\Gamma}$ wird jedem Gruppenelement eine quadratische Matrix zugeordnet
 \begin{equation*}
-  \symup{\Gamma}(A) : \quad V \to V
+  \symup{\Gamma}(A) : \quad \symcal{V} \to \symcal{V}.
 \end{equation*}
-mit dem Vektorraum $V$ als Darstellungsraum mit $\text{Dim(V)} = d$ als 
-Dimension der Darstellung.
-Eine lineare Darstellung $\symup{\Gamma} (A)$ von $\symcal{G}$ ist ein Homomorphismus der Gruppe GL$(V)$
+Der Vektorraum $\symcal{V}$ wird Darstellungsraum genannt, wobei $\text{Dim}(\symcal{V}) = d$ die Dimension der Darstellung ist.
+Eine lineare Darstellung $\symup{\Gamma} (A)$ von $\symcal{G}$ ist ein Homomorphismus der Gruppe GL$(\symcal{V})$
 \begin{equation*}
   \symup{\Gamma}(A) \symup{\Gamma}(B) = \symup{\Gamma}(AB), \quad A,B \in \symcal{G}.
 \end{equation*} 
@@ -303,15 +304,17 @@ Die direkte Summe von zwei Darstellungen
   \end{pmatrix}
   , \quad \symup{\Gamma} (A) = \symup{\Gamma}^1 (A)\bigoplus \symup{\Gamma}^2(A)
 \end{equation*}
-ist eine weiter Form von Redundanz.
+ist eine weitere Form von Redundanz.
 Lässt sich eine Darstellung durch eine globale Ähnlichkeitstransformation auf eine Blockdiagonale
 bringen, ist sie reduzibel, sonst irreduzibel.
 \subsection{Satz: unitäre Darstellungen}
 Jede Darstellung lässt sich mit Hilfe einer Ähnlichkeitstransformation auf eine 
-unitäre Darstellung abgebildet werden. Vorgehen: Konstruiere hermitesche Matrix 
-${\mathbf{H} = \sum_i^h \symup{\Gamma}(A_i) \symup{\Gamma} (A_i)^\dagger}$. Dann diese diagonalisieren mit unitärer Trafo 
-$\mathbf{d} = \mathbf{U}^{-1} \mathbf{H} \mathbf{U}$. Somit ist
-die Darstellung 
+unitäre Darstellung abgebilden. 
+Vorgehen: Konstruiere hermitesche Matrix 
+${\mathbf{H} = \sum_i^h \symup{\Gamma}(A_i) \symup{\Gamma} (A_i)^\dagger}$. 
+Dann diese diagonalisieren mit unitärer Trafo 
+$\mathbf{d} = \mathbf{U}^{-1} \mathbf{H} \mathbf{U}$. 
+Somit ist die Darstellung 
 \begin{equation*}
   \symup{\Gamma}^{'}(A_j) = \mathbf{d^{-\frac{1}{2}}} \mathbf{U}^{-1} \symup{\Gamma}(A_j) \mathbf{U} \mathbf{d}^{\frac{1}{2}}
 \end{equation*}
@@ -322,14 +325,14 @@ muss ein Vielfaches von der Einheitsmatrix (sog. konstante Matrix) sein.
 Wenn somit eine nicht-konstante Matrix mit mindestens einer Matrix einer Darstellung kommutiert, 
 ist diese Darstellung reduzibel.
 \subsubsection{Alternative Formulierung}
-Gegeben seien zwei Darstellungen mit $\text{Dim}(\symup{\Gamma}^1(A_i)) = d_1$ und $\text{Dim}(\symup{\Gamma}^1(A_i)) = d_1$.
+Gegeben seien zwei Darstellungen mit $\text{Dim}(\symup{\Gamma}^1(A)) = d_1$ und $\text{Dim}(\symup{\Gamma}^2(A)) = d_2$.
 Wenn dann mit einer beliebigen Matrix $\mathbf{M}$
 \begin{equation*}
-  \mathbf{M}\symup{\Gamma}^1(A_1) = \symup{\Gamma}^2(A_i) \mathbf{M}
+  \mathbf{M}\symup{\Gamma}^1(A) = \symup{\Gamma}^2(A) \mathbf{M}
 \end{equation*}
 gilt, dann muss (i) bei $d_1 \neq d_2$ $\mathbf{M} = \mathbf{0}$ oder (ii) bei $d_1 = d_2$ entweder 
 $\mathbf{M} = \mathbf{0}$ oder $|\mathbf{M}| \neq 0$ gelten.
-Aus letzterem folgt $\symup{\Gamma}^1(A_i) = \mathbf{M} \symup{\Gamma}^2(A_i) \mathbf{M}^{-1} $, womit 
+Aus letzterem folgt $\symup{\Gamma}^1(A) = \mathbf{M} \symup{\Gamma}^2(A) \mathbf{M}^{-1} $, womit 
 die Darstellungen äquivalent sind.
 \subsection{Orthogonalitätstheorem}
 \label{sub:orth}
@@ -356,13 +359,13 @@ Die eindeutige Gleichheit wird z.B. im Tinkham bewiesen.
 Der Charakter einer Darstellung $\symup{\Gamma}^i(R)$ ist die Menge
 der $h$ Zahlen $\chi^i(E), \chi^i(A_2), \ldots, \chi^i(A_h)$ mit
 \begin{equation*}
-  \chi^i(R) = \text{Tr}(\symup{\Gamma}^i(R)) = \sum_j^{d_i} \Gamma^i(R)_{jj}.
+  \chi^i(R) = \text{Tr}(\symup{\Gamma}^i(R)) = \sum_j^{d_i} \symup{\Gamma}^i(R)_{jj}.
 \end{equation*}
 Die Spur ist unter einer Ähnlichkeitstransformation invariant, so dass äquivalente Darstellungen und 
 Elemente innerhalb einer Klasse denselben Charakter besitzen.
 Im Folgenden wird der Charakter für die $k$-te Klasse $\symcal{G}_k$ durch $\chi^i(\symcal{G}_k)$ angegeben.
 \subsection{Satz: Zeilenorthogonalität}
-Wir das Orthogonalitätstheorem genutzt, kann 
+Wird das Orthogonalitätstheorem genutzt, kann 
 \begin{equation*}
   \sum_R \chi^i(R)^* \chi^j(R) = \sum_R \chi^i(\symcal{G}_k)^* \chi^j(\symcal{G}_k) N_k = h \delta_{ij}
 \end{equation*}
@@ -372,13 +375,13 @@ Somit formen die Charaktere der verschiedenen irreduziblen Darstellungen eine Me
 \chi^i = 
 \begin{pmatrix}
   \chi^i(E       )\\
-  \chi^i(A_2     )\\
+  \chi^i(\symcal{G}_2     )\\
   \ldots          \\
-  \chi^i(A_h     )
+  \chi^i(\symcal{G}_n     )
 \end{pmatrix}
 \end{equation*}  
-im Gruppenelement-Vektorraum aufgespannt durch die Klassen $\symcal{G}_k$.
-Da die Anzahl der orthogonalen Vektoren nicht die Dimension des Vektorraums übersteigen kann,
+in einem $n$-dimensionalen Vektorraum, welcher durch die Klassen $\symcal{G}_k$ aufgespannt wird.
+Da die Anzahl der orthogonalen Vektoren die Dimension des Vektorraums nicht übersteigen kann,
 darf die Anzahl der Klassen nicht die Anzahl der irreduziblen Darstellungen übersteigen.
 Es gilt sogar
 \begin{equation*}
@@ -396,15 +399,16 @@ der Anzahl an Elementen in der jeweiligen Klasse.
   \toprule
    & {$\symcal{G}_1$} & {$3\symcal{G}_2$} & {$2\symcal{G}_3$} \\
   \midrule
-  {$\Gamma^1$} & 1 & 1  & 1   \\
-  {$\Gamma^2$} & 1 & -1 & 1   \\
-  {$\Gamma^3$} & 2 & 0  & -1  \\
+  {$\symup{\Gamma}^1$} & 1 & 1  & 1   \\
+  {$\symup{\Gamma}^2$} & 1 & -1 & 1   \\
+  {$\symup{\Gamma}^3$} & 2 & 0  & -1  \\
   \bottomrule
   \end{tabular}
   \end{table}
 \subsection{Satz: Spaltenorthogonalität}
+Für irreduzible Darstellungen $\chi^i$ und $\chi^j$ gilt
 \begin{equation*}
-  \sum_i \chi^i(\symcal{G}_k)^* \chi^i(\symcal{G}_l) = \frac{h}{N_k} \delta_{kl}
+  \sum_i \chi^i(\symcal{G}_k)^* \chi^i(\symcal{G}_l) = \frac{h}{N_k} \delta_{kl}.
 \end{equation*}
 \subsection{Dekomposition von reduziblen Darstellungen}
 Bringe die Darstellung erst auf blockdiagonale Form
@@ -426,9 +430,9 @@ wobei der Koeffizient $a_i$ angibt, wie oft die $i$-te irreduzible Darstellung a
 Diagonale vorkommt.
 Durch Anwendung des Orthogonalitätstheorems \ref{sub:orth}, sind die Koeffizienten eindeutig 
 durch den Charakter der reduziblen Darstellung bestimmt.
-\begin{equation*}
+\begin{equation}
   a_i = \frac{1}{h} \sum_k N_k \chi_{\text{irred}}^i (\symcal{G}_k)^* \chi_{\text{red}} (\symcal{G}_k) . \label{eqn:decomp}
-\end{equation*}
+\end{equation}
 \subsection{Reguläre Darstellung}
 Hier schiebt man einfach die Elemente in der Multiplikationstabelle so rum, so dass 
 auf der Hauptdiagonalen das Einselement liegt. 
@@ -448,7 +452,7 @@ Damit bekommt die Matrix der regulären Darstellung eine $1$ als Eintrag an dies
     \end{tabular} 
 \]
 \begin{equation*}
-  \Gamma_\text{reg}(A)
+  \symup{\Gamma}_\text{reg}(A)
   \begin{pmatrix}
     0 & 1 & 0 & 0 & 0 & 0 \\
     1 & 0 & 0 & 0 & 0 & 0 \\
@@ -483,17 +487,18 @@ Dabei gibt j den Grad der Entartung an.
 Ziel ist es nun einen Zusammenhang zwischen den Symmetrieoperationen und der Entartung der Energieniveaus 
 zu finden.
 \subsection{Wirkung der Symmetrieoperationen auf Wellenfunktionen}
-Sei $\hat{P}_R$ eine Symmetrieoperationen, somit wirkt diese auf eine Wellenfunktionen gemäß
+Sei $\hat{P}_R$ eine Symmetrieoperation.
+Diese wirkt auf eine Wellenfunktion gemäß
 \begin{equation*}
   \hat{P}_R \Psi (\vec{r}) = \Psi(\mathbf{R}^{-1}\vec{r}).
 \end{equation*}
 Somit kann entweder der Vektor um einen Winkel im mathematisch positiven Drehsinn oder 
 das Koordinatensystem um diese Winkel im mathematisch negativen Drehsinn gedreht werden.
-Die Symmetrieoperatoren bilden eine Gruppe, die isomoprh zu der Gruppe der 
+Die Symmetrieoperatoren bilden eine Gruppe, die isomorph zu der Gruppe der 
 Koordinatentransformationen ist.
 \subsection{Symmetrie des Hamiltonoperators}
 \label{sub:symmhamil}
-Wenn das System und damit auch der Hamiltonian invariant unter einer Symmetrieoperationen ist, vertauscht 
+Wenn das System und damit auch der Hamiltonian invariant unter einer Symmetrieoperation ist, vertauscht 
 der Hamiltonian mit dem Symmetrieoperator und somit gilt 
 \begin{equation*}
   \hat{H} \Psi = E_n \Psi \iff 
@@ -503,7 +508,7 @@ der Hamiltonian mit dem Symmetrieoperator und somit gilt
 d.h. bei Symmetrien haben verschiedene Zustände die selbe Energie, womit Entartung vorliegt.
 \subsection{Die Gruppe der Schrödingergleichung}
 \label{sub:schrdgroup}
-Sei nun eine Energieniveau $E_n$ $d_n$-fach entartet.
+Sei nun ein Energieniveau $E_n$ $d_n$-fach entartet.
 Dann wähle $d_n$ orthonormale Eigenfunktionen, welche zu $E_n$ gehören.
 Diese $d_n$ Eigenfunktionen spannen den entarteten Unterraum $\symcal{V} \in \symcal{H}$ 
 von dem gesamten Hilbertraum $\symcal{H}$ auf, welcher invariant unter den Symmetrieoperationen, welche 
@@ -517,12 +522,12 @@ Die Darstellungen sind irreduzibel, da in dem Raum $\symcal{V}$ kein invarianter
 Nach Abschnitt \ref{sub:schrdgroup} erhält man durch Anwendung der Symmetrieoperation auf eine 
 Eigenfunktion des entarteten Unterraums eine Linearkombination aller Eigenfunktionen
 \begin{equation*}
-  \hat{P}_R \Psi_\nu^n = \sum_\kappa \Gamma^n(R)_{\kappa \nu} \Psi_\kappa^n
+  \hat{P}_R \Psi_\nu^n = \sum_\kappa \symup{\Gamma}^n(R)_{\kappa \nu} \Psi_\kappa^n .
 \end{equation*}
-Die Matrixen $\Gamma^n(R)$ bilden dann eine irreduzible Darstellung zu der Symmetriegruppe, unter welcher 
+Die Matrixen $\symup{\Gamma}^n(R)$ bilden dann eine irreduzible Darstellung zu der Symmetriegruppe, unter welcher 
 der entartete Unterraum mit dem Energiveau $E_n$ invariant ist.
 \subsection{Unitarität der Darstellung}
-Nur wenn die Eigenfunktionen orthornmiert gewählt werden, sind die Darstellungen unitär.
+Nur wenn die Eigenfunktionen orthonormiert gewählt werden, sind die Darstellungen unitär.
 \subsection{Entartungsgrad}
 \begin{equation*}
   \text{Entartungsgrad} = \text{Dimension der irreduziblen Darstellung}
@@ -536,45 +541,48 @@ Nur wenn die Eigenfunktionen orthornmiert gewählt werden, sind die Darstellunge
 \subsection{Definiton: Liegruppe}
 Eine Gruppe $\symcal{G}$ wird Liegruppe genannt, wenn
 \begin{enumerate}
-  \item $\symcal{G}$ besitzt mindestens eine endliche Darstellung $\Gamma(T)$ mit $T \in \symcal{G}$ der Dimension 
+  \item $\symcal{G}$ besitzt mindestens eine endliche Darstellung $\symup{\Gamma}(T)$ mit $T \in \symcal{G}$ der Dimension 
   $d$. 
   Definiere einen Abstand 
     \begin{equation*}
-      d(T,T') = \sqrt{\sum_{\substack{j=1}{k=1}} \left | \Gamma(T)_{jk} - \Gamma(T')_{jk} \right |^2  } = d(T',T) > 0
+      d(T,T') = \sqrt{\sum_{\substack{j=1}{k=1}} \left | \symup{\Gamma}(T)_{jk} - \symup{\Gamma}(T')_{jk} \right |^2  } = d(T',T) > 0
     \end{equation*}
     und somit eine Metrik.
   \item Jedes Element $T$ kann durch $n$ reelle Parameter $\theta = (\theta_1, \ldots, \theta_n)$ angegeben werden.
     $n$ ist dann die Dimension der Liegruppe und die minimale Anzahl an Elementen.
   \item Nähe zum Einselement. Sei $\eta$ vorgegeben, dann gehört zu jedem Punkt $\theta =  (\theta_1, \ldots, \theta_n)$,
     für den $\sum_i^n \theta_i^2 < \eta^2$ gilt, ein Element $T \in \symcal{G}$.
-  \item Die Darstellungen $\Gamma(T(\theta))$ sind in den Parametern analytisch und somit in eine Potenzreihe entwickelbar.
+  \item Die Darstellungen $\symup{\Gamma}(T(\theta))$ sind in den Parametern analytisch und somit in eine Potenzreihe entwickelbar.
 \end{enumerate}
 Die Gruppenelemente $T(\theta)$ sind \enquote{smooth} bzgl. den Parametern. 
-Das bedeutet, dass die wenn die Gruppenelemente nah beieinander sind, dass die Parameter ebenfalls nah beieinander sind.
-Ebenfalls soll das Einselement bei $\theta = 0$ liegen:
+Das bedeutet, dass, wenn die Gruppenelemente nah beieinander sind, die Parameter ebenfalls nah beieinander sind.
+Ebenfalls soll das Einselement bei $\theta = 0$ liegen
 \begin{equation*}
-  T(\theta)\big |_{\theta = 0} = E \iff \Gamma(T(\theta)) \big |_{\theta = 0} = \mathbb{1}
+  T(\theta)\big |_{\theta = 0} = E \iff \symup{\Gamma}(T(\theta)) \big |_{\theta = 0} = \mathbb{1} .
 \end{equation*}
 \subsection{Erzeugenden}
 Die $n$ Erzeugenden/Generatoren einer $n$-dimensionalen Liealgebra sind gemäß 
-\begin{equation*}
-  \frac{1}{i} \frac{\partial}{\partial \theta_j} \Gamma(T(\theta)) \biggr |_{\theta = 0} = t_j \label{eqn:gen}
-\end{equation*}
+\begin{equation}
+  \frac{1}{i} \frac{\partial}{\partial \theta_j} \symup{\Gamma}(T(\theta)) \biggr |_{\theta = 0} = t_j \label{eqn:gen}
+\end{equation}
 definiert. 
 Der Faktor $\sfrac{1}{i}$ ist Konvention.
 Wenn man die Darstellungen bis zur ersten Ordnung entwickelt und fordert, dass die Darstellungen 
-unitär sind, folgt dass die Generatoren hermitesch sein müssen. 
+unitär sind, folgt, dass die Generatoren hermitesch sein müssen. 
 \begin{align*}
-  \Gamma(T(\theta)) &= \symbb{1} + \frac{\partial \Gamma(T(\theta))}{\partial \theta_a} \biggr |_{\theta = 0} \theta_a + \symbfcal{O}(\theta^2) 
+  \symup{\Gamma}(T(\theta)) &= \symbb{1} + \frac{\partial \symup{\Gamma}(T(\theta))}{\partial \theta_a} \biggr |_{\theta = 0} \theta_a + \symbfcal{O}(\theta^2) 
   = \mathbb{1} + i t_a \theta_a + \symbfcal{O}(\theta^2) \\
-  \implies \Gamma(T(\theta))\Gamma(T(\theta))^{\dagger}  &\approx \mathbb{1} + i \theta_a (t_a - t_a^{\dagger}) \stackrel{!}{=} \mathbb{1} \iff t_a = t_a^{\dagger}
+  \implies \symup{\Gamma}(T(\theta))\symup{\Gamma}(T(\theta))^{\dagger}  &\approx \mathbb{1} + i \theta_a (t_a - t_a^{\dagger}) \stackrel{!}{=} \mathbb{1} \iff t_a = t_a^{\dagger}
 \end{align*}
 \subsection{Strukturkonstanten}
 Ausgang ist die Gruppeneigenschaft. 
-Somit muss mit $T(\theta), \; T(\theta') \in \symcal{G}$ $T(\theta)T(\theta') = T(f(\theta, \theta'))$ gelten.
+Somit muss mit $T(\theta), T(\theta') \in \symcal{G}$ 
+\begin{equation*}
+  T(\theta)T(\theta') = T(f(\theta, \theta'))
+\end{equation*} gelten.
 Es gilt ebenfalls $\theta = \theta_1, \ldots, \theta_n, \; f = f_1, \ldots, f_n$ mit n als Dimension der Gruppe.
 Bestimme nun $f(\theta, \theta')$ und entwickle $f$ in die zweite Ordnung.
-Dann nochmal die Darstellungen in erste Ordnung entwickeln und dann Koeffizientenvergleich machen, womit 
+Dann nochmal die Darstellungen in erste Ordnung entwickeln und dann einen Koeffizientenvergleich machen, womit 
 die Bedingung für eine Liealgebra
 \begin{equation*}
   [t_a, t_b] = i \sum_c^n f_{ab}^ct_c
@@ -584,19 +592,36 @@ Die $f_{ab}^c$ als sind Strukturkonstanten,
 welche extrem wichtig sind, da diese die gesamte Gruppenmultiplikation zusammenfassen.
 \subsection{Exponentielle Parameterisierung}
 \label{sub:exp}
-Wenn man nun etwas von der Eins weggeht, lässt sich die Darstellung durch 
-ein Entwicklung in den Parametern darstellen:
+Eine inifinitesimale Transformation lässt sich durch eine Reihenentwicklung bis zur ersten Ordnung darstellen.
 \begin{equation*}
-  \Gamma(\symup{d}\theta) = \mathbb{1} + i \sum_a^n t_a \symup{d}\theta_a 
+  \symup{\Gamma}(\symup{d}\theta) = \mathbb{1} + i \sum_a^n t_a \symup{d}\theta_a.
 \end{equation*}
-Wir können $\symup{d}\theta_a$ auch einfach durch $\symup{d}\theta_a = \frac{\theta}{k}$ darstellen und $k$ gegeben
-Unendlich laufen lassen.
-Damit lässt sich die Darstellung
+Man stelle sich vor, dass eine Transformation in $k$ gleiche Stücke unterteilt wird und diese Teil-Transformationen
+$k$ mal ausgeführt werden
 \begin{equation*}
-  \Gamma(\theta) = \lim_{k \to \infty} (\mathbb{1} + i \sum_a^n t_a \frac{\theta_a}{k})^k = \symup{e}^{i\sum_a^n t_a \theta_a}
+  \symup{\Gamma}(\theta) = (\mathbb{1} + i \sum_a^n t_a \symup{d}\theta_a)(\mathbb{1} + i \sum_a^n t_a \symup{d}\theta_a)
+  \cdots (\mathbb{1} + i \sum_a^n t_a \symup{d}\theta_a)
+  = (\mathbb{1} + i \sum_a^n t_a \symup{d}\theta_a)^k.
+\end{equation*}
+Um nun eine infinitesimale Transformation zu beschreiben, können wir den Parameter 
+$\symup{d}\theta_a$ auch einfach durch $\symup{d}\theta_a = \frac{\theta}{k}$ darstellen und $k$ gegeben
+Unendlich laufen lassen.
+Um nun aber eine finite Transformation zu erhalten, müssen wir diese inifinitesimale Transformation unendlich oft anwenden.
+Damit lässt sich die Transformation als Limite
+\begin{equation*}
+  \symup{\Gamma}(\theta) = \lim_{k \to \infty} (\mathbb{1} + i \sum_a^n t_a \frac{\theta_a}{k})^k = \symup{e}^{i\sum_a^n t_a \theta_a}
   = \symup{e}^{i\vec{t} \cdot \vec{\theta}}
 \end{equation*}
-finden.
+finden, wobei der Übergang zur Exponentialfunktion gemacht wurde.
+\subsubsection{Einschub: Name \enquote{Generator}}
+Den Namen \enquote{Generator} lässt sich begründen, indem man ein Element der Gruppe als Matrix um die Eins entwickelt, also 
+\begin{equation*}
+  \symup{\Gamma}(\theta) = \mathbb{1} + \frac{\symup{d}\symup{\Gamma}}{\symup{d} \theta} \big |_{\theta = 0} \theta + 
+  \frac{\symup{d^2}\symup{\Gamma}}{\symup{d} \theta^2} \big |_{\theta = 0} \theta^2 + \cdots  = \sum_{n=0}^{\infty}\frac{1}{n!}
+  \frac{\symup{d}^n\symup{\Gamma}}{\symup{d} \theta^n} \big |_{\theta = 0} \theta^n .
+\end{equation*}
+In diese Reihenentwicklung können die Generatoren einfach eingesetzt werden und damit sieht man, dass 
+die Generatoren tatsächlich die Transformationen generieren.
 \subsection{Lie-Klammern}
 Die Erzeugenden erfüllen die Axiome einer Liealgebra, d.h. für die Generatoren $t_a \in \symcal{V}$ ist 
 zusätzlich eine Verknüpfung, die Lie-Klammer, 
@@ -604,17 +629,17 @@ zusätzlich eine Verknüpfung, die Lie-Klammer,
   \symcal{V} * \symcal{V} &\to \symcal{V} \\
   x,y \in \symcal{V}      &\to [x,y] \in \symcal{V}
 \end{align*}
-definieren, welche die Eigenschaften 
+definiert, welche die Eigenschaften 
 \begin{enumerate}
   \item Biliniarität: $[\alpha x + \beta y, z] = \alpha [x,z] + \beta [y,z]$
   \item $[x,x] = 0$
   \item Jacobi-Identität (zyklische Vertauschung): $[x, [y,z]] + [z,[x,y]] + [y,[z,x]] = 0$
 \end{enumerate}
 erfüllen.
-\subsection{SO(3)}
-S für speziell (Determinante ist eins), O für orthogonal und drei für $3 \times 3$ Darstellungsmatrizen.
-Die SO(3) ist eigentlich einfach nur  die Gruppe der Drehungen im $\mathbb{R}^3$.
-Generatoren $J_i$ gemäß Gleichung \eqref{eqn:gen} bestimmen:
+\subsection{\texorpdfstring{$SO(3)$}{PDFstring}}
+S für speziell (Determinante ist eins), O für orthogonal und drei für $3 \times 3$-Matrizen.
+Die $SO(3)$ ist eigentlich einfach nur  die Gruppe der Drehungen im $\mathbb{R}^3$.
+Die Generatoren $J_i$ können gemäß Gleichung \eqref{eqn:gen} bestimmt werden
 \begin{equation*}
   J_1 = 
   \begin{pmatrix}
@@ -627,32 +652,33 @@ Generatoren $J_i$ gemäß Gleichung \eqref{eqn:gen} bestimmen:
     0 & 0   & i \\
     0 & 0   & 0 \\
     -i & 0  & 0 
-  \end{pmatrix}
+  \end{pmatrix},
   J_3= 
   \begin{pmatrix}
     0 & -i  & 0 \\
     i & 0   & 0 \\
     0 & 0   & 0 
-  \end{pmatrix}
+  \end{pmatrix}.
 \end{equation*}
 Die Kommutatorrelation ist 
 \begin{equation*}
   [J_i, J_j] = i \sum_k \epsilon_{ijk} J_k 
 \end{equation*}
-mit dem epsilon-Tensor als Strukturkonstanten und somit bilden die Generatoren $J_i$ eine Liealgebra.
+mit dem epsilon-Tensor als Strukturkonstanten.
+Somit bilden die Generatoren $J_i$ eine Liealgebra.
 Die Gruppenmannigfaltigkeit wird durch  Drehungen im $\mathbb{R}^3$ auf einer Vollkugel mit dem Radius $\pi$ 
 um den Vektor $\hat{k} = \sfrac{\vec{k}}{|\vec{k}|} = (k_1, k_2, k_3)^T$ mit $|\vec{k}| = \theta$ als
 Drehwinkel beschrieben.
 Es gilt 
 \begin{equation*}
-  \Gamma_{ij} = (1-\cos(\theta)) k_i k_j + \cos(\theta) \delta_{ij} + \sin(\theta) \sum_m \epsilon_{imj}k_m.
+  \symup{\Gamma}_{ij} = (1-\cos(\theta)) k_i k_j + \cos(\theta) \delta_{ij} + \sin(\theta) \sum_m \epsilon_{imj}k_m.
 \end{equation*}
-Es gilt außerdem $\Gamma(\hat{k}) = \Gamma(-\hat{k})$.
+Es gilt außerdem $\symup{\Gamma}(\hat{k}) = \symup{\Gamma}(-\hat{k})$.
 Auf der Vollkugel sind die gegenüberliegenden Punkte zu identifizieren,
-wo dann die Elemente identisch sind ({\color{red}hier bin ich mir nicht sicher})
-\subsection{SU(2)}
-Die SU(2) ist die lineare Gruppe der unitären (U für unitär) Matritzen mit Determinante (S für spezielle) 1.
-Die Generatoren der SU(2) sind die Pauli-Matrizen gewichtet mit dem Faktor $\sfrac{1}{2}$
+wo dann die Elemente identisch sind ({\color{red}hier bin ich mir nicht sicher}).
+\subsection{\texorpdfstring{$SU(2)$}{PDFstring}}
+Die $SU(2)$ ist die lineare Gruppe der unitären (U für unitär) $2 \times 2$-Matrizen mit Determinante (S für spezielle) 1.
+Die Generatoren der $SU(2)$ sind die Pauli-Matrizen gewichtet mit dem Faktor $\sfrac{1}{2}$
 \begin{equation*}
   s_i = \frac{1}{2} \sigma_i,
 \end{equation*}
@@ -660,27 +686,28 @@ welche die Kommutatorrelation
 \begin{equation*}
   [s_i, s_j] = i \sum_k \epsilon_{ijk} s_k
 \end{equation*}
-erfüllen erneut mit dem epslion-Tensor als Strukturkonstanten.
-Die Gruppenmannigfaltigkeit ist die selbe wie die der SO(3) bis auf, dass die Vollkugel den Radius $2\pi$ besitzt.
+erfüllen.
+Erneut bildet der epslion-Tensor die Strukturkonstanten.
+Die Gruppenmannigfaltigkeit ist die selbe wie die der $SO(3)$ bis auf, dass die Vollkugel den Radius $2\pi$ besitzt.
 Die Darstellungen können durch das Matrixexponential (s. \ref{sub:exp}) gewonnen werden
 \begin{equation*}
-  \Gamma(\alpha) = \symup{e}^{i\alpha S_3} = \symup{i\frac{\alpha}{2}\sigma_3} = 
+  \symup{\Gamma}(\alpha) = \symup{e}^{i\alpha S_3} = \symup{i\frac{\alpha}{2}\sigma_3} = 
   \begin{pmatrix}
     \symup{e}^{i\frac{\alpha}{2}} & 0                               \\
     0                             & \symup{e}^{-i\frac{\alpha}{2}}  \\
-  \end{pmatrix}
+  \end{pmatrix}.
 \end{equation*}
-jedoch gilt $\Gamma(\alpha + 2\pi) = - \Gamma(\alpha)$.
+Jedoch gilt $\symup{\Gamma}(\alpha + 2\pi) = - \symup{\Gamma}(\alpha)$.
 Erst bei einer Verschiebung um $4\pi$ kommt man am selben Punkt an (
   eine Drehung um $4\pi$ entspricht dem Einheitselement
 ), wobei hier wieder die gegenüberliegenden Punkte auf der Vollkugel 
 mit Radius $2\pi$ zu identifizieren sind, welche 
 die selben Elemente bilden ({\color{red}hier bin ich mir wieder nicht sicher}).
-\subsection{Vergleich SO(3) und SU(2)}
-Die Generatoren der SO(3) und SU(2) haben dieselben Kommutatorrelationen und somit auch die selbe Liealgebra
+\subsection{Vergleich \texorpdfstring{$SO(3)$}{PDFstring} und \texorpdfstring{$SU(2)$}{PDFstring}}
+Die Generatoren der $SO(3)$ und $SU(2)$ haben dieselben Kommutatorrelationen und somit auch die selbe Liealgebra
 (vielleicht genauer: deren Liealgebren sind isomorph). 
 Sie unterscheiden sich lediglich in ihren Gruppenmannigfaltigkeiten.
-Die SU(2) ist eine doppelte Überlagerung der SO(3).
+Die $SU(2)$ ist eine doppelte Überlagerung der $SO(3)$.
 \subsection{Irreduzible Darstellungen der SU(2) und SO(3)}
 {\color{green} Aus Vorlesung: $\sigma_z/2$ ({\color{red} nicht sicher hier, in Vorlesung steht $s_z/2$ 
 aber sehe noch nicht die Richtigkeit}) bilden 2 dimensionale Darstellung und $(\epsilon_i)_{jk}$ bilden 3 dimensionale Darstellung}
@@ -718,40 +745,153 @@ $j$ kann ganz- oder halbzahlig sein.
 Bei ganzahligem $j$ folgt $\Gamma(\alpha +2\pi)$, bei halbzahligen $j$ folgt $\Gamma(\alpha + 2\pi) = - 
 \Gamma(\alpha)$
 \section{Poincare-Gruppe}
+Die Poincaré-Gruppe ist das semidirekte Produkt der Lorentzgruppe 
+$O(3,1)$ (3 Raumdimensionen + 1 Zeitdimension) und der Gruppe der Translationen im ${\mathbb {R}}^{{3+1}}$.
 Ab hier wird die Einsteinsche Summenkonvention verwendet.
 \subsection{Lorentz-Transformation}
-Eine Lorentz-Transformation (LT) ist ein $\Lambda$ ist ein lineare Transformation, die 
+\label{sub:LT}
+Eine Lorentz-Transformation (LT) $\Lambda$ ist eine lineare Transformation, die 
 Raumzeitpunkte $x^{\mu}$  auf  $x^{\mu ' } = \Lambda_{\; \nu}^{\mu} x_{\nu} + a^{\mu}$ abbilden.
-Im Folgenden werden nur die homogenen LT, d.h. $a^{\mu} = 0$ gebraucht.
-Es wird gefordet, dass die LT das Skalarprdukt $x_{\mu}x^{\mu}$ nicht ändert, so dass die Metrik $g_{\nu \mu}$unter 
+Im Folgenden werden nur die homogenen LT, d.h. $a^{\mu} = 0$ gebraucht, also es wird nur die Lorentz-Gruppe 
+$O(3,1)$ betrachtet.
+Es wird gefordet, dass die LT das Pseudo-Skalarprdukt $x_{\mu}x^{\mu}$ nicht ändert, so dass die Metrik $g_{\nu \mu}$unter 
 der LT invariant ist 
 \begin{equation*}
   \Lambda_{\; \nu}^{\mu} \Lambda_{\; \sigma}^{\delta} g_{\mu \delta} = g_{\nu \sigma}.
 \end{equation*}
-\subsection{Eigenschaften der Lorentz-Transformation}
-$\text{Det}(\lambda) = \pm 1$, da 
+Das ist ist die definierende Eigenschaft der LT
+\subsubsection{Einschub: Warum \texorpdfstring{$O(3,1)$}{PDFstring} und nicht \texorpdfstring{$O(4)$}{PDFstring}?}
+In Abschnitt \ref{sub:LT} wurd bereits angemerkt, dass die LT das Pseudo-Skalarprodukt $x_{\mu}x^{\mu} = x_0^2 - x_1^2 - x_2^2 - x_3^3$
+invariant lässt.
+Dabei wurde die Metrik direkt auf 
 \begin{equation*}
-  \Lambda g \Lambda^T = g \iff \text{Det}(\Lambda^2) \text{Det}(g) = \text{Det}(g) \implies 
-  \text{Det}(\Lambda) = \pm 1.
+  g_{\mu \nu} = 
+  \begin{pmatrix}
+    1 & 0   & 0   & 0 \\
+    0 & -1  & 0   & 0 \\
+    0 & 0   & -1  & 0 \\
+    0 & 0   & 0   & -1 
+  \end{pmatrix}
 \end{equation*}
-Außerdem folgt aus $\Lambda_{\; 0}^{\mu} \Lambda_{\; 0}^{\rho} g_{\mu \rho} = g_{0 0}$, dass 
+gesetzt. 
+Die $O(4)$ lässt das Skalarprodukt $x_0^2 + x_1^2 + x_2^2 + x_3^2$ invariant.
+Da kann der Unterschied zwischen $O(4)$ und $O(3,1)$ gesehen werden.
+\subsection{Lorentz-Gruppe}
+Die Lorentz-Gruppe kann durch folgende beiden Eigenschaften unterteilt werden:
+\begin{enumerate}
+  \item$\text{Det}(\Lambda) = \pm 1$, da 
+  \begin{equation*}
+    \Lambda^T g \Lambda = g \iff \text{Det}(\Lambda^2) \text{Det}(g) = \text{Det}(g) \implies 
+    \text{Det}(\Lambda) = \pm 1.
+  \end{equation*}
+  \item Aus $\Lambda_{\; 0}^{\mu} \Lambda_{\; 0}^{\rho} g_{\mu \rho} = g_{0 0}$ folgt, dass 
+  \begin{equation*}
+    \Lambda_{\; 0}^{0} \geq 1 \quad \text{oder} \quad \Lambda_{\; 0}^{0} \leq 1 .
+  \end{equation*}
+\end{enumerate}
+Die Unterteilung erfolgt durch 
+\begin{align*}
+  & \symcal{L}_+^{\uparrow}:    \quad \text{Det}(\Lambda) = +1, \; \;  \Lambda_0^0 \geq 1 \\
+  & \symcal{L}_-^{\uparrow}:    \quad \text{Det}(\Lambda) = -1, \; \;  \Lambda_0^0 \geq 1 \\
+  & \symcal{L}_+^{\downarrow}:  \quad \text{Det}(\Lambda) = +1, \; \;  \Lambda_0^0 \leq -1 \\
+  & \symcal{L}_-^{\downarrow}:  \quad \text{Det}(\Lambda) = -1, \; \;  \Lambda_0^0 \leq -1 .
+\end{align*}
+Nur die eigentlich ($\text{Det}(\Lambda) = +1$, Nach der Trafo bleibt ein rechtshändiges Koordinatensystem rechtshändig) 
+orthochrone ($\Lambda_0^0 \geq 1$, ändert nicht die Orientierung der Zeit) 
+Lorentz-Gruppe $\symcal{L}_+^{\uparrow}$ kann durch infinitesimale Transformationen 
+generiert werden (Das sieht man daran, dass $\mathbb{1}_0^0 = 1$ und $\text{Det}(\mathbb{1}) = 1$ und die 
+infinitesimalen Transformationen kontinuierlich an das Einselement gebunden sind).
+Außerdem können die restlichen Gruppen der Lorentz-Gruppe durch die Zeit- und Raumumkehrtransformationen 
 \begin{equation*}
-  \Lambda_{\; 0}^{0} \geq 1 \quad \text{oder} \quad \Lambda_{\; 0}^{0} \leq 1 
+  \Lambda_{\text{T}} = 
+  \begin{pmatrix}
+    -1  & 0   & 0   & 0 \\
+    0   & 1   & 0   & 0 \\
+    0   & 0   & 1   & 0 \\
+    0   & 0   & 0   & 1 
+  \end{pmatrix} , \quad
+  \Lambda_{\text{P}} = 
+  \begin{pmatrix}
+    1 & 0   & 0   & 0 \\
+    0 & -1  & 0   & 0 \\
+    0 & 0   & -1  & 0 \\
+    0 & 0   & 0   & -1 
+  \end{pmatrix}
 \end{equation*}
-\subsection{Lorentz-Gruppe als Liegruppe}
-Die Erzeugenden der Drehungen erüllen die Algebra 
+gewonnen werden.
+Die Lorentz-Gruppe lässt sich damit als Vereinigung von vier Mengen 
+$O(3,1) = \symcal{L}_+^{\uparrow} \cup \Lambda_{\text{P}} \symcal{L}_+^{\uparrow}\cup 
+\Lambda_{\text{T}} \symcal{L}_+^{\uparrow}\cup\Lambda_{\text{T}} \Lambda_{\text{P}} \symcal{L}_+^{\uparrow}$ verstehen.
+{\color{red} Vorsicht!} Nur die Menge $ \symcal{L}_+^{\uparrow}$ ist eine Gruppe, da die anderen drei Mengen nicht das Einselement enthalten.
+\subsection{Die Gruppe \texorpdfstring{$\text{L}_+^{\uparrow}$}{PDFstring} }
+\label{sub:l+arr}
+Die Generatoren der Gruppe der eigentlich-orthochronen LT, die als 
+$SO(3,1)$ bezeichnet wird, bilden die Liealgebra 
+\begin{equation}
+  [J_i,J_j] = i \epsilon_{ijk} J^k,\quad [K_i, K_j] = - i \epsilon_{ijk} J^k,
+  \quad [J_i,J_j] = i \epsilon_{ijk} K^k. \label{eqn:genspinor}
+\end{equation}
+Die drei Generatoren 
 \begin{equation*}
-  [J_i, J_j] = i \epsilon_{ijk} J_k
+  J_1 = 
+  \begin{pmatrix}
+    0 & 0   & 0   & 0 \\
+    0 & 0   & 0   & 0 \\
+    0 & 0   & 0   & -i \\
+    0 & 0   & i   & 0  
+  \end{pmatrix}, \quad
+  J_2 = 
+  \begin{pmatrix}
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & i \\
+    0 & 0 & 0 & 0 \\
+    0 & -i& 0 & 0 
+  \end{pmatrix}, \quad 
+  J_3 = 
+  \begin{pmatrix}
+    0 & 0 & 0 & 0 \\
+    0 & 0 & -i& 0 \\
+    0 & i & 0 & 0 \\
+    0 & 0 & 0 & 0 
+  \end{pmatrix}
 \end{equation*}
-und die Winkel sind additiv, womit 
+sind die Generatoren der Drehungen.
+Die Boosts werden duch die Generatoren
 \begin{equation*}
-  \symup{e}^{i\theta J_i} \symup{e}^{i\varphi J_i} = \symup{e}^{i(\theta + \varphi) J_i}
+  K_1 = 
+  \begin{pmatrix}
+    0 & i   & 0   & 0 \\
+    i & 0   & 0   & 0 \\
+    0 & 0   & 0   & 0 \\
+    0 & 0   & 0   & 0  
+  \end{pmatrix}, \quad
+  K_2 = 
+  \begin{pmatrix}
+    0 & 0 & i & 0 \\
+    0 & 0 & 0 & 0 \\
+    i & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 
+  \end{pmatrix}, \quad 
+  K_3 = 
+  \begin{pmatrix}
+    0 & 0 & 0 & i \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    i & 0 & 0 & 0 
+  \end{pmatrix}
 \end{equation*}
-gilt. 
-Jedoch sind die Parameter der Boosts nicht additiv. 
-Somit wird ein Satz neuer Parameter, die Rapiditäten, gesucht, die additiv sind.
-\subsection{Rapiditäten}
-Die Rapidität $\chi$ sind gemäß 
+erzeugt.
+Somit wirken die Lorentz-Transformationen als $4 \times 4$-Matrix auf einen Vierervektor.
+Die Generatoren können, wie immer, mit den Parametern und der exponentiellen Parameterisierung genutzt werden, um eine 
+LT zu generieren
+\begin{equation*}
+ \Lambda(\vec{\theta}, \vec{\chi}) =  \symup{e}^{i(\vec{\theta} \cdot \vec{J} + \vec{\chi} \cdot \vec{K})}.
+\end{equation*}
+Die Parameter $\theta_1, \theta_2, \theta_3$ sind die Drehwinkel und $\chi_1,\chi_2,\chi_3$ die Rapiditäten.
+Wie in Gleichung \eqref{eqn:genspinor} ersichtlich wird, sind die Generatoren der Boosts nicht geschlossen unter Kommutation 
+(Die Algebra der Boosts ist nicht kompakt).
+\subsubsection{Definition: Rapiditäten}
+Die Rapidität $\chi$ ist gemäß 
 \begin{equation*}
   \gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} = \cosh(\chi)
 \end{equation*}
@@ -779,39 +919,99 @@ Ein Lorentzboost in $x$-Richtung ist
   .
 \end{equation*}
 Die Rapiditäten sind nun additive Parameter.
-Die Generatoren de Boosts $K_i$ gewinnt man wie üblich mit Hilfe von 
-Gleichung \eqref{eqn:gen} mit $(K_j)_{\; \mu}^{\nu} = \sfrac{1}{i} \sfrac{\partial \Lambda_{\; \mu }^{\nu}}{\partial \chi_j} $ gewonnen, womit 
+\subsection{Andere Basis für die eigentlich-orthochrone LT}
+\label{sub:bas}
+In Abschnitt \ref{sub:l+arr} ist hervorgegangen, dass die Algebra der Boosts nicht kompakt ist. 
+Die Generatoren können in einer anderen Basis gewählt werden
 \begin{equation*}
-  K_i= \frac{1}{i} (\delta_{1i} + \delta_{i1}),
+  A_k = \frac{1}{2} (J_k + i K_k), \quad B_k = \frac{1}{2} (J_k - i K_k),
 \end{equation*}
-welcher antihermitesch sind.
-Als Beispiel ergibt sich der Generator des Boosts in $x$-Richtung
+welche zwei unabhängige $SU(2)$-Algebren ergeben
 \begin{equation*}
-  (K_1)_{\; \nu}^{\mu} = \frac{1}{i}
+  [A_i,A_j] = i \epsilon_{ijk} A^k, \quad [B_i,B_j] = i \epsilon_{ijk} B^k, \quad [A_i,B_j] = 0 \label{eqn:ka}.
+\end{equation*}
+Hier sieht man, dass $SO(3,1) ~ SU(2) \otimes SU(2)$ gilt.
+Die Liealgebra von $\symcal{L}_+^{\uparrow}$ besteht somit aus zwei \enquote{Kopien} von 
+der $SU(2)$. 
+Das sind gute Neuigkeiten, da wir bereits wissen, wie man die irreduziblen Darstellung der 
+$SU(2)$ konstruiert.
+Genauer gilt für die komplexen Lie-Algebren der Isomorphismus 
+\begin{equation*}
+  \mathbb{C} \otimes SO(3) \simeq SL(2,\mathbb{C}) \otimes SL(2,\mathbb{C})
+\end{equation*}
+Die Menge der komplexen Zahlen wirken hier mit, da komplexe Linearkombinationen von den Erzeugern der $SO(3,1)$ gebildet werden.
+Damit lassen sich die endlich-dimensionalen Darstellungen von $\symcal{L}_+^{\uparrow}$ durch zwei Drehimpulse
+$(j_1, j_2)$ (direkte Summe) mit der Dimension $(2j_1 + 1)(2j_2 + 1)$ charakterisieren.
+\subsection{Darstellungen der Lorentzgruppe}
+Prinzipiell geht man hier einfach verschiedene Werte für $j_1$ und $j_2$ aus Abschnitt \ref{sub:bas} durch.
+\subsubsection{(0,0)}
+Diese Darstellung ist relativ langweilig, da die Räume beider $SU(2)$-Algebren (damit auch die Generatoren) eindimensional sind.
+Der einzige Skalar, der die Kommutatorrelationen \eqref{eqn:ka} erfüllt, ist die Null.
+Demnach ist jede LT einfach eins ($\Lambda(\theta_i) = \symup{e}^{i\theta_i J_i} = \symup{e}^{0} = 1$).
+Damit kann man schlussfolgern, dass die (0,0)-Darstellung jedes Objekt, auf welches diese Darstellung wirkt, invariant lässt.
+\subsubsection{(1/2, 0)}
+\label{sub:left}
+Hier ist $B_k = 0$ (eindimensionale Darstellung für Spin 0).
+Aus der Diskussion zur SU(2) wissen wir, dass die zweidimensionale Darstellung für Spin $1/2$ durch die Pauli-Matrizen gewonnen werden kann, 
+also setzt man $A_k = \frac{\sigma_k}{2}$.
+Da $B_k = 0$ gilt, folgt $K_k = \frac{-i\sigma_i}{2} = \frac{J_k}{i}$.
+Damit lässt sich durch exponentieren wieder eine Drehung oder ein Boost erzeugen
+\begin{equation*}
+  \Lambda  = \symup{e}^{i ( \vec{\theta} \cdot \vec{J} + \vec{\chi} \cdot \vec{K})} 
+  = \symup{e}^{\frac{i\vec{\theta} \cdot \vec{\sigma} +\vec{\chi} \cdot \vec{\sigma}}{2}}.
+\end{equation*}
+Beispielweise eine Drehung um die $x$-Achse:
+\begin{equation*}
+  \Lambda(\theta) = 
   \begin{pmatrix}
-    0&1&0&0\\
-    1&0&0&0\\
-    0&0&0&0\\
-    0&0&0&0
+    \cos(\frac{\theta}{2}) & i \sin(\frac{\theta}{2}) \\
+    i\sin(\frac{\theta}{2}) & \cos(\frac{\theta}{2}) 
+  \end{pmatrix} .
+\end{equation*} 
+Diese $2 \times 2$-Matrizen wirken nicht auf Vierervektoren sondern auf Weyl-Spinoren, in diesem Fall wegen $(1/2,0)$ auf 
+linkshändige Weyl-Spinoren 
+\begin{equation*}
+  \chi_L = 
+  \begin{pmatrix}
+  (\chi_L)_1 \\ (\chi_L)2  
+  \end{pmatrix}.
+\end{equation*}
+Bei der Rotation fällt auf, dass die Weyl-Spinoren, im Gegensatz zu gewöhnlichen
+Vierervektoren, erst nach einer Drehung um $4\pi$ in sich selbst übergehen.
+\subsubsection{(0,1/2)}
+Hier wird analog zu dem linkshändigen Spinor \ref{sub:left} gerechnet, außer, dass $A_k = 0$ gilt. 
+Als Ergebnis findet man die LT 
+\begin{equation*}
+  \Lambda  = \symup{e}^{i ( \vec{\theta} \cdot \vec{J} + \vec{\chi} \cdot \vec{K})} 
+  = \symup{e}^{\frac{i\vec{\theta} \cdot \vec{\sigma} - \vec{\chi} \cdot \vec{\sigma}}{2}}.
+\end{equation*}
+Der Unterschied zum linkshändigen Spinor liegt darin, dass der Exponent der Boosts um ein Minuszeichen besitzt.
+Diese LT wirkt auf einen rechtshändigen Weyl-Spinor  
+\begin{equation*}
+  \chi_R = 
+  \begin{pmatrix}
+  (\chi_R)_1 \\ (\chi_R)2  
+  \end{pmatrix}.
+\end{equation*}
+\subsection{Dirac-Spinor}
+Der Dirac-Spinor $\Psi$ ist die direkte Summe aus dem rechts- und linkshändigen Weyl-Spinor.
+Damit ist der Dirac-Spinor durch 
+\begin{equation*}
+  \Psi = 
+  \begin{pmatrix}
+    \chi_L \\
+    \chi_R
   \end{pmatrix}
 \end{equation*}
-Die Generatoren der Boosts sind nicht kompakt, was an den Kommuatatorrelationen 
+gegeben.
+Der Dirac-Spinor unterliegt der Dirac-Gleichung 
 \begin{equation*}
-  [J_i,J_j] = i \epsilon_{ijk} J^k,\quad [K_i, K_j] = - i \epsilon_{ijk} J^k, 
-  \quad [J_i,J_j] = i \epsilon_{ijk} K^k
+  (i\gamma^{\mu}\partial_{\mu} - m)\Psi = 0,
 \end{equation*}
-ersichtlich wird.
-\subsection{Darstellung der Lorentzgruppe}
-Definiere $A_k = \frac{1}{2} (J_k + i K_k)$ und $B_k = \frac{1}{2} (J_k - i K_k)$.
-Diese Generatoren bilden wieder eine kompakte Liealgebra mit 
-\begin{equation*}
-  [A_i,A_j] = i \epsilon_{ijk} A^k, \quad [B_i,B_j] = i \epsilon_{ijk} B^k, \quad [A_i,B_j] = 0 \label{eqn:ka}
-\end{equation*}
-An Gleichung \eqref{eqn:ka} wird ersichtlich, dass die homogene Lorentzgruppe eine $SO(3) \simeq SU(2) \times SU(2)$
-ist. 
+wobei die Gamma-Matrizen mit $\gamma^{\mu}$ bezeichnet werden.
 \subsubsection{Darstellung eines Vierervektors als hermitesche \texorpdfstring{$2 \times 2$}{PDFstring}-Matrix}
 \label{sub:2times2}
-Ein Vierervektor $x^{\mu} = (v_0, v_1, V_2, V_3)^\text{T}$ kann als 
+Ein Vierervektor $x^{\mu} = (v_0, v_1, v_2, v_3)^\text{T}$ kann als 
 hermitesche $2 \times 2$- Matrix gemäß
 \begin{equation*}
   v^{\mu} \sigma_{\mu} = 
@@ -823,13 +1023,13 @@ hermitesche $2 \times 2$- Matrix gemäß
 mit den Pauli-Matrizen $\sigma_{\mu}$ ($\sigma_0 = \mathbb{1}_{2 \times 2}$) dargestellt werden.
 Somit gilt $v^{\mu} v_{\mu} = {(v^0)^2 - \vec{v}^2} = \text{Det}(v^{\mu} \sigma_{\mu})$.
 Die LT bilden dann komplexe $2\times 2$-Matrizen mit Determinante $+ 1$, also  
-die SL(2, $\mathbb{C}$) (special linear, komplex zweidimensonal).
-Mit $\lambda(\Lambda) \in SL(2, \mathbb{C})$ wird ein Viervektor gemäß
+die $SL(2, \mathbb{C})$ (special linear, komplex zweidimensonal).
+Mit $\lambda(\Lambda) \in SL(2, \mathbb{C})$ wird ein Vierervektor gemäß
 \begin{equation*}
   \lambda (v^{\mu} \sigma_{\mu}) \lambda^{\dagger} = (\Lambda_{\; \nu}^{\mu} v^{\nu}) \sigma_{\mu}
 \end{equation*}
 transformiert.
-Als Beispiel ein Boost in $z$-Richtung: Es gilt 
+Als Beispiel ein Boost in $z$-Richtung:
 \begin{equation*}
   \lambda  = \symup{e}^{\frac{\chi}{2} \sigma_z}
   =
@@ -849,16 +1049,6 @@ Als Beispiel ein Boost in $z$-Richtung: Es gilt
     \symup{e}^{\chi} (v^0 + v^3) & v^1 - iv^2 \\
     v^1 + iv^2 & \symup{e}^{-\chi}(v^0 - v^3)
   \end{pmatrix}
-\end{equation*}
-\subsection{Die Gruppe \texorpdfstring{$\text{L}_+^{\uparrow}$}{PDFstring} }
-Die eignetlich-orthochrone Lorentz-Gruppe hat die Generatoren 
-\begin{equation*}
-  [J_i,J_j] = i \epsilon_{ijk} J^k,\quad [K_i, K_j] = - i \epsilon_{ijk} J^k, 
-  \quad [J_i,J_j] = i \epsilon_{ijk} K^k \label{eqn:genspinor}
-\end{equation*}
-und entspricht der SO(1,3) mit den Darstellungen
-\begin{equation*}
-  \symup{e}^{i(\vec{\theta} \cdot \vec{J} + \vec{\chi} \cdot \vec{K})}.
 \end{equation*}
 \subsection{Relativstische Schreibweise einer allgemeinen Lorentz-Transformation}
 Definiere zwei neue Tensor, die einmal die Boosts und Drehungen zusammenfasst und einmal 
@@ -886,19 +1076,21 @@ Damit können die LT durch
 dargestellt werden.
 \subsection{Transformation eines Spinors mit Spin \texorpdfstring{$s = 1/2$}{PDFstring}
 unter \texorpdfstring{$\text{L}_+^{\uparrow}$}{PDFstring}}
+{\color{red} Das ist einfach aus der Vorlesung übernommen.
+Jedoch ist das redundant zu dem Abschnitt zu den Darstellungen und die gepunkteten Spinoren 
+finde ich komisch.}
 Suche eine Spinordarstellung für die Algebra \eqref{eqn:genspinor}.
 Nutze dazu die Darstellung eines Viervektors als hermitesche $2\times 2$-Matrix (s. \ref{sub:2times2}).
 Ein Weyl-Spinor ist ein zweikomponentiges Objekt, dass wie 
 \begin{equation*}
   x_{\alpha}' = \lambda_{\; \alpha}^{\beta} x_{\beta}
 \end{equation*}
-{\color{red} Strich bei rechte Vektor vll. falsch}
 transformiert mit $\lambda \in SL(2, \mathbb{C})$.
-$\lambda$ und $\lambda^*$ sind die unabhängigen Darstellung der SL(2,$\mathbb{C}$), d.h., dass 
+$\lambda$ und $\lambda^*$ sind die unabhängigen Darstellung der $SL(2,\mathbb{C})$, d.h., dass 
 keine Trafo $\lambda = U^{-1} \lambda^* U$ exestiert.
 Die Weyl-Spinoren $\eta_{\dot{\beta}}$ transformieren unter $\lambda^*$ wie 
 \begin{equation*}
-  \eta_{\dot{\alpha}}' =  \lambda_{\dot{\alpha}}^{\dot{\beta}*} 
+  \eta_{\dot{\alpha}}' =  {\lambda^{*}}_{ \!\! \dot{\alpha}}^{\; \dot{\beta}} \eta_{\dot{\beta}}
 \end{equation*}
 mit dem gepunkteten Spinor, wobei $\dot{\alpha} = 1,2, \; \alpha  = 1,2$ gilt.
 Das Rauf- und Runterziehen der Indizes geschieht mit Hilfe des antisymmetrischen Tensors  
@@ -917,29 +1109,39 @@ $\vec{A} = \frac{1}{2}\vec{\sigma}, \; \vec{B} = \vec{0}$, damit gilt
 $\vec{J} =\frac{1}{2}\vec{\sigma}, \; \vec{K} = -\frac{i}{2}\vec{\sigma}$, womit eine 
 allgemeine LT eines linkshändigen Spinors $(1/2, 0)$ durch 
 \begin{equation*}
-  \symup{e}^{i(\vec{J}\cdot \vec{\theta} + \vec{K} \cdot \vec{\chi})}
+  \lambda (\Lambda) = \symup{e}^{i(\vec{J}\cdot \vec{\theta} + \vec{K} \cdot \vec{\chi})} 
+  = \symup{e}^{i(-\frac{\vec{\sigma} \cdot \vec{\theta}}{2} + \frac{\vec{\chi} \cdot \vec{\sigma}}{2})}
 \end{equation*}
 gegeben ist.
-Bei einem linkshändigen (gepunkteten) Spinor $(0, 1/2)^*$ gilt unter $\lambda^*$ 
+Bei einem rechtshändigen (gepunkteten) Spinor $(0, 1/2)$ gilt
 $\vec{A} = \vec{0}, \; \vec{B} = \frac{1}{2}\vec{\sigma}^*$ und somit 
 $\vec{J} =\frac{1}{2}\vec{\sigma}^*, \; \vec{K} = \frac{i}{2}\vec{\sigma}^*$ 
 mit der Transformation 
 \begin{equation*}
-  \symup{e}^{i(\frac{\vec{\sigma}^* \cdot \vec{\theta}}{2} + \frac{\vec{\chi} \cdot \vec{\sigma}^*}{2})}
+  \lambda(\Lambda) = \symup{e}^{i(\frac{\vec{\sigma}^* \cdot \vec{\theta}}{2} + \frac{\vec{\chi} \cdot \vec{\sigma}^*}{2})}.
+\end{equation*}
+Ein Dirac-Spinor transformiert dan wie 
+\begin{equation*}
+  \Psi' = 
+  \begin{pmatrix}
+    \lambda & \mathbf{0} \\ 
+    \mathbf{0}       & \epsilon \lambda^* \epsilon^{\text{T}}
+  \end{pmatrix}
+  \Psi
 \end{equation*}
 \section{Die SU(N)}
-Determinante 1 und wieder unitär, mit Elementn 
-$\symup{e}^{i(\vec{theta} * \vec{{T}})}$
+Die SU(N) ist die Gruppe der unitären $N \times N$-Matrizen mit Determinante Eins. 
+Ein Element kann durch $\symup{e}^{i\vec{\theta} \cdot \vec{{T}}}$ dargestellt werden.
 Aus der Unitarität folgt wieder, dass die Generatoren hermitesch sein müssen.
 Eine SU(N) hat
-\begin{equation*}
+\begin{equation}
   N^2 - 1 \label{eqn:dimgen}
-\end{equation*}
+\end{equation}
 Generatoren.
-\subsection{Die SU(2)}
+\subsection{Die \texorpdfstring{$SU(2)$}{PDFstring}}
 Aus den Überlegungen aus Gleichung \eqref{eqn:dimgen} folgt, dass die 
-SU(3) 8 Generatoren, die Gell-Matrizen $\lambda_i$ (gewichter mit dem Faktor $1/2$ analog 
-zu den Pauli-Matrizen in der SU(2))hat.
+SU(3) 8 Generatoren, die Gell-Matrizen $\lambda_i$ (gewichtet mit dem Faktor $1/2$ analog 
+zu den Pauli-Matrizen in der $SU(2)$)hat.
 Als Beispiel
 \begin{equation*}
   \lambda_1 = 
@@ -959,24 +1161,24 @@ Die Gell-Matrizen haben die Normierung
 \begin{equation*}
   \text{Tr}[\lambda_a \lambda_b] = 2 \delta_{ab} .
 \end{equation*}
-und bilden eine Basis der SU(3) für die Elemente $\symup{e}^{i \theta \vec{\lambda}}$.
+und bilden eine Basis der SU(3) für die Elemente $\symup{e}^{i \vec{\theta} \vec{\lambda}}$.
 Die Gell-Matrizen $\lambda_1, \lambda_2, \lambda_3$ bilden eine Basis für 
-die SU(2).
-Die Basiszustände der fundamentalen Darstellung sind dreidimensionale Vektoren, die der SU(2) sind 
+die $SU(2)$.
+Die Basiszustände der fundamentalen Darstellung sind dreidimensionale Vektoren, die der $SU(2)$ sind 
 zweidimensionale Vektoren.
 Die Farbladung und der Flavour wird druch die SU(3) beschrieben.
 Die QCD (Quantenchromodynamik) beinhaltet exakte Symmetrien, Baryonen und Mesonen und Color-Singulett ({\color{red} ???}).
 Der Flavour hat $(u, d, s)$ als fundamentale Darestellung der SU(3).
 \subsection{Cartan'sche Unteralgebra einer Liealgebra}
 Die Cartansche Unterlgebra (CU) bildet eine abelsche Unteralgebra einer Liealbegra $\symcal{L}$.
-Das heißt die Elemente $H_i$ für die $[H_i, H_j] = 0 \forall i,j, \quad i = 1, \ldots, l$ gilt, bilden 
+Das heißt die Elemente $H_i$ für die $[H_i, H_j] = 0 \quad \forall i,j, \quad i = 1, \ldots, l$ gilt, bilden 
 die Cartansche Unteralgebra.
 Die kommutierenden Elemente sind $H_1 = \frac{\lambda_3}{2}, H_2 = \frac{\lambda_8}{2}$.
 Die Dimension der CU gibt den Rang der Gruppe and.
-Die Dimension der CU is 2 und somit der Rang der SU(3) 2.
+Die Dimension der CU ist zwei und somit der Rang der SU(3) ebenfalls zwei.
 Die Eigenwerte der Elemente der CU nennt man Gewichte.
-Da die gewichte der CU der SU(3) diagonal sind, lassen sich diese einfach ablesen
-\begin{equation*}
+Da die Gewichte der CU der SU(3) diagonal sind, lassen sich diese einfach ablesen
+\begin{equation}
   H_3 = \frac{1}{2}
   \begin{pmatrix}
     1 &  0  & 1 \\
@@ -989,10 +1191,10 @@ Da die gewichte der CU der SU(3) diagonal sind, lassen sich diese einfach ablese
     0 & 1 & 0 \\
     0 & 0 & -2
   \end{pmatrix}. \label{eqn:CUgen}
-\end{equation*}
+\end{equation}
 Aus den Gewichten der beiden Generatoren der CU \eqref{eqn:CUgen} lassen sich 
 Gewichtsvektoren (\enquote{weightvectors}) $\vec{\mu}_i = \ket{(H_1)_{ii}, (H_2)_{ii}}$ basteln.
-Damit ergibt sich Abbildung \ref{fig:weightvectors}
+Damit ergibt sich Abbildung \ref{fig:weightvectors}.
 \begin{figure}
   \centering
   \includegraphics[width = 0.35 \textwidth]{CU_mu.jpg}
@@ -1001,11 +1203,11 @@ Damit ergibt sich Abbildung \ref{fig:weightvectors}
 \end{figure}
 \subsection{Flavour SU(3)}
 Hier wird in Abbildung \ref{fig:weightvectors} auf die $x$-Achse der Isospin 
-aufgetragen also entsprechen die Komponente von $H_1$ dem Isospin $I_3$ und auf der 
-$y$-Achse wird die Hyperladung $Y$ reskaliert mit $\sfrac{2}{\sqrt{3}}$ aufgetragen, also enspricht 
+aufgetragen.
+Also entsprechen die Komponenten von $H_1$ dem Isospin $I_3$.
+Auf der $y$-Achse wird die Hyperladung $Y$ reskaliert mit $\sfrac{2}{\sqrt{3}}$ aufgetragen, also enspricht 
 $H_2$ der Hyperladung bis auf den Vorfaktor. 
-Prinzipiell wird jedem weightvector einfach nur ein Quark zugeordnet, womit 
-die Abbildung \ref{fig:quark}
+Prinzipiell wird jedem weightvector einfach nur ein Quark zugeordnet (s. Abb. \ref{fig:quark}).
 \begin{figure}
   \centering
   \includegraphics[width = 0.35 \textwidth]{Quark.jpg}
